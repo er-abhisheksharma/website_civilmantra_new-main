@@ -16,10 +16,10 @@ const Aboutus = () => {
                             className="object-cover max-w-full h-auto duration-300 ease-in-out hover:-translate-y-4 hover:scale-110 transition-transform opacity-80 hover:opacity-90"
                         />
                         {/* Dots */}
-                        <div className="absolute top-60 left-76 w-2 h-2 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        {/* <div className="absolute top-60 left-76 w-2 h-2 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute top-20 left-20 w-2 h-2 bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute top-52 left-15 w-2 h-2 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute top-5 right-0 w-2 h-2 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute top-5 right-0 w-2 h-2 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                         {/* Add more dots as needed */}
                     </div>
 

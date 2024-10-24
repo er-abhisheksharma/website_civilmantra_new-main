@@ -55,15 +55,15 @@ const Journey = () => {
     const journeyRef = useRef<HTMLDivElement>(null); // Reference to the black div
 
     return (
-        <>  
+        <>
             <div>
                 <h1 className="unihead my-20"> Our Achievements</h1>
             </div>
             <div
                 className="overflow-hidden h-[100vh] flex mb-20 bg-black"
-                style={{ backgroundImage: "url('/images/Home/hello.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                style={{ backgroundImage: "url('/images/AboutUs/journey/bgi.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-                <div className="absolute  left-0 w-full h-full bg-black opacity-70 "></div>
+                <div className="absolute  left-0 w-full h-full bg-black opacity-50 "></div>
                 {/* Static 20 */}
                 <div className="max-w-[88vw] mx-auto py-52  text-white flex justify-between items-center z-10">
                     <motion.div
@@ -94,15 +94,19 @@ const Journey = () => {
                                     whileInView="visible"
                                     transition={{ duration: 0.8, delay: 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex my-[149px] gap-x-24">
+                                    className="flex my-[101px] gap-x-24 ">
 
-                                    <h1 className="text-[200px]">{item.year} <hr /></h1>
+                                    <h1 className="text-[200px] text-primary">
+                                        {item.year}
+                                        <hr className="border-primary mt-[1px]" />
+                                    </h1>
+
                                     <Image
                                         src={item.image}
                                         alt="helo"
                                         height={300}
                                         width={300}
-                                        className="rounded-xl   "
+                                        className="h-[350px]   "
                                     />
                                     <h2 className="text-[30px]">{item.info}</h2>
 

@@ -6,7 +6,7 @@ const Top = () => {
         <div className="relative w-full h-[90vh] ">
             {/* Background image */}
             <Image
-                src={"/images/AboutUs/Top/download (1).jpg"}
+                src={"/images/Sectors/Herosectors/roads.png"}
                 alt="Background"
                 width={500}
                 height={500}
@@ -14,7 +14,7 @@ const Top = () => {
             />
 
             {/* Dark overlay */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 
             {/* Centered Heading Content */}
             <div className="flex justify-center items-center h-full z-10 px-4 max-w-[88vw] mx-auto">

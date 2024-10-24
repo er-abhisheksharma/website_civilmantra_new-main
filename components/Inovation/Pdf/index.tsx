@@ -10,7 +10,8 @@ const Inovate = () => {
         style={{ border: 'none' }}
         allowFullScreen={true}
         allow="autoplay"
-        className='mx-auto'
+        translate='yes'
+        className='mx-auto '
       ></iframe>
     </div>
   );

@@ -3,7 +3,7 @@
 const Sectors = [
     {
         Sector: "Roads & Bridges",
-        bgimage: "/images/Sectors/Herosectors/bridge-over-highway-on-background-260nw-745861345.png",
+        bgimage: "/images/Sectors/Herosectors/roads.png",
         discription: "lorem lipsum road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
         url: "#roadsbridges",
     },
@@ -128,12 +128,6 @@ const Herosectors = () => {
                                     </motion.div>
                                 ))}
                             </div>
-
-
-
-
-
-
                         </motion.div>
 
                     </div>

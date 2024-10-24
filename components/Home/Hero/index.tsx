@@ -77,12 +77,12 @@ const Hero = () => {
             <div  className="relative w-full h-[90vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
-                    <source src="/videos/Home/bgvideo2.mp4" type="video/mp4" />
+                    <source src="/videos/Home/Final.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
                 {/* Dark overlay */}
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
                 {/* Centered Heading Content */}
                 <div className="flex justify-center items-center h-full relative z-10">
