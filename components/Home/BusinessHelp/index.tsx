@@ -68,7 +68,7 @@ const businessdata = [
         paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
         flipimage: "/images/AboutUs/journey/pexels-tranmautritam-448828 (1).jpg",
     },
-    
+
 ];
 
 const Business = () => {
@@ -103,21 +103,20 @@ const Business = () => {
                                         className="flex flex-col justify-between h-full"
                                     >
                                         {/* Front Content Section */}
-                                        <div>
+                                        <div className="">
                                             <ul>
                                                 <li className="text-xl mb-3 font-semibold">Work - <span className="text-primary font-normal">{item.work}</span></li>
+                                                <li className="text-xl font-semibold mb-3">{item.head}</li>
+                                                <li className="text-xl mb-3 font-semibold">Length - <span className="text-primary font-normal">{item.km}</span></li>
+                                                <li className="text-xl mb-3 font-semibold">Duration - <span className="text-primary font-normal">{item.duration}</span></li>
                                             </ul>
-                                            <li className="text-xl font-semibold mb-3">{item.head}</li>
-                                            <li className="text-xl mb-3 font-semibold">Length - <span className="text-primary font-normal">{item.km}</span></li>
-                                            <li className="text-xl mb-3 font-semibold">Duration - <span className="text-primary font-normal">{item.duration}</span></li>
-
+                                            <p className="text-gray-800 font-semibold  self-end   ">
+                                                {item.paragraph}
+                                            </p>
                                         </div>
-
-                                        {/* Positioned Paragraph at the Bottom */}
-                                        <p className="text-gray-600 mt-5 self-end">{item.paragraph}</p>
                                     </motion.div>
-
                                 </div>
+
 
                                 {/* Back Side */}
                                 <div className=" front-side bg-gray-100 rounded-lg shadow-md">

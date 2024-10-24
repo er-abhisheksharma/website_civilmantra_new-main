@@ -6,7 +6,7 @@ import React from 'react'
 const Heroprojects = () => {
   return (
     <>
-    <div className='relative flex flex-col justify-center items-center mb-0 max-sm:px-4 text-white top-[-92px]'>
+    <div className='relative flex flex-col justify-center items-center mb-0 max-sm:px-4 text-white '>
                 {/* Background Video */}
                 <video
                     autoPlay

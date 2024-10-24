@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Top = () => {
     return (
-        <div className="relative w-full h-[90vh] top-[-82px]">
+        <div className="relative w-full h-[90vh] ">
             {/* Background image */}
             <Image
                 src={"/images/AboutUs/Top/download (1).jpg"}

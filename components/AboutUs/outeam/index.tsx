@@ -119,10 +119,10 @@ const Ourteam = () => {
                 whileInView="visible"
                 transition={{ duration: 1, delay: 0 }}
                 viewport={{ once: true }}>
-                <h1 className="unihead mb-10  text-center">Our Members</h1>
+                <h1 className="unihead mb-10  text-center my-20">Our Members</h1>
             </motion.div>
 
-            <div className="max-w-[88vw] mx-auto pb-10">
+            <div className="max-w-[88vw] mx-auto ">
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },

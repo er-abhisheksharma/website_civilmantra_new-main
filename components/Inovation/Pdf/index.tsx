@@ -2,20 +2,18 @@ import React from 'react';
 
 const Inovate = () => {
   return (
-    <>
-      <div className="pdf-container ">
-        {/* Displaying PDF with iframe */}
-        <iframe
-          src="/pdf/Corporate Presentation- CivilMantra Infracon Pvt l_240525_153920 (1).pdf" // Place the actual path to your PDF file here
-          width="100%"
-          height="800px"
-          title="PDF Viewer"
-        />
-      </div>
-    </>
+    <div className="my-10">
+      <iframe
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSUY4IL-EDgwVSMAV7YzB_6-UJsTkya2bvelx8NVU-4YTS7EzCNlmgmwZW7GB_ZfPX5Qh-98NJ0_CZY/embed?start=true&loop=true&delayms=2000"
+        width="70%"
+        height="600px"
+        style={{ border: 'none' }}
+        allowFullScreen={true}
+        allow="autoplay"
+        className='mx-auto'
+      ></iframe>
+    </div>
   );
 };
 
 export default Inovate;
-
-

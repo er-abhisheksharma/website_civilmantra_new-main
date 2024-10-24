@@ -57,7 +57,7 @@ const ProjectDetails = () => {
     const [selectedProject, setSelectedProject] = useState(data[0]); // State to track selected project
 
     return (
-        <div className="max-w-[88vw] mx-auto mb-20">
+        <div className="max-w-[88vw] mx-auto my-20">
             
 
             {/* Project selection buttons */}

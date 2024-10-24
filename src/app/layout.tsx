@@ -11,6 +11,7 @@ const rubik = Rubik({
   display: "swap", // This ensures text is immediately displayed with a fallback font until the Rubik font is loaded
 });
 
+
 export const metadata: Metadata = {
   title: "Civil Mantra",
   description: "",
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={rubik.className}> {/* Applying the font class here */}
-      <body className="bg-slate-900">
+      <body className="font-rubik">
         <NavBar />
         {children}
         <Footer />

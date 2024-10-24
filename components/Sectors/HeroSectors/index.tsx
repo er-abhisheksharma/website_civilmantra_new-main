@@ -65,7 +65,7 @@ const Herosectors = () => {
     };
     return (
         <>
-            <div className="relative w-full h-[98vh] top-[-82px]">
+            <div className="relative w-full h-[94vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
                     <source src="/videos/Home/Bgvideo.mp4" type="video/mp4" />
@@ -88,7 +88,7 @@ const Herosectors = () => {
                             transition={{ duration: 0.8, delay: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="grid grid-cols-4 max-w-[88vw] gap-x-2 mx-auto gap-y-2 mt-10">
+                            <div className="grid grid-cols-4 max-w-[88vw] gap-x-2 mx-auto gap-y-2 mt-5">
                                 {Sectors.map((item, index) => (
                                     <motion.div
                                         key={index}
@@ -121,7 +121,6 @@ const Herosectors = () => {
 
                                             {/* Description */}
                                             <p
-
                                                 className="opacity-0 transition-transform text-gray-200 duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-1 group-hover:scale-110 text-sm font-normal">
                                                 {item.discription}
                                             </p>

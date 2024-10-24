@@ -97,7 +97,7 @@ const Position : React.FC = () => {
     };
 
     return (
-        <div className='w-full flex flex-col justify-center items-center  max-[1024px]:mt-0 mt-[15%] max-sm:mt-[20%] gap-20 max-sm:gap-14 max-sm:px-4 relative top-[-215px] mb-0'>
+        <div className='w-full flex flex-col justify-center items-center  max-[1024px]:mt-0 mt-[20%] max-sm:mt-[20%] gap-20 max-sm:gap-14 max-sm:px-4 relative top-[-215px] '>
             <div className="max-sm:w-full flex py-3 px-6 cursor-pointer max-sm:shadow-[0_0_40px_1px_rgba(0,0,0,0.2)] shadow-[0_0_40px_1px_rgba(0,0,0,0.1)] rounded-xl">
             <motion.div
                     variants={{

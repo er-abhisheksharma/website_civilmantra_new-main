@@ -73,7 +73,8 @@ const Hero = () => {
                 <meta property="twitter:image" content="/images/civilmantra-twitter.jpg" />
             </Head>
 
-            <div className="relative w-full h-[90vh] top-[-82px]">
+            <div className="mb-10">
+            <div  className="relative w-full h-[90vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
                     <source src="/videos/Home/bgvideo2.mp4" type="video/mp4" />
@@ -113,16 +114,16 @@ const Hero = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 2 }}
                         >
-                            {Text} 
+                            {Text}
                         </motion.p>
                     </div>
                 </div>
             </div>
 
             {/* Sliding Section */}
-            <div className="bg-primary overflow-hidden top-[-82px] relative">
+            <div className="bg-primary overflow-hidden ">
                 <ul className="flex gap-x-52 py-2 whitespace-nowrap animate-slide text-white">
-                    <li>Roads & Bridges</li>
+                    <li><a href="#roadsbridges">Roads & Bridges</a></li>
                     <li>Tunnels</li>
                     <li>Transport Planning</li>
                     <li>Urban Infrastructure</li>
@@ -146,6 +147,7 @@ const Hero = () => {
                         animation: slide 20s linear infinite;
                     }
                 `}</style>
+            </div>
             </div>
         </>
     );

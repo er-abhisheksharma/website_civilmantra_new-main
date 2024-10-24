@@ -100,7 +100,7 @@ const Clients = () => {
     };
 
     return (
-        <div className="client-carousel max-w-[86vw] mx-auto py-10 relative">
+        <div className="client-carousel max-w-[86vw] mx-auto pb-10 relative">
             <h2 className="unihead mb-20"> Our Clients</h2>
             
             <Slider {...settings}>

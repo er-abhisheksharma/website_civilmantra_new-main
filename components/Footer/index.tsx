@@ -16,11 +16,11 @@ const Socialmedia = [
 const Quicklinks = [
     { page: "Home", url: "/" },
     { page: "About us", url: "/AboutUs" },
-    { page: "Sectors", url: "/" },
+    { page: "Sectors", url: "/Sectors" },
     { page: "Projects", url: "/Projects" },
-    { page: "Achievements", url: "/" },
-    { page: "Innovation", url: "/" },
-    { page: "Career", url: "/" },
+    { page: "Innovation", url: "/Innovation" },
+    { page: "Career", url: "/Career" },
+    { page: "Contact us", url: "/ContactUs" },
 ];
 
 const Services = [

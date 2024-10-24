@@ -27,14 +27,6 @@ export default function Home() {
       <Projects/>
       <Clients/>
       <Associate/>
-      
-      
-
-
-
-
-     
-      
 
     </>
   );

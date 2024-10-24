@@ -108,7 +108,7 @@ const ContactForm = () => {
       </Head>
 
       {/* Contact Form Section */}
-      <div className="relative sm:top-0">
+      <div className="relative mt-20">
         <div className=" max-sm:hidden absolute top-0 left-0 w-full h-full opacity-60"></div>
         <div className="max-sm:flex-col flex max-[1024px]:justify-around justify-center items-start max-[1024px]:gap-10 max-[1024px]:px-4 gap-28 max-sm:gap-6 max-sm:px-4 max-sm:py-0 px-10 max-sm:mt-0 pb-20 poppins relative z-10">
           <ToastContainer
