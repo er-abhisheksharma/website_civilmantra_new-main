@@ -2,7 +2,7 @@ const img = [
     { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
     { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
     { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    
+
 ]
 
 import Image from "next/image";
@@ -21,36 +21,44 @@ const Tunnels = () => {
                                 <Image
                                     src={item.image}
                                     alt=""
-                                    width={index === 1 ? 350 : 300}
+                                    width={index === 0 ? 450 : index === 2 ? 450 : 370}
                                     height={index === 1 ? 350 : 300}
-                                    className="rounded-lg"
+                                    className="rounded-lg hover:scale-110 transition-transform duration-300 shadow-2xl shadow-gray-500"
                                 />
                             </div>
                         </div>
                     ))}
                 </div>
                 <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-secondary">Building Enduring Connections:
-                        <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Tunnels</span>
+                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Tunneling Expertise:
+                        <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Navigating Complexities</span>
                     </h1>
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
-                        At CivilMantra, we understand the critical role that roads and bridges play in connecting communities, facilitating trade, and driving economic prosperity. Our team of skilled engineers and experienced project managers works collaboratively with clients to design, construct, and supervise the development of:
+                        CivilMantra tackles even the most intricate tunneling projects with a commitment to safety, efficiency, and environmental responsibility. We utilize a combination of innovative techniques, meticulous planning, and advanced technology to deliver:
                     </p>
                 </div>
                 <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-secondary">Highways & Expressways
+                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Safe & Efficient Tunneling
 
                     </h1>
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
-                        At CivilMantra, we understand the critical role that roads and bridges play in connecting communities, facilitating trade, and driving economic prosperity. Our team of skilled engineers and experienced project managers works collaboratively with clients to design, construct, and supervise the development of:
+                        Safety is paramount at CivilMantra. We employ rigorous safety protocols and best practices throughout the tunneling process to protect our workers and the surrounding environment. Additionally, we optimize project timelines and costs through efficient excavation methods and advanced material handling techniques.
+                         
                     </p>
                 </div>
                 <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-secondary">Bridges    
+                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Urban Tunneling
                     </h1>
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
-                        Our bridge design expertise encompasses a broad spectrum, from elegant pedestrian bridges to complex multi-span structures. We prioritize aesthetics, functionality, and long-term sustainability, considering factors like traffic volume, seismic resilience, and ease of maintenance.
-                        Rural Roads: We recognize the unique challenges faced by rural communities in terms of accessibility and infrastructure development. Our team designs and implements rural road projects that improve connectivity to essential services, markets, and educational
+                    Navigating the dense urban landscape with its existing infrastructure and utilities requires exceptional planning and expertise. Our team specializes in urban tunneling projects, minimizing disruption to daily life and ensuring the integrity of existing structures.
+                     
+                    </p>
+                </div>
+                <div>
+                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Utility Tunnels
+                    </h1>
+                    <p className="text-[18px] leading-[32px] mb-5 font-normal ">
+                    Efficient and well-maintained utility tunnels are essential for the smooth functioning of urban areas. CivilMantra designs and constructs utility tunnels that house essential services such as power lines, water pipes, and communication cables, ensuring their long-term functionality and accessibility for maintenance.
                     </p>
                 </div>
             </div>

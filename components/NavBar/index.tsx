@@ -63,8 +63,8 @@ const NavBar = () => {
             <Link
               key={index}
               href={link.url}
-              className={`font-extralight font-playwrite  px-2 py-1 rounded-lg relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out
-                ${pathname === link.url ? ' bg-primary scale-110 -translate-y-1 text-white hover:no-underline' : 'hover:bg-white hover:text-black'}`}
+              className={` px-2 py-1 rounded-lg relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out
+                ${pathname === link.url ? ' scale-125 hover:font-normal text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black' : 'hover:bg-white hover:text-black'}`}
             >
               {link.name}
             </Link>

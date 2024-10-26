@@ -77,7 +77,7 @@ const Business = () => {
             <div className="max-w-[88vw] mx-auto mb-20">
                 {/* Header Section */}
                 <div className="lg:max-w-[70vw] text-center mx-auto mb-10">
-                    <h1 className="unihead">Our Projects</h1>
+                    <h1 className="unihead mb-12">Our Projects</h1>
                     <p className="unip">
                         From concept to completion, CivilMantra Infracon offers a comprehensive suite of services to turn your construction goals into reality, combining expert engineering with innovative solutions and a commitment to the highest quality standards.
                     </p>

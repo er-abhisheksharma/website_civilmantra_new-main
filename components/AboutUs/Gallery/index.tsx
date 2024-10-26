@@ -183,7 +183,7 @@ const Gallery = () => {
                                     width={500}
                                     height={150}
                                     style={{ width: '400px', height: '250px', objectFit: 'cover', borderRadius: '0.5rem' }}
-                                    className="shadow-xl shadow-gray-700 hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+                                    className="shadow-xl shadow-gray-500 hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out"
                                 />
                             </div>
                         </motion.div>

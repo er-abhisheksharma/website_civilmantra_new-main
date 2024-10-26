@@ -54,7 +54,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className="my-28 bg-primary">
+        <div ref={sectionRef} className="mb-20 bg-primary">
             <div className="flex max-[476px]:grid-cols-1 max-lg:grid max-lg:grid-cols-2 gap-6 max-w-[88vw] px-4 mx-auto justify-between py-20 text-white ">
                 {data.map((item, index) => (
                     <motion.div

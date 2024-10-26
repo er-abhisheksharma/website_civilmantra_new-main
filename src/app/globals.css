@@ -21,6 +21,22 @@ body {
 }
 
 
+/* styles/globals.css */
+.flex > .space-x-8::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #cbd5e1; /* Gray */
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
 
 
 

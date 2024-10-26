@@ -100,8 +100,9 @@ const Clients = () => {
     };
 
     return (
-        <div className="client-carousel max-w-[86vw] mx-auto pb-10 relative">
-            <h2 className="unihead mb-20"> Our Clients</h2>
+        <div className="client-carousel max-w-[86vw] mx-auto relative">
+            <h2 className="unihead mb-8"> Our Clients</h2>
+            <p className='unip pb-8'>We take pride in delivering exceptional service and value to our clients.</p>
             
             <Slider {...settings}>
                 {info.map((client, index) => (
@@ -118,15 +119,15 @@ const Clients = () => {
                             <img
                                 src={client.img}
                                 alt={client.name}
-                                className="rounded-full w-20 h-20 mb-2"
+                                className="rounded-full w-20 h-20"
                             />
                             <h3 className="text-xl font-bold mb-2">{client.name}</h3>
                             {/* Star rating component */}
                             <StarRating rating={client.rating} />
-                            <p className="text-gray-600 italic mt-2">"{client.review}"</p>
+                            <p className="text-gray-800 mt-2">"{client.review}"</p>
                         </div>
                     </motion.div>
-                ))}
+                ))} 
             </Slider>
 
             {/* Progress Bar */}

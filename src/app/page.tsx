@@ -11,6 +11,7 @@ import Projects from "../../components/Home/Projects";
 import Associate from "../../components/Home/Associate";
 import Clients from "../../components/Home/HappyClients";
 
+
 // Typing effect hook
 
 
@@ -20,13 +21,14 @@ export default function Home() {
 
   return (
     <>
-
+      
       <Hero />
       <Aboutus/>
       <Business/>
       <Projects/>
       <Clients/>
       <Associate/>
+
 
     </>
   );

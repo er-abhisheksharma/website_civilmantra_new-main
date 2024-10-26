@@ -17,37 +17,37 @@ const Sectors = [
         Sector: "Transport Planning",
         bgimage: "/images/Sectors/Herosectors/TRUCKS.jpg",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Transport",
     },
     {
         Sector: "Urban Infrastructure",
         bgimage: "/images/Sectors/Herosectors/DelhiFlyover_EDITED.jpg",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Urban",
     },
     {
         Sector: "Railway",
         bgimage: "/images/Sectors/Herosectors/train.jpg",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Railway",
     },
     {
         Sector: "Expressway",
         bgimage: "/images/Sectors/Herosectors/Expressway.webp",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Expressway",
     },
     {
         Sector: "Metro",
         bgimage: "/images/Sectors/Herosectors/metrotunnel-2.jpg",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Metro",
     },
     {
         Sector: "Waterways",
         bgimage: "/images/Sectors/Herosectors/waterway.jpg",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        url: "#Waterways",
     },
 ]
 
@@ -59,9 +59,8 @@ const Herosectors = () => {
     const handleScroll = (url: string) => {
         const section = document.querySelector(url);
         if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-
     };
     return (
         <>
