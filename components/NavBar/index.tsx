@@ -64,7 +64,7 @@ const NavBar = () => {
               key={index}
               href={link.url}
               className={` px-2 py-1 rounded-lg relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out
-                ${pathname === link.url ? ' scale-125 hover:font-normal text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black' : 'hover:bg-white hover:text-black'}`}
+                ${pathname === link.url ? ' scale-125  text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black' : 'hover:bg-white hover:text-black'}`}
             >
               {link.name}
             </Link>
@@ -73,7 +73,7 @@ const NavBar = () => {
           <Link
             href="/ContactUs"
             className={`ml-2 px-6 py-2 border-gray-800 hover:border-white border-[2px] rounded-lg text-xl hover:bg-white hover:text-black transition-all duration-300 ease-in-out
-              ${pathname === '/ContactUs' ? 'bg-primary border-none text-white' : ''}`}
+              ${pathname === '/ContactUs' ? 'bg-primary border-none text-white ' : ''}`}
           >
             Contact us
           </Link>

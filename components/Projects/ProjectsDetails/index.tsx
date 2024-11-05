@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Define the type for business data
 interface BusinessData {
@@ -12,14 +15,14 @@ interface BusinessData {
     client: string;
     Department: string;
     paragraph: string;
-    flipimage: string; // Ensure this is a string for image paths
+    flipimage: string;
 }
 
 // Define the type for project data
 interface ProjectData {
     id: number;
     description: string;
-    businessdata: BusinessData[]; // Use the defined type
+    businessdata: BusinessData[];
 }
 
 const data: ProjectData[] = [
@@ -314,7 +317,17 @@ const data: ProjectData[] = [
 ];
 
 const ProjectDetails = () => {
-    const [selectedProject, setSelectedProject] = useState<ProjectData>(data[0]); // State to track selected project
+    const [selectedProject, setSelectedProject] = useState<ProjectData>(data[0]);
+
+    // Slider settings
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+    };
 
     return (
         <div className="max-w-[88vw] mx-auto my-20">
@@ -327,7 +340,8 @@ const ProjectDetails = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }} className="flex justify-center gap-8 mb-8"
+                viewport={{ once: true }}
+                className="flex justify-center gap-8 mb-8"
             >
                 {data.map((projectItem) => (
                     <button
@@ -337,14 +351,14 @@ const ProjectDetails = () => {
                             ? 'bg-primary text-white relative -translate-y-1 scale-125 transition-transform duration-300 ease-in-out'
                             : 'bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out shadow-xl'} 
                         rounded-lg`}
-                        onClick={() => setSelectedProject(projectItem)} // Update selected project on click
+                        onClick={() => setSelectedProject(projectItem)}
                     >
-                        {projectItem.description} {/* Use descriptive text instead of id */}
+                        {projectItem.description}
                     </button>
                 ))}
             </motion.div>
 
-            {/* Gallery Grid with Transition */}
+            {/* Carousel for Business Data */}
             <AnimatePresence mode="wait">
                 <motion.div
                     key={selectedProject.id}
@@ -352,95 +366,48 @@ const ProjectDetails = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-center items-center gap-y-10"
                 >
-                    {selectedProject.businessdata.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            variants={{
-                                hidden: { opacity: 0, y: -20 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.8, delay: index * 0.1 }}
-                            viewport={{ once: true }} className="flex justify-center items-center mb-10">
-                            <div className="group perspective-1000 mx-auto h-[350px] w-[350px]">
-                                {/* Flip Container */}
-                                <div className="rotate-container">
-                                    {/* Front Side */}
-                                    <div className="back-side bg-white p-6 rounded-lg shadow-md border-t-8 border-brown">
-                                        <motion.div
-                                            variants={{
-                                                hidden: { opacity: 0, y: -20 },
-                                                visible: { opacity: 1, y: 0 },
-                                            }}
-                                            initial="hidden"
-                                            whileInView="visible"
-                                            transition={{ duration: 0.5, delay: index * 0.2 }}
-                                            viewport={{ once: true }}
-                                            className="flex flex-col justify-between h-full"
-                                        >
-                                            {/* Front Content Section */}
-                                            <div className="">
-                                                <ul>
-                                                    <li className="text-xl mb-3 font-semibold">Location - <span className="text-primary font-normal">{item.location }</span></li>
-                                                    <li className="text-xl font-semibold mb-3">{item.head}</li>
-                                                    <li className="text-xl mb-3 font-semibold">Length - <span className="text-primary font-normal">{item.km}</span></li>
-                                                    <li className="text-xl mb-3 font-semibold">Duration - <span className="text-primary font-normal">{item.duration}</span></li>
-                                                </ul>
-                                                <p className="text-gray-800 font-medium self-end">
-                                                    {item.paragraph}
-                                                </p>
-                                            </div>
-                                        </motion.div>
-                                    </div>
+                    <Slider {...sliderSettings}>
+                        {selectedProject.businessdata.map((item, index) => (
+                            <div key={index} className="flex justify-center items-center mb-10">
+                                <div className="group perspective-1000 mx-auto h-[350px] w-[350px]">
+                                    <div className="rotate-container">
+                                        {/* Front Side */}
+                                        <div className="back-side bg-white p-6 rounded-lg shadow-md border-t-8 border-brown">
+                                            <ul>
+                                                <li className="text-xl mb-3 font-semibold">Location - <span className="text-primary font-normal">{item.location}</span></li>
+                                                <li className="text-xl font-semibold mb-3">{item.head}</li>
+                                                <li className="text-xl mb-3 font-semibold">Length - <span className="text-primary font-normal">{item.km}</span></li>
+                                                <li className="text-xl mb-3 font-semibold">Duration - <span className="text-primary font-normal">{item.duration}</span></li>
+                                            </ul>
+                                            <p className="text-gray-800 font-medium">{item.paragraph}</p>
+                                        </div>
 
-                                    {/* Back Side */}
-                                    <div className="front-side bg-gray-100 rounded-lg shadow-md">
-                                        <div className="flex justify-center items-center w-full h-full">
-                                            <Image
-                                                src={item.flipimage} // Back Image
-                                                alt="Back Side Image"
-                                                fill // Use fill for Next.js 13
-                                                style={{ objectFit: "cover" }}
-                                                className="rounded-lg"
-                                            />
-                                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 rounded-lg"></div>
-                                            <div>
-                                                <motion.div
-                                                    variants={{
-                                                        hidden: { opacity: 0, y: -20 },
-                                                        visible: { opacity: 1, y: 0 },
-                                                    }}
-                                                    initial="hidden"
-                                                    whileInView="visible"
-                                                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                                                    viewport={{ once: true }}
-                                                    className="flex flex-col justify-between h-full relative"
-                                                >
-                                                    {/* Front Content Section */}
-                                                    <div className="p-6">
-                                                        <ul className="list-none">
-                                                            <li className="text-xl mb-3 font-semibold text-gray-200">
-                                                                Work - <span className="text-gray-100 font-normal">{item.work}</span>
-                                                            </li>
-                                                            <li className="text-xl mb-3 font-semibold text-gray-200">
-                                                                Client - <span className="text-gray-100 font-normal">{item.client}</span>
-                                                            </li>
-                                                            <li className="text-xl mb-3 font-semibold text-gray-200">
-                                                                Department - <span className="text-gray-100 font-normal">{item.Department}</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </motion.div>
+                                        {/* Back Side */}
+                                        <div className="front-side bg-gray-100 rounded-lg shadow-md y-5">
+                                            <div className="flex justify-center items-center w-full h-full ">
+                                                <Image
+                                                    src={item.flipimage}
+                                                    alt="Back Side Image"
+                                                    fill
+                                                    style={{ objectFit: "cover" }}
+                                                    className="rounded-lg"
+                                                />
+                                                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 rounded-lg"></div>
+                                                <div className="p-6 text-gray-200 z-10">
+                                                    <ul>
+                                                        <li className="text-xl mb-3 font-semibold">Work - <span className="font-normal">{item.work}</span></li>
+                                                        <li className="text-xl mb-3 font-semibold">Client - <span className="font-normal">{item.client}</span></li>
+                                                        <li className="text-xl mb-3 font-semibold">Department - <span className="font-normal">{item.Department}</span></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
-                    ))}
+                        ))}
+                    </Slider>
                 </motion.div>
             </AnimatePresence>
         </div>

@@ -127,7 +127,7 @@ const Gallery = () => {
                 whileInView="visible"
                 transition={{ duration: 0.8, delay: 0 }}
                 viewport={{ once: true }}>
-                <h1 className="unihead mt-28  ">Our Gallery</h1>
+                <h1 className="unihead mt-28  ">Life at Civil Mantra</h1>
             </motion.div>
 
             {/* Year selection buttons */}
