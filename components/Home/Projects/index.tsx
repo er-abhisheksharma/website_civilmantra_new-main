@@ -69,8 +69,8 @@ const Projects = () => {
                         key={index}
                         className="flex flex-col "
                     >
-                        <div className="group cursor-pointer max-lg:mt-5">
-                            <div className="flex items-center gap-x-2 justify-center">
+                        <div className="group cursor-pointer max-lg:mt-5 w-52">
+                            <div className="flex items-center gap-x-2 ">
                                 <Image
                                     src={item.image}
                                     alt={item.name}

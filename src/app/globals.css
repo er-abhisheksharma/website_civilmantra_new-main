@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=League+Spartan:wght@100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +19,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif; /* Set Kablammo as the primary font */
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif; 
 }
 
-
-/* styles/globals.css */
 .flex > .space-x-8::before {
   content: "";
   position: absolute;
@@ -32,6 +32,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
 
 
 
@@ -93,14 +94,14 @@ body {
 
 }
 .unihead {
-  @apply text-[36px] leading-[40px] font-bold font-montserrat text-center
-  sm:text-[40px] sm:leading-[44px]
-  md:text-[44px] md:leading-[48px]
-  lg:text-[32px] lg:leading-[40px]
-  xl:text-[38px] xl:leading-[42px]
+  @apply text-[36px] leading-[40px] font-bold  text-center
+  sm:text-[40px] sm:leading-[18px]
+  md:text-[44px] md:leading-[20px]
+  lg:text-[32px] lg:leading-[25px]
+  xl:text-[38px] xl:leading-[30px]
 }
 .unip{
-  @apply text-[16px] leading-[24px] font-light font-rubik text-center my-5 
+  @apply text-[16px] leading-[24px] font-light  text-center my-5 
   sm:text-[18px] sm:leading-[26px]
   md:text-[20px] md:leading-[28px]
   lg:text-[18px] lg:leading-[26px]

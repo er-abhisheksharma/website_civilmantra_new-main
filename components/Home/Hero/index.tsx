@@ -97,7 +97,7 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="font-semibold leading-7 lg:text-xl md:text-lg sm:text-base font-sans">We make a Difference</h2>
+                            <h2 className="font-semibold leading-7 lg:text-xl md:text-lg sm:text-base">We make a Difference</h2>
                             <h1 className="mt-3 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl">
                                 <span className="text-secondary">We Don't Just Build</span>{" "}
                                 <span className="text-red-600 text-6xl">Structures</span>
