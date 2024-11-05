@@ -22,6 +22,7 @@ body {
   font-family: 'League Spartan', Arial, Helvetica, sans-serif; 
 }
 
+
 .flex > .space-x-8::before {
   content: "";
   position: absolute;
