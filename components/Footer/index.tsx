@@ -38,7 +38,7 @@ const Footer = () => {
     return (
         <>
             <div className="bg-grays ">
-                <div className="max-w-[92vw] mx-auto py-3   flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 lg:flex-row lg:justify-between space-y-8 lg:space-y-0 pl-5">
+                <div className="max-w-[88vw] mx-auto py-3   flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 lg:flex-row lg:justify-between space-y-8 lg:space-y-0 ">
                     {/* Logo and Address */}
                     <div className="lg:w-1/4 max-lg:mt-9">
                         <Image

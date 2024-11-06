@@ -54,8 +54,8 @@ const Projects = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className="mb-20 bg-primary">
-            <div className="flex max-[476px]:grid-cols-1 max-lg:grid max-lg:grid-cols-2 gap-6 max-w-[88vw] px-4 mx-auto justify-between py-20 text-white ">
+        <div ref={sectionRef} className="mb-16 bg-primary pl-4">
+            <div className="flex max-[476px]:grid-cols-1 max-lg:grid max-lg:grid-cols-2 gap-6 max-w-[88vw]  mx-auto justify-between py-16 text-white ">
                 {data.map((item, index) => (
                     <motion.div
                         variants={{
@@ -74,15 +74,15 @@ const Projects = () => {
                                 <Image
                                     src={item.image}
                                     alt={item.name}
-                                    width={70}
+                                    width={50}
                                     height={40}
                                     className="rounded-xl"
                                 />
-                                <h1 className="text-[36px] sm:text-[48px] text-center font-extrabold transition-transform duration-300 ease-in-out group-hover:-translate-y-4  ">
+                                <h1 className="text-[36px] sm:text-[40px] text-center font-extrabold transition-transform duration-300 ease-in-out group-hover:-translate-y-2  ">
                                     {startCounting && <CountUp start={0} end={item.id} duration={2} delay={index * 0} />}+
                                 </h1>
                             </div>
-                            <p className="text-[20px] sm:text-[25px] font-bold pt-4 max-lg:text-center ">
+                            <p className="text-[20px] sm:text-[22px] font-bold pt-1 max-lg:text-center  ">
                                 {item.name}
                             </p>
                         </div>

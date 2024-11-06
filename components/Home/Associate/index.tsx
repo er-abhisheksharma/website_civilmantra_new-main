@@ -35,22 +35,29 @@ const Associate = () => {
   }, []);
 
   return (
-    <div className="my-28 overflow-hidden">
+    <div className=" overflow-hidden">
       <motion.div
-        className="flex space-x-4"
-        // Animate the scroll effect to the left in a loop
+        className="flex space-x-8"
         animate={{ x: ["0%", "-100%"] }}
-        transition={{ ease: "linear", duration: scrollSpeed, repeat: Infinity }} // Infinite loop scroll
+        transition={{
+          ease: "linear",
+          duration: scrollSpeed,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
       >
-        {/* Duplicate the images to create a seamless loop */}
+        {/* Create an infinite loop effect by repeating the image array */}
         {[...images, ...images].map((item, index) => (
-          <div key={index} className="flex-shrink-0 ">
+          <div
+            key={index}
+            className="flex-shrink-0 bg-white rounded-3xl  my-16  w-[200px] h-[200px] flex items-center justify-center"
+          >
             <Image
               src={item.image}
               alt="Associate logo"
               width={200}
               height={200}
-              className="object-contain w-[200px] h-[200px] " // Fixed size
+              className="object-contain w-[180px] h-[180px]"
             />
           </div>
         ))}

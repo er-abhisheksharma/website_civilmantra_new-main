@@ -5,7 +5,7 @@ const Aboutus = () => {
     return (
         <>
             <div className="mb-20 relative">
-                <div className="max-w-[88vw] mx-auto flex flex-wrap items-center justify-center px-4">
+                <div className="max-w-[88vw] mx-auto flex flex-wrap items-center justify-center ">
                     {/* Image Section */}
                     <div className="w-full sm:w-1/2 p-2 flex justify-center relative group">
                         <Image
@@ -37,14 +37,14 @@ const Aboutus = () => {
                             viewport={{ once: true }}
                             className="rounded-l-3xl text-left"
                         >
-                            <h1 className="text-2xl font-bold font-montserrat mb-2 text-red-600">About Us</h1>
-                            <h2 className="mb-4 text-lg sm:text-xl font-bold">
-                                CivilMantra Infracon Pvt. Ltd. is your one-stop shop for all your construction needs. We're a team of passionate engineers and consultants dedicated to exceeding client expectations.
+                            <h1 className="text-4xl  font-bold font-montserrat mb-4 text-red-600">About Us</h1>
+                            <h2 className=" text-lg sm:text-xl text-justify ">
+                                <span className="font-bold">CivilMantra Infracon Pvt. Ltd.</span> is your one-stop shop for all your construction needs. We're a team of passionate engineers and consultants dedicated to exceeding client expectations. 
                             </h2>
-                            <p className="mb-4 text-base sm:text-lg">
-                                CivilMantra Infracon Pvt. Ltd. transforms visions into reality. We're a passionate team of engineers and consultants providing comprehensive construction solutions. From design and planning to construction supervision, we leverage cutting-edge techniques to deliver exceptional results.
+                            <p className=" text-base sm:text-lg text-justify my-2">
+                            CivilMantra Infracon Pvt. Ltd. transforms visions into reality. We're a passionate team of engineers and consultants providing comprehensive construction solutions. From design and planning to construction supervision, we leverage cutting-edge techniques to deliver exceptional results.
                             </p>
-                            <h3 className="text-lg sm:text-xl font-bold">Learn more about our expertise and commitment to quality on our About Us page.</h3>
+                            <h3 className="text-lg sm:text-xl font-bold mt-2 text-justify"><a href="/AboutUs">Learn more about our expertise and commitment to quality on our About Us page. </a></h3>
                         </motion.div>
                     </div>
                 </div>

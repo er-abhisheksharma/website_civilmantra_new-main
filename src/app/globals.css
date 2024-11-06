@@ -102,11 +102,11 @@ body {
   xl:text-[38px] xl:leading-[30px]
 }
 .unip{
-  @apply text-[16px] leading-[24px] font-light  text-center my-5 
+  @apply text-[16px] leading-[24px] font-light  text-center my-2 
   sm:text-[18px] sm:leading-[26px]
   md:text-[20px] md:leading-[28px]
   lg:text-[18px] lg:leading-[26px]
-  xl:text-[20px] xl:leading-[28px]
+  xl:text-[24px] xl:leading-[28px]
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari, and Opera */

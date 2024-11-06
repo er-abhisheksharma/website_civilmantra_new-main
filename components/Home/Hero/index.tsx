@@ -74,7 +74,7 @@ const Hero = () => {
             </Head>
 
             <div className="mb-10">
-            <div  className="relative w-full h-[90vh] ">
+            <div  className="relative w-full h-[88vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
                     <source src="/videos/Home/Bgvideo.mp4" type="video/mp4" />
@@ -82,11 +82,11 @@ const Hero = () => {
                 </video>
 
                 {/* Dark overlay */}
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
 
                 {/* Centered Heading Content */}
-                <div className="flex justify-center items-center h-full relative z-10">
-                    <div className="mx-auto text-white max-w-[950px] px-4">
+                <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
+                    <div className=" text-white max-w-[950px] mt-[60px]">
                         <motion.div
                             variants={{
                                 hidden: { opacity: 0, y: -20 },

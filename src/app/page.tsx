@@ -24,8 +24,9 @@ export default function Home() {
       
       <Hero />
       <Aboutus/>
-      <Business/>
       <Projects/>
+      <Business/>
+      
       <Clients/>
       <Associate/>
 

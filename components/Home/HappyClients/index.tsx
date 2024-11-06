@@ -121,7 +121,7 @@ const Clients = () => {
                                 alt={client.name}
                                 className="rounded-full w-20 h-20"
                             />
-                            <h3 className="text-xl font-bold mb-2">{client.name}</h3>
+                            <h3 className="text-xl font-bold my-2">{client.name}</h3>
                             {/* Star rating component */}
                             <StarRating rating={client.rating} />
                             <p className="text-gray-800 mt-2">"{client.review}"</p>
@@ -130,16 +130,7 @@ const Clients = () => {
                 ))} 
             </Slider>
 
-            {/* Progress Bar */}
-            <div className="relative h-1 w-full bg-gray-300 rounded-3xl mt-8">
-                <div
-                    className="absolute h-1 bg-primary rounded-3xl"
-                    style={{
-                        width: `${((activeIndex + 1) / info.length) * 100}%`,
-                        transition: "width 0.5s ease-in-out"
-                    }}
-                />
-            </div>
+           
         </div>
     );
 };

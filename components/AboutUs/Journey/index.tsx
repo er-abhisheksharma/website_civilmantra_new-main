@@ -104,39 +104,42 @@ const Journey = () => {
                         </button>
 
                         <div
-                            ref={scrollContainerRef}
-                            className="flex flex-col overflow-y-scroll h-[500px] scrollbar-hidden group"
-                        >
-                            {journeydata.map((item, index) => (
-                                <div key={index}>
-                                    <motion.div
-                                        variants={{
-                                            hidden: { opacity: 0, y: 20 },
-                                            visible: { opacity: 1, y: 0 },
-                                        }}
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        transition={{ duration: 0.8, delay: 0.1 }}
-                                        viewport={{ once: true }}
-                                        className={`flex ${index === 0 ? "mt-[99px]" : "my-[51.5px]"} gap-x-24 `}
-                                    >
-                                        <h1 className="text-[200px] text-primary">
-                                            {item.year}
-                                            <hr className="border-primary mt-[1px]" />
-                                        </h1>
+    ref={scrollContainerRef}
+    className="flex flex-col overflow-y-scroll h-[500px] scrollbar-hidden group"
+>
+    {journeydata.map((item, index) => (
+        <div key={index}>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+                className={`flex justify-between ${index === 0 ? "mt-[99px]" : "my-[51.5px]"} gap-x-24`}
+            >
+                {/* Year element with fixed width */}
+                <h1 className="text-[200px] text-primary w-[220px] flex-shrink-0">
+                    {item.year}
+                    <hr className="border-primary mt-[1px]" />
+                </h1>
 
-                                        <Image
-                                            src={item.image}
-                                            alt="Journey Image"
-                                            height={300}
-                                            width={300}
-                                            className="h-[400px]"
-                                        />
-                                        <h2 className="text-[30px]">{item.info}</h2>
-                                    </motion.div>
-                                </div>
-                            ))}
-                        </div>
+                <Image
+                    src={item.image}
+                    alt="Journey Image"
+                    height={300}
+                    width={300}
+                    className="h-[400px]"
+                />
+
+                <h2 className="text-[30px] max-w-[400px]">{item.info}</h2>
+            </motion.div>
+        </div>
+    ))}
+</div>
+
 
                         <button
                             onClick={scrollDown}
