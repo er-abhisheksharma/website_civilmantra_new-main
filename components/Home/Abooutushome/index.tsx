@@ -37,14 +37,14 @@ const Aboutus = () => {
                             viewport={{ once: true }}
                             className="rounded-l-3xl text-left"
                         >
-                            <h1 className="text-4xl  font-bold font-montserrat mb-4 text-red-600">About Us</h1>
+                            <h1 className="text-4xl  font-bold font-montserrat mb-4 text-logored">About Us</h1>
                             <h2 className=" text-lg sm:text-xl text-justify ">
-                                <span className="font-bold">CivilMantra Infracon Pvt. Ltd.</span> is your one-stop shop for all your construction needs. We're a team of passionate engineers and consultants dedicated to exceeding client expectations. 
+                                <span className="font-bold"><span className="text-primary">Civil<span className="text-logored">Mantra</span></span> Infracon Pvt. Ltd.</span> is your one-stop shop for all your construction needs. We're a team of passionate engineers and consultants dedicated to exceeding client expectations. 
                             </h2>
-                            <p className=" text-base sm:text-lg text-justify my-2">
-                            CivilMantra Infracon Pvt. Ltd. transforms visions into reality. We're a passionate team of engineers and consultants providing comprehensive construction solutions. From design and planning to construction supervision, we leverage cutting-edge techniques to deliver exceptional results.
+                            <p className=" text-lg sm:text-xl text-justify my-2">
+                            <span className="font-bold"><span className="text-primary">Civil<span className="text-logored">Mantra</span></span> Infracon Pvt. Ltd.</span> transforms visions into reality. We're a passionate team of engineers and consultants providing comprehensive construction solutions. From design and planning to construction supervision, we leverage cutting-edge techniques to deliver exceptional results.
                             </p>
-                            <h3 className="text-lg sm:text-xl font-bold mt-2 text-justify"><a href="/AboutUs">Learn more about our expertise and commitment to quality on our About Us page. </a></h3>
+                            <h3 className="text-lg sm:text-xl font-bold hover:bg-logored transition-all duration-300 hover:translate-x-1 hover:scale-110 rounded bg-primary text-center w-[110px] text-white py-2"><a href="/AboutUs">Read More </a></h3>
                         </motion.div>
                     </div>
                 </div>

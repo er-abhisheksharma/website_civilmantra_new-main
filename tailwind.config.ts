@@ -16,6 +16,7 @@ const config: Config = {
         secondary: "#00b4d8",
         grays: "#EAF1F7",
         brown: "#8D3236",
+        logored: "#9D0604"
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],

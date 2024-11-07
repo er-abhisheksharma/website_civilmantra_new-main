@@ -15,10 +15,11 @@ export default function Aboutus() {
   return (
     <>
      <Top/>
-     <Ourteam/>
+     
      <Journey/>
      <Dealin/>
      <OurPresence/>
+     <Ourteam/>
      <Gallery/>
      
 

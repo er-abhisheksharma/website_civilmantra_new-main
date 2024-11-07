@@ -55,7 +55,7 @@ const Projects = () => {
 
     return (
         <div ref={sectionRef} className="mb-16 bg-primary pl-4">
-            <div className="flex max-[476px]:grid-cols-1 max-lg:grid max-lg:grid-cols-2 gap-6 max-w-[88vw]  mx-auto justify-between py-16 text-white ">
+            <div className="flex max-[476px]:grid-cols-1 max-lg:grid max-lg:grid-cols-2 gap-6 max-w-[88vw]  mx-auto justify-between py-14 text-white ">
                 {data.map((item, index) => (
                     <motion.div
                         variants={{
@@ -78,11 +78,11 @@ const Projects = () => {
                                     height={40}
                                     className="rounded-xl"
                                 />
-                                <h1 className="text-[36px] sm:text-[40px] text-center font-extrabold transition-transform duration-300 ease-in-out group-hover:-translate-y-2  ">
+                                <h1 className="text-[36px] pt-2 sm:text-[40px] text-center font-extrabold transition-transform duration-300 ease-in-out group-hover:-translate-y-2  ">
                                     {startCounting && <CountUp start={0} end={item.id} duration={2} delay={index * 0} />}+
                                 </h1>
                             </div>
-                            <p className="text-[20px] sm:text-[22px] font-bold pt-1 max-lg:text-center  ">
+                            <p className="text-[20px] sm:text-[22px] font-bold pt-1  ">
                                 {item.name}
                             </p>
                         </div>

@@ -13,7 +13,7 @@ const Dealsin = () => {
                             whileInView="visible"
                             transition={{ duration: 0.8, delay: 0 }}
                             viewport={{ once: true }}>
-                <h1 className="unihead">We Deals In</h1>
+                <h1 className="unihead mt-20">We Deals In</h1>
             </motion.div>
 
 
@@ -70,7 +70,7 @@ const Dealsin = () => {
                             whileInView="visible"
                             transition={{ duration: 0.5, delay: 0 }}
                             viewport={{ once: true }}
-                            className="text-[18px] mb-4"><span className="text-primary">CIVIL</span><span className="text-brown">MANTRA</span> is providing services in various sectors like Roads & Bridges, Expressways, Tunnels, Irrigation, Urban Development. The team of CIVILMANTRA has vast experience in designing various types of roads. Currently, we are executing detailed Project Reports/ Detailed Design of over 3500 km of major NH projects and providing consultancy for another 32,000 km of NH/SH.
+                            className="text-[18px] mb-4 text-justify"><span className="text-primary">CIVIL</span><span className="text-brown">MANTRA</span> is providing services in various sectors like Roads & Bridges, Expressways, Tunnels, Irrigation, Urban Development. The team of CIVILMANTRA has vast experience in designing various types of roads. Currently, we are executing detailed Project Reports/ Detailed Design of over 3500 km of major NH projects and providing consultancy for another 32,000 km of NH/SH.
                         </motion.h2>
 
                         <motion.ul
@@ -82,7 +82,7 @@ const Dealsin = () => {
                             whileInView="visible"
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                             className="list-disc text-primary ml-5 mb-4 marker:text-brown">
+                             className="list-disc text-xl text-justify text-primary ml-5 mb-4 marker:text-brown">
                             <li>Pre-Feasibility Studies</li>
                             <li>Pre & Post Tender Engineering Services</li>
                             <li>Proof & Safety Consultant</li>
@@ -99,7 +99,7 @@ const Dealsin = () => {
                             initial="hidden"
                             whileInView="visible"
                             transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }} className="text-base">
+                            viewport={{ once: true }} className="text-base text-justify">
                             The following abstract shows the complete order book scenario: CivilMantra is an Engineering & Management Consultancy providing services for Design and Construction Supervision, Pre-bid services for National Highway Authority of India, Ministry of Surface Transport, Government of India, and Private Developers/ Contractors.
                         </motion.p>
                     </div>

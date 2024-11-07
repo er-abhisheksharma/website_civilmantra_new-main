@@ -50,7 +50,7 @@ const Associate = () => {
         {[...images, ...images].map((item, index) => (
           <div
             key={index}
-            className="flex-shrink-0 bg-white rounded-3xl  my-16  w-[200px] h-[200px] flex items-center justify-center"
+            className="flex-shrink-0 bg-white rounded-3xl  my-16   w-[200px] h-[200px] flex items-center justify-center"
           >
             <Image
               src={item.image}

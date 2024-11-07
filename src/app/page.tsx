@@ -26,9 +26,9 @@ export default function Home() {
       <Aboutus/>
       <Projects/>
       <Business/>
-      
-      <Clients/>
       <Associate/>
+      <Clients/>
+      
 
 
     </>

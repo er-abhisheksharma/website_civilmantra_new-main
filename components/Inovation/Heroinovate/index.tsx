@@ -29,7 +29,7 @@ const Heroinovate = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className='max-sm:w-full max-[1024px]:h-[35vh] max-[1024px]:w-[90%] max-sm:h-[40vh] w-[60%] h-[65vh] flex flex-col justify-center items-center max-sm:justify-start text-center gap-4 overflow-hidden z-10'>
                     <p className='max-sm:text-3xl max-[1024px]:text-5xl max-sm:pt-0 pt-20  text-6xl font-semibold max-[1024px]:pt-0'>
-                        Inovation
+                        Innovation
                     </p>
                     
                 </motion.div>

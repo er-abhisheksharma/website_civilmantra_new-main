@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 
 const Top = () => {
     return (
-        <div className="relative w-full h-[90vh] ">
+        <div className="relative w-full h-[80vh] ">
             {/* Background image */}
             <Image
                 src={"/images/Sectors/Herosectors/roads.png"}
                 alt="Background"
                 width={500}
-                height={500}
+                height={300}
                 className="w-full h-full absolute top-0 left-0 object-cover -z-10"
             />
 
             {/* Dark overlay */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
 
             {/* Centered Heading Content */}
-            <div className="flex justify-center items-center h-full z-10 px-4 max-w-[88vw] mx-auto">
+            <div className="flex  items-center h-full z-10 px-4 max-w-[90vw] mx-auto ">
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },
@@ -26,7 +26,7 @@ const Top = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className=" max-w-[950px] mx-auto"
+                    className=" max-w-[950px]  mt-12 "
                 >
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-secondary my-5">
                         A Legacy Etched in <span className="text-red-600">Stone</span>

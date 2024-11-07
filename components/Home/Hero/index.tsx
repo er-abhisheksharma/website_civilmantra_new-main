@@ -86,7 +86,7 @@ const Hero = () => {
 
                 {/* Centered Heading Content */}
                 <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
-                    <div className=" text-white max-w-[950px] mt-[60px]">
+                    <div className=" text-white max-w-[950px] mt-[62px]">
                         <motion.div
                             variants={{
                                 hidden: { opacity: 0, y: -20 },
@@ -102,14 +102,14 @@ const Hero = () => {
                                 <span className="text-secondary">We Don't Just Build</span>{" "}
                                 <span className="text-red-600 text-6xl">Structures</span>
                             </h1>
-                            <h2 className="mt-5 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl text-secondary">
+                            <h2 className="mt-1 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl text-secondary">
                                 We Build a Better <span className="text-red-600 text-6xl">Tomorrow</span>
                             </h2>
                         </motion.div>
 
                         {/* Typing animation for paragraph */}
                         <motion.p
-                            className="mt-5 font-normal leading-7 lg:text-xl md:text-lg sm:text-base max-sm:hidden"
+                            className="mt-5 font-normal leading-7 lg:text-xl md:text-lg sm:text-base max-sm:hidden text-justify"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 2 }}
@@ -122,8 +122,8 @@ const Hero = () => {
 
             {/* Sliding Section */}
             <div className="bg-primary overflow-hidden ">
-                <ul className="flex gap-x-52 py-2 whitespace-nowrap animate-slide text-white">
-                    <li><a href="#roadsbridges">Roads & Bridges</a></li>
+                <ul className="flex gap-x-52 py-2 cursor-default whitespace-nowrap animate-slide text-white text-xl ">
+                    <li>Roads & Bridges</li>
                     <li>Tunnels</li>
                     <li>Transport Planning</li>
                     <li>Urban Infrastructure</li>
