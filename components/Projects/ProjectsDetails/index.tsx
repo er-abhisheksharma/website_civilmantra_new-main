@@ -316,21 +316,53 @@ const data: ProjectData[] = [
     },
 ];
 
+// Custom Next Arrow
+const NextArrow = (props: { onClick: any; }) => {
+    const { onClick } = props;
+    return (
+        <div
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer z-10" // Change 'right-4' to 'right-8'
+            onClick={onClick}
+        >
+            <svg className="" width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        </div>
+    );
+};
+
+// Custom Previous Arrow
+const PrevArrow = (props: { onClick: any; }) => {
+    const { onClick } = props;
+    return (
+        <div
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 cursor-pointer z-10" // Change 'left-4' to 'left-8'
+            onClick={onClick}
+        >
+            <svg className="" width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        </div>
+    );
+};
+
+
 const ProjectDetails = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData>(data[0]);
 
-    // Slider settings
+    // Slider settings with custom arrows
     const sliderSettings = {
         dots: true,
         infinite: true,
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 3,
-        arrows: true,
+        nextArrow: <NextArrow onClick={undefined} />,
+        prevArrow: <PrevArrow onClick={undefined} />,
     };
 
     return (
-        <div className="max-w-[88vw] mx-auto my-20">
+        <div className="max-w-[90vw] mx-auto my-20">
             {/* Project selection buttons */}
             <motion.div
                 variants={{
@@ -341,15 +373,15 @@ const ProjectDetails = () => {
                 whileInView="visible"
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="flex justify-center gap-8 mb-8"
+                className="flex justify-center gap-8"
             >
                 {data.map((projectItem) => (
                     <button
                         key={projectItem.id}
                         className={`px-4 py-2 mb-10 
                         ${selectedProject.id === projectItem.id
-                                ? 'bg-primary text-white relative -translate-y-1 scale-125 transition-transform duration-300 ease-in-out'
-                                : 'bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out shadow-xl'} 
+                                ? 'bg-primary text-white relative -translate-y-1 scale-110 transition-transform duration-300 ease-in-out'
+                                : 'bg-white text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out shadow-xl hover:scale-110 '} 
                         rounded-lg`}
                         onClick={() => setSelectedProject(projectItem)}
                     >
@@ -369,7 +401,7 @@ const ProjectDetails = () => {
                 >
                     <Slider {...sliderSettings}>
                         {selectedProject.businessdata.map((item, index) => (
-                            <div key={index} className="flex justify-center items-center mb-10">
+                            <div key={index} className="flex justify-center items-center my-10">
                                 <div className="group perspective-1000 mx-auto h-[350px] w-[350px]">
                                     <div className="rotate-container">
                                         {/* Front Side */}
@@ -385,7 +417,7 @@ const ProjectDetails = () => {
 
                                         {/* Back Side */}
                                         <div className="front-side bg-gray-100 rounded-lg shadow-md y-5">
-                                            <div className="flex justify-center items-center w-full h-full ">
+                                            <div className="flex justify-center items-center w-full h-full">
                                                 <Image
                                                     src={item.flipimage}
                                                     alt="Back Side Image"

@@ -6,7 +6,7 @@ const Top = () => {
         <div className="relative w-full h-[80vh] ">
             {/* Background image */}
             <Image
-                src={"/images/Sectors/Herosectors/roads.png"}
+                src={"/images/Sectors/Herosectors/Bridges.jpg"}
                 alt="Background"
                 width={500}
                 height={300}
@@ -26,9 +26,9 @@ const Top = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className=" max-w-[950px]  mt-12 "
+                    className=" max-w-[70vw]  mt-12 "
                 >
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-secondary my-5">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl text-secondary my-5">
                         A Legacy Etched in <span className="text-red-600">Stone</span>
                     </h1>
                     <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white">

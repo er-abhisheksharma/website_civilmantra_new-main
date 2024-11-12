@@ -86,7 +86,7 @@ const Hero = () => {
 
                 {/* Centered Heading Content */}
                 <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
-                    <div className=" text-white max-w-[950px] mt-[62px]">
+                    <div className=" text-white max-w-[70vw] mt-[62px]">
                         <motion.div
                             variants={{
                                 hidden: { opacity: 0, y: -20 },
@@ -121,8 +121,17 @@ const Hero = () => {
             </div>
 
             {/* Sliding Section */}
-            <div className="bg-primary overflow-hidden ">
-                <ul className="flex gap-x-52 py-2 cursor-default whitespace-nowrap animate-slide text-white text-xl ">
+            <motion.div
+                            variants={{
+                                hidden: { opacity: 0, y: 0 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            initial="hidden"
+                            whileInView="visible"
+                            transition={{ duration: 0.8, delay: 0 }}
+                            viewport={{ once: true }}
+                         className="bg-primary overflow-hidden ">
+                <ul className="flex gap-x-52  py-2 cursor-default whitespace-nowrap animate-slide text-white text-xl ">
                     <li>Roads & Bridges</li>
                     <li>Tunnels</li>
                     <li>Transport Planning</li>
@@ -147,7 +156,7 @@ const Hero = () => {
                         animation: slide 20s linear infinite;
                     }
                 `}</style>
-            </div>
+            </motion.div>
             </div>
         </>
     );

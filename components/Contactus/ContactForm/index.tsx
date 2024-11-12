@@ -45,7 +45,7 @@ const ContactForm = () => {
 
       if (response.status === 200) {
         toast.success("Thank you! We'll get back to you soon.", {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 1500,
           hideProgressBar: false,
           closeOnClick: true,
@@ -63,7 +63,7 @@ const ContactForm = () => {
         });
       } else {
         toast.error("Failed to send. Check your connection and retry.", {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 1500,
           hideProgressBar: false,
           closeOnClick: true,
@@ -74,7 +74,7 @@ const ContactForm = () => {
       }
     } catch (error) {
       toast.error("Error! Unable to send. Try again later.", {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
@@ -87,30 +87,12 @@ const ContactForm = () => {
 
   return (
     <>
-      {/* SEO Head Section */}
-      <Head>
-        <title>Contact Us - Civil Mantra</title>
-        <meta name="description" content="Get in touch with Civil Mantra for any queries. Contact us through phone, email, or visit us at our office in Gurugram." />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://www.civilmantra.com/contact" />
-
-        {/* Open Graph Meta Tags for Social Media */}
-        <meta property="og:title" content="Contact Civil Mantra" />
-        <meta property="og:description" content="Reach out to Civil Mc antra for queries or services. Contact us via phone, email, or visit our office." />
-        <meta property="og:url" content="https://www.civilmantra.com/contact" />
-        <meta property="og:image" content={`${MEDIA_URL}/Contact/contact-banner.jpg`} />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Civil Mantra" />
-        <meta name="twitter:description" content="Get in touch with Civil Mantra. Contact us via phone, email, or visit us." />
-        <meta name="twitter:image" content={`${MEDIA_URL}/Contact/contact-banner.jpg`} />
-      </Head>
+      
 
       {/* Contact Form Section */}
-      <div className="relative mt-20">
+      <div className="relative mt-20 lg:mr-24">
         <div className=" max-sm:hidden absolute top-0 left-0 w-full h-full opacity-60"></div>
-        <div className="max-sm:flex-col flex max-[1024px]:justify-around justify-center items-start max-[1024px]:gap-10 max-[1024px]:px-4 gap-28 max-sm:gap-6 max-sm:px-4 max-sm:py-0 px-10 max-sm:mt-0 pb-20 poppins relative z-10">
+        <div className="max-sm:flex-col flex max-[1024px]:justify-around justify-center items-start max-[1024px]:gap-10 gap-28 max-sm:gap-6 max-sm:px-4 max-sm:py-0 px-10 max-sm:mt-0 pb-20 poppins relative z-10">
           <ToastContainer
             newestOnTop
             draggable
@@ -120,15 +102,10 @@ const ContactForm = () => {
             position="top-center"
             pauseOnFocusLoss={false}
           />
-
-
-
           <div className="max-[1024px]:w-[45%] max-sm:w-full max-sm:px-4 p-8 px-12 rounded-lg shadow-[0_0_45px_1px_rgba(0,0,0,0.1)] w-[36vw] bg-white bg-opacity-100">
             <form className="space-y-6" onSubmit={handleSubmit}>
 
               <div>
-
-
                 <label className="block darkgray text-sm font-semibold mb-2">
                   Name
                   <input
@@ -195,9 +172,9 @@ const ContactForm = () => {
           </div>
 
           {/* Contact Info Section */}
-          <div className="max-[1024px]:w-[40vw] max-sm:w-full bg-white px-8 max-sm:px-2 w-[35vw] rounded-lg py-10 ">
-            <h2 className="max-sm:hidden blue text-4xl font-semibold mb-4 text-primary">Connect with us</h2>
-            <p className="max-sm:hidden darkgray mb-6 w-[26vw]">For any kind of query, contact us with the details below.</p>
+          <div className="max-md:mb-10 max-[1024px]:w-[50vw] max-sm:w-full bg-white px-8 max-sm:px-2 w-[35vw] rounded-lg py-10  shadow-[0_0_45px_1px_rgba(0,0,0,0.1)] ">
+            <h2 className=" blue text-4xl font-semibold mb-4 text-primary">Connect with us</h2>
+            <p className=" darkgray mb-6 lg:w-[26vw]">For any kind of query, contact us with the details below.</p>
             <div className="max-[1024px]:w-full max-sm:w-full w-[20vw] my-6 flex gap-2 items-start">
               <img src={callicon} alt="Call" className='w-12' />
               <div>

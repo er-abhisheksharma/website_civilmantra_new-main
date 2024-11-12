@@ -1,7 +1,7 @@
 const img = [
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
+    { image: "/images/Sectors/Tunnels/1729263877541 (1).jpg" },
+    { image: "/images/Sectors/Tunnels/1720754084821.jpg" },
+    { image: "/images/Sectors/Tunnels/1720754084838.jpg" },
 
 ]
 
@@ -21,14 +21,15 @@ const Tunnels = () => {
                                 <Image
                                     src={item.image}
                                     alt=""
-                                    width={index === 0 ? 450 : index === 2 ? 450 : 370}
-                                    height={index === 1 ? 350 : 300}
+                                    width={index === 0 ? 350 : index === 2 ? 350 : 430}
+                                    height={index === 1 ? 450 : 300}
                                     className="rounded-lg hover:scale-110 transition-transform duration-300 shadow-2xl shadow-gray-500"
                                 />
                             </div>
                         </div>
                     ))}
                 </div>
+                <div className="text-justify">
                 <div>
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Tunneling Expertise:
                         <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Navigating Complexities</span>
@@ -46,7 +47,7 @@ const Tunnels = () => {
                          
                     </p>
                 </div>
-                <div>
+                <div  className="text-justify">
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Urban Tunneling
                     </h1>
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
@@ -60,6 +61,7 @@ const Tunnels = () => {
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
                     Efficient and well-maintained utility tunnels are essential for the smooth functioning of urban areas. CivilMantra designs and constructs utility tunnels that house essential services such as power lines, water pipes, and communication cables, ensuring their long-term functionality and accessibility for maintenance.
                     </p>
+                </div>
                 </div>
             </div>
         </>

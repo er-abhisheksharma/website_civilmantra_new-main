@@ -1,39 +1,12 @@
 import Slider from "react-slick";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { MouseEventHandler } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { useState } from "react";
-import { motion } from "framer-motion"
 
-// Custom Left Arrow
-const PrevArrow = (props: any) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={`${className} left-[-30px]`}
-            style={{ ...style, display: "block", zIndex: 10 }}
-            onClick={onClick}
-        >
-            <FaArrowLeft size={30} className="text-black" />
-        </div>
-    );
-};
-
-// Custom Right Arrow
-const NextArrow = (props: any) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={`${className} right-[-30px]`}
-            style={{ ...style, display: "block", zIndex: 10 }}
-            onClick={onClick}
-        >
-            <FaArrowRight size={30} className="text-black" />
-        </div>
-    );
-};
-
+// Array of key members with their details
 const keymembers = [
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
@@ -65,43 +38,55 @@ const keymembers = [
         name: "Bruce Wayne",
         position: "CEO",
     },
-    {
-        image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Bruce Wayne",
-        position: "CEO",
-    },
 ];
 
-const Ourteam = () => {
-    const [currentSlide, setCurrentSlide] = useState(Math.floor(keymembers.length / 2)); // Start at the center
+// Custom Arrow Components
 
-    // Carousel settings for react-slick
+// Custom Next Arrow component
+const NextArrow = ({ onClick }: { onClick?: MouseEventHandler<HTMLDivElement> }) => {
+    return (
+        <div
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 rounded-full bg-gray-800 text-white cursor-pointer z-10"
+            onClick={onClick}
+        >
+            <FaArrowRight size={20} />
+        </div>
+    );
+};
+
+// Custom Prev Arrow component
+const PrevArrow = ({ onClick }: { onClick?: MouseEventHandler<HTMLDivElement> }) => {
+    return (
+        <div
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-full bg-gray-800 text-white cursor-pointer z-10"
+            onClick={onClick}
+        >
+            <FaArrowLeft size={20} />
+        </div>
+    );
+};
+
+const Ourteam = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        initialSlide: Math.floor(keymembers.length / 2), // Start from the middle
-        centerMode: true,
-        centerPadding: "0px",
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-        beforeChange: (current: number, next: number) => {
-            setCurrentSlide(next); // Update the current slide
-        },
+        nextArrow: <NextArrow onClick={undefined} />,  // Using custom NextArrow component
+        prevArrow: <PrevArrow onClick={undefined} />,  // Using custom PrevArrow component
         responsive: [
             {
-                breakpoint: 1024, // Tablet size
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 768, // For smaller screens
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 1, // Show 1 member per slide on small screens
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 },
             },
@@ -117,12 +102,13 @@ const Ourteam = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
-                transition={{ duration: 1, delay: 0 }}
-                viewport={{ once: true }}>
-                <h1 className="unihead mb-10  text-center my-20">Our Members</h1>
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+            >
+                <h1 className="unihead mb-10 text-center text-2xl md:text-3xl lg:text-4xl my-20">Our Members</h1>
             </motion.div>
 
-            <div className="max-w-[88vw] mx-auto ">
+            <div className="max-w-[85vw] mx-auto">
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },
@@ -131,17 +117,18 @@ const Ourteam = () => {
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 1, delay: 0.2 }}
-                    viewport={{ once: true }} className="flex flex-col items-center ">
-
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center"
+                >
                     <Image
                         src="/images/AboutUs/Keymembers/download (3).png"
                         alt="Director"
-                        width={150}
-                        height={200}
-                        className="rounded-xl object-cover "
+                        width={120}
+                        height={150}
+                        className="rounded-xl object-cover"
                     />
-                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr. Shushil Bhardwaj</h1>
-                    <p className="text-gray-700 text-md sm:text-lg lg:text-xl font-semibold">Director</p>
+                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr. Head</h1>
+                    <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">Director</p>
                 </motion.div>
 
                 {/* Carousel for key members */}
@@ -153,28 +140,27 @@ const Ourteam = () => {
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 1, delay: 0.4 }}
-                    viewport={{ once: true }} className="max-w-[100vw] mx-auto mt-5">
+                    viewport={{ once: true }}
+                    className="my-10"
+                >
                     <Slider {...settings}>
                         {keymembers.map((item, index) => (
                             <div
                                 key={index}
-                                className={` flex items-center justify-center rounded-xl gap-x-4 py-4 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-50"}`}
-                                style={{ margin: '0 10px' }} // Added margin for spacing
+                                className="flex flex-col items-center rounded-xl  p-6 transition-opacity duration-500 hover:opacity-90"
                             >
-                                <div className=" w-[400px] mx-auto">
-                                <div className="flex items-center justify-center">
+                                <div className="flex items-center justify-center w-full h-full">
                                     <Image
                                         src={item.image}
                                         alt={item.name}
-                                        width={150}
-                                        height={150}
+                                        width={120}
+                                        height={120}
                                         className="rounded-lg object-cover"
                                     />
                                 </div>
                                 <div className="mt-4 text-center">
-                                    <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-brown">{item.name}</h1>
-                                    <p className="text-gray-700 text-md sm:text-lg lg:text-xl">{item.position}</p>
-                                </div>
+                                    <h1 className="text-md sm:text-lg lg:text-2xl font-bold text-brown">{item.name}</h1>
+                                    <p className="text-gray-700 text-sm sm:text-lg">{item.position}</p>
                                 </div>
                             </div>
                         ))}

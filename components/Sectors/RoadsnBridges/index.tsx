@@ -40,6 +40,7 @@ const Roadsbridges = () => {
                         </div>
                     ))}
                 </div>
+                <div className="text-justify">
                 <div>
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Building Enduring Connections:
                         <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Roads & Bridges</span>
@@ -71,6 +72,7 @@ const Roadsbridges = () => {
                     We recognize the unique challenges faced by rural communities in terms of accessibility and infrastructure development. Our team designs and implements rural road projects that improve connectivity to essential services, markets, and educational
                          
                     </p>
+                </div>
                 </div>
             </div>
 

@@ -29,6 +29,7 @@ const Urbaninfra = () => {
                         </div>
                     ))}
                 </div>
+                <div className="text-justify">
                 <div>
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Shaping Livable Cities
                         <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Urban Infrastructure Development</span>
@@ -58,6 +59,7 @@ const Urbaninfra = () => {
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
                     We believe in harnessing the power of technology to create intelligent and efficient urban environments. We collaborate with clients to integrate smart technologies in areas like traffic management, waste collection, and energy efficiency, fostering sustainable and resilient cities.
                     </p>
+                </div>
                 </div>
             </div>
         </>

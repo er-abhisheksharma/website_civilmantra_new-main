@@ -2,14 +2,14 @@
 
 const Sectors = [
     {
-        Sector: "Roads & Bridges",
-        bgimage: "/images/Sectors/Herosectors/roads.png",
-        discription: "lorem lipsum road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#roadsbridges",
+        Sector: "Expressway",
+        bgimage: "/images/Sectors/Herosectors/1730806663019.jpg",
+        discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
+        url: "#Expressway",
     },
     {
         Sector: "Tunnels",
-        bgimage: "/images/Sectors/Herosectors/Tunnel.jpg",
+        bgimage: "/images/Sectors/Tunnels/1720754084838.jpg",
         url: "#tunnels",
         discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
     },
@@ -32,11 +32,12 @@ const Sectors = [
         url: "#Railway",
     },
     {
-        Sector: "Expressway",
-        bgimage: "/images/Sectors/Herosectors/Expressway.webp",
-        discription: "lorem lipsun road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
-        url: "#Expressway",
+        Sector: "Bridges",
+        bgimage: "/images/Sectors/Herosectors/Bridges.jpg",
+        discription: "lorem lipsum road over bridge stock photos, vectors, and illustrations are available royalty-free for download",
+        url: "#roadsbridges",
     },
+   
     {
         Sector: "Metro",
         bgimage: "/images/Sectors/Herosectors/metrotunnel-2.jpg",
@@ -64,7 +65,7 @@ const Herosectors = () => {
     };
     return (
         <>
-            <div className="relative w-full h-[94vh] ">
+            <div className="relative w-full h-[95vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
                     <source src="/videos/Home/Bgvideo.mp4" type="video/mp4" />
@@ -87,7 +88,7 @@ const Herosectors = () => {
                             transition={{ duration: 0.8, delay: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="grid grid-cols-4 max-w-[88vw] gap-x-2 mx-auto gap-y-2 mt-5">
+                            <div className="grid grid-cols-4 max-w-[88vw] gap-x-2 mx-auto gap-y-2 mt-11">
                                 {Sectors.map((item, index) => (
                                     <motion.div
                                         key={index}
@@ -100,7 +101,7 @@ const Herosectors = () => {
                                         whileInView="visible"
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                         viewport={{ once: true }}
-                                        className="h-[300px] w-80 flex flex-col relative overflow-hidden group cursor-pointer rounded-lg" // Use flex-col to arrange items vertically
+                                        className="h-[290px] w-80 flex flex-col relative overflow-hidden group cursor-pointer rounded-lg" // Use flex-col to arrange items vertically
                                     >
                                         {/* Background Image */}
                                         <div

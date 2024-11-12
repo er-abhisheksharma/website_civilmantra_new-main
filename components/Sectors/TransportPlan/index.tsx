@@ -29,6 +29,7 @@ const Transport = () => {
                         </div>
                     ))}
                 </div>
+                <div className="text-justify">
                 <div>
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Optimizing Movement:
                         <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Transport Planning Solutions</span>
@@ -58,6 +59,7 @@ const Transport = () => {
                     <p className="text-[18px] leading-[32px] mb-5 font-normal ">
                     We recognize the importance of accessible and efficient public transportation systems in reducing car dependence and promoting sustainable urban development. We collaborate with clients to enhance public transport infrastructure, improve service frequency and reliability, and create a user-friendly experience for commuters.
                     </p>
+                </div>
                 </div>
             </div>
         </>

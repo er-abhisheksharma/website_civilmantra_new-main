@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-10 right-16 transition-opacity duration-300 
+            className={`fixed z-10 max-sm:right-2 bottom-10 right-16 transition-opacity duration-300 
             ${visible ? 'opacity-100' : 'opacity-0'} 
             bg-primary text-white py-2 px-2 rounded-lg shadow-lg hover:bg-blue-700`}
             style={{ display: visible ? 'block' : 'none' }} // Additional visibility control

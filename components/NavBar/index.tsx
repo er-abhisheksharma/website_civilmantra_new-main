@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { usePathname } from 'next/navigation'; // Import usePathname for current route detection
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,14 @@ const NavBar = () => {
 
   return (
 
-    <div
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.5, delay: 0 }}
       className={`w-full fixed top-0 z-50 ${isScrolled ? 'bg-white bg-opacity-100' : 'bg-white bg-opacity-100'
         } text-gray-700 shadow-lg transition-all duration-300 ease-in-out`}
     >
@@ -49,7 +57,12 @@ const NavBar = () => {
           className="lg:hidden bg-white px-4 py-2 rounded-md"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? 'Close' : 'Menu'}
+          <Image
+            src="/images/logo/menu.png"
+            alt="Menu icon"
+            width={24} // Adjust size as needed
+            height={24}
+          />
         </button>
 
         {/* Desktop Navigation */}
@@ -66,8 +79,8 @@ const NavBar = () => {
               key={index}
               href={link.url}
               className={`px-2 py-1 rounded-lg text-xl relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
-                  ? 'scale-125 text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black'
-                  : 'hover:bg-white hover:text-black'
+                ? 'scale-125 text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black'
+                : 'hover:bg-white hover:text-black'
                 }`}
             >
               {link.name}
@@ -89,7 +102,18 @@ const NavBar = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 w-full bg-grays text-gray-700 flex flex-col rounded-md z-10">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: -20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.1, delay: 0 }}
+            className={`lg:hidden absolute top-16 left-0 w-full bg-grays text-gray-700 flex flex-col rounded-b-md z-10 max-sm:mt-[28px] mt-[20px]
+            transform transition-transform duration-500 ease-in-out opacity-0
+            ${isMenuOpen ? 'translate-y-0 opacity-100' : ''}`}
+          >
             {[
               { name: "Home", url: "/" },
               { name: "About us", url: "/AboutUs" },
@@ -101,7 +125,7 @@ const NavBar = () => {
               <Link
                 key={index}
                 href={link.url}
-                className={`px-3 py-2 hover:bg-gray-800 ${pathname === link.url ? 'bg-gray-800 text-white' : ''
+                className={`px-3 py-2 hover:bg-gray-800 ${pathname === link.url ? ' scale-125 text-black font-bold' : ''
                   }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -111,16 +135,16 @@ const NavBar = () => {
 
             <Link
               href="/ContactUs"
-              className={`hover:bg-amber-600 text-white bg-primary px-10 py-3 rounded-md mt-2 ${pathname === '/ContactUs' ? 'bg-amber-600' : ''
+              className={`hover:bg-amber-600 text-white bg-primary px-10 py-3 rounded-b-md mt-2 ${pathname === '/ContactUs' ? 'bg-logored' : ''
                 }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact us
             </Link>
-          </div>
+          </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

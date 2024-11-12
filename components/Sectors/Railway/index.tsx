@@ -29,6 +29,7 @@ const Railway = () => {
                         </div>
                     ))}
                 </div>
+                <div className="text-justify">
                 <div>
                     <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Railway Station Design:
                         <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Enhancing Passenger Experience and Operational Efficiency
@@ -55,6 +56,7 @@ const Railway = () => {
                     Beyond passenger comfort, we optimize station layouts for efficient passenger movement and freight handling.
                      
                     </p>
+                </div>
                 </div>
                 
             </div>
