@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { API, MEDIA_URL } from '../../../src/axios';
 import { ToastContainer, toast } from "react-toastify";
-import Head from 'next/head'; // Import Head for SEO
+
 import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {

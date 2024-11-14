@@ -77,7 +77,7 @@ const Hero = () => {
             <div  className="relative w-full h-[88vh] ">
                 {/* Background video */}
                 <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
-                    <source src="/videos/Home/Bgvideo.mp4" type="video/mp4" />
+                    <source src="/videos/Home/20123298-uhd_3840_2160_25fps.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 

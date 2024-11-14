@@ -97,7 +97,7 @@ const Position : React.FC = () => {
     };
 
     return (
-        <div className='w-full flex flex-col justify-center items-center  max-[1024px]:mt-0 mt-[20%] max-sm:mt-[20%] gap-20 max-sm:gap-14 max-sm:px-4 relative top-[-215px] '>
+        <div className='w-full flex flex-col justify-center items-center  max-[1024px]:mt-0 mt-[20%] max-sm:mt-[70%] gap-20 md:mt-[30%] lg:mt-[18%] xl:mt-13%] max-sm:gap-14 max-sm:px-4 relative top-[-215px] '>
             <div className="max-sm:w-full flex py-3 px-6 cursor-pointer max-sm:shadow-[0_0_40px_1px_rgba(0,0,0,0.2)] shadow-[0_0_40px_1px_rgba(0,0,0,0.1)] rounded-xl">
             <motion.div
                     variants={{
@@ -163,8 +163,8 @@ const Position : React.FC = () => {
                 transition={{ duration: 0.8, delay: index*0.4 }}
                     className="vacancy-box max-sm:w-full w-[90%] relative flex my-6 max-sm:justify-start justify-between cursor-pointer bg-[rgba(245,245,245,0.4)] px-10 py-10 border-[1px] border-[#e0e1e9] rounded-lg"
                 >
-                    <div className="w-[50%] max-[1024px]:w-[75%] flex flex-col items-start justify-center max-sm:gap-4 max-sm:p-2">
-                        <div className="w-full max-sm:flex-col flex items-center gap-10 max-sm:gap-4">
+                    <div className="w-[50%] max-[1024px]:w-[100%] flex flex-col items-start justify-center max-sm:gap-4 max-sm:p-2">
+                        <div className="w-full max-sm:flex-col flex lg:items-center gap-10 max-sm:gap-4">
                             <div className="position-title text-3xl font-semibold">{item.position_name}</div>
                             <div className="max-[1024px]:w-[25%] w-[20%] text-sm py-1 rounded-full uppercase text-center bg-[#EFF0F6]">
                                 {"Job ID: " + item.id.slice(0, 5)}

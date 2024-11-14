@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 // Social media icons and links
 const Socialmedia = [
@@ -35,10 +36,19 @@ const Services = [
 ];
 
 const Footer = () => {
+    const [clickCount, setClickCount] = useState(0);
+
+    const handleLogoClick = () => {
+        setClickCount((prevCount: number) => prevCount + 1);
+        if (clickCount + 1 === 5) {
+            window.location.href = "AdminPanel"; 
+        }
+    };
+
     return (
         <>
             <div className="bg-grays ">
-                <div className="max-w-[88vw] mx-auto pb-3 pt-5   flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 lg:flex-row lg:justify-between space-y-8 lg:space-y-0 ">
+                <div className="max-w-[88vw] mx-auto pb-3 pt-8   flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 lg:flex-row lg:justify-between space-y-8 lg:space-y-0 ">
                     {/* Logo and Address */}
                     <div className="lg:w-1/4 max-lg:mt-9">
                         <Image
@@ -47,6 +57,7 @@ const Footer = () => {
                             height={100}
                             width={100}
                             className="mb-4"
+                            onClick={handleLogoClick}
                         />
                         <motion.div
                             variants={{

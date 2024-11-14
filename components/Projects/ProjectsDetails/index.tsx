@@ -321,10 +321,10 @@ const NextArrow = (props: { onClick: any; }) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer z-10" // Change 'right-4' to 'right-8'
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer z-10"
             onClick={onClick}
         >
-            <svg className="" width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
         </div>
@@ -336,29 +336,44 @@ const PrevArrow = (props: { onClick: any; }) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 cursor-pointer z-10" // Change 'left-4' to 'left-8'
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 cursor-pointer z-10"
             onClick={onClick}
         >
-            <svg className="" width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
         </div>
     );
 };
 
-
 const ProjectDetails = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData>(data[0]);
 
-    // Slider settings with custom arrows
+    // Slider settings with custom arrows and responsive slides
     const sliderSettings = {
         dots: true,
         infinite: true,
         speed: 1000,
-        slidesToShow: 3,
+        slidesToShow: 3,  // Default for larger screens
         slidesToScroll: 3,
         nextArrow: <NextArrow onClick={undefined} />,
         prevArrow: <PrevArrow onClick={undefined} />,
+        responsive: [
+            {
+                breakpoint: 1024, // Tablet
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 640, // Mobile
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
@@ -373,7 +388,7 @@ const ProjectDetails = () => {
                 whileInView="visible"
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="flex justify-center gap-8"
+                className="flex justify-center gap-x-8 flex-wrap"
             >
                 {data.map((projectItem) => (
                     <button
@@ -401,39 +416,77 @@ const ProjectDetails = () => {
                 >
                     <Slider {...sliderSettings}>
                         {selectedProject.businessdata.map((item, index) => (
-                            <div key={index} className="flex justify-center items-center my-10">
-                                <div className="group perspective-1000 mx-auto h-[350px] w-[350px]">
+                            <div key={index} className="flex justify-center items-center lg:my-10">
+                                <div className="group  perspective-1000 mt-10 mb-8 mx-auto md:h-[250px] md:w-[250px] h-[300px] w-[250px] sm:h-[300px] sm:w-[300px] lg:h-[290px] lg:w-[290px] xl:h-[350px] xl:w-[350px]">
+                                    {/* Flip Container */}
                                     <div className="rotate-container">
-                                        {/* Front Side */}
-                                        <div className="back-side bg-white p-6 rounded-lg shadow-md border-t-8 border-brown">
-                                            <ul>
-                                                <li className="text-xl mb-3 font-semibold">Location - <span className="text-primary font-normal">{item.location}</span></li>
-                                                <li className="text-xl font-semibold mb-3">{item.head}</li>
-                                                <li className="text-xl mb-3 font-semibold">Length - <span className="text-primary font-normal">{item.km}</span></li>
-                                                <li className="text-xl mb-3 font-semibold">Duration - <span className="text-primary font-normal">{item.duration}</span></li>
-                                            </ul>
-                                            <p className="text-gray-800 font-medium">{item.paragraph}</p>
+                                        {/* front Side */}
+                                        <div className="front-side bg-gray-100 rounded-lg shadow-md relative flex items-center justify-center ">
+                                            <Image
+                                                src={item.flipimage}
+                                                alt="Back Side Image"
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg"></div>
+                                            <motion.div
+                                                variants={{
+                                                    hidden: { opacity: 0, y: -20 },
+                                                    visible: { opacity: 1, y: 0 },
+                                                }}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                transition={{ duration: 0.5, delay: index * 0 }}
+                                                viewport={{ once: true }}
+                                                className="relative z-10 text-left"
+                                            >
+                                                <ul className="list-none space-y-1 sm:space-y-2">
+                                                    <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                                                        Sector - <span className="text-gray-100 font-normal">{item.work}</span>
+                                                    </li>
+                                                    <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                                                        Client - <span className="text-gray-100 font-normal">{item.client}</span>
+                                                    </li>
+                                                    <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                                                        Department - <span className="text-gray-100 font-normal">{item.Department}</span>
+                                                    </li>
+                                                </ul>
+                                            </motion.div>
                                         </div>
-
                                         {/* Back Side */}
-                                        <div className="front-side bg-gray-100 rounded-lg shadow-md y-5">
-                                            <div className="flex justify-center items-center w-full h-full">
-                                                <Image
-                                                    src={item.flipimage}
-                                                    alt="Back Side Image"
-                                                    fill
-                                                    style={{ objectFit: "cover" }}
-                                                    className="rounded-lg"
-                                                />
-                                                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 rounded-lg"></div>
-                                                <div className="p-6 text-gray-200 z-10">
-                                                    <ul>
-                                                        <li className="text-xl mb-3 font-semibold">Work - <span className="font-normal">{item.work}</span></li>
-                                                        <li className="text-xl mb-3 font-semibold">Client - <span className="font-normal">{item.client}</span></li>
-                                                        <li className="text-xl mb-3 font-semibold">Department - <span className="font-normal">{item.Department}</span></li>
+                                        <div className="back-side bg-white p-4 sm:p-6 rounded-lg shadow-md border-t-8 border-brown">
+                                            <motion.div
+                                                variants={{
+                                                    hidden: { opacity: 0, y: -20 },
+                                                    visible: { opacity: 1, y: 0 },
+                                                }}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                transition={{ duration: 0, }}
+                                                viewport={{ once: true }}
+                                                className="flex flex-col justify-between h-full"
+                                            >
+                                                <div className="">
+                                                    <ul className="space-y-2 sm:space-y-3">
+                                                        <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
+                                                            Location - <span className="text-primary font-normal">{item.location}</span>
+                                                        </li>
+                                                        <li className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2">
+                                                            {item.head}
+                                                        </li>
+                                                        <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
+                                                            Length - <span className="text-primary font-normal">{item.km}</span>
+                                                        </li>
+                                                        <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
+                                                            Duration - <span className="text-primary font-normal">{item.duration}</span>
+                                                        </li>
                                                     </ul>
+                                                    <p className="text-gray-800 font-medium self-end text-sm sm:text-base">
+                                                        {item.paragraph}
+                                                    </p>
                                                 </div>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 </div>
@@ -442,7 +495,14 @@ const ProjectDetails = () => {
                     </Slider>
                 </motion.div>
             </AnimatePresence>
+            <style jsx>{`
+        .mySwiper .swiper-pagination {
+          position: static;
+          margin-top: 20px;
+        }
+      `}</style>
         </div>
+        
     );
 };
 

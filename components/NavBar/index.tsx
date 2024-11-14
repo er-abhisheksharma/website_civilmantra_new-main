@@ -37,7 +37,7 @@ const NavBar = () => {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.5, delay: 0 }}
-      className={`w-full fixed top-0 z-50 ${isScrolled ? 'bg-white bg-opacity-100' : 'bg-white bg-opacity-100'
+      className={`w-full fixed top-0 z-50 ${isScrolled ? 'bg-grays bg-opacity-100' : 'bg-white bg-opacity-100'
         } text-gray-700 shadow-lg transition-all duration-300 ease-in-out`}
     >
       <div className="flex flex-row justify-between items-center text-center max-w-[88vw] mx-auto relative z-50">

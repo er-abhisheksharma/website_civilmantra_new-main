@@ -1,4 +1,3 @@
-// components/Roadsbridges.tsx
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -21,64 +20,60 @@ const Roadsbridges = () => {
     }, []);
 
     return (
-        <div id="roadsbridges" className="max-w-[88vw] mx-auto">
-                <div>
-                    <h1 className="unihead mb-10 mt-10">Roads & Bridges</h1>
-                </div>
-                <div className="flex justify-center  items-center gap-x-10"> {/* Flex container */}
+        <div id="roadsbridges" className="max-w-[88vw] mx-auto ">
+            <div>
+                <h1 className="unihead mb-10 mt-10 ">Roads </h1>
+            </div>
+
+            {/* Flex container with responsive adjustments */}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-10">
                     {img.map((item, index) => (
-                        <div key={index} className="flex-shrink-0"> {/* Prevent shrinking of images */}
+                        <div key={index} className=" w-full md:w-auto">
                             <div className="my-5">
                                 <Image
                                     src={item.image}
                                     alt=""
-                                    width={index === 1 ? 450 : 370}
+                                    width={index === 1 ? 420 : 370}
                                     height={index === 1 ? 350 : 300}
-                                    className="rounded-lg hover:scale-110 transition-transform duration-300 shadow-2xl shadow-gray-500"
+                                    className="rounded-lg hover:scale-110 transition-transform duration-300 shadow-2xl shadow-gray-500 mx-auto
+                               " // responsive width classes
                                 />
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="text-justify">
-                <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Building Enduring Connections:
-                        <span className="text-[28px] leading-[28px] mb-5 font-normal text-brown " > Roads & Bridges</span>
-                    </h1>
-                    <p className="text-[18px] leading-[32px] mb-5 font-normal ">
-                        At CivilMantra, we understand the critical role that roads and bridges play in connecting communities, facilitating trade, and driving economic prosperity. Our team of skilled engineers and experienced project managers works collaboratively with clients to design, construct, and supervise the development of:
-                    </p>
-                </div>
-                <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Highways & Expressways
 
+            <div className="text-justify mt-8 space-y-8  px-4 sm:px-2">
+                <div>
+                    <h1 className="text-2xl text-start md:text-[28px] leading-[28px] my-5 font-semibold text-primary">
+                        Building Enduring Connections:
+                        <span className="text-brown font-normal"> Roads </span>
                     </h1>
-                    <p className="text-[18px] leading-[32px] mb-5 font-normal ">
+                    <p className="text-base md:text-[18px] leading-[28px] md:leading-[32px] mb-5 font-normal">
                         At CivilMantra, we understand the critical role that roads and bridges play in connecting communities, facilitating trade, and driving economic prosperity. Our team of skilled engineers and experienced project managers works collaboratively with clients to design, construct, and supervise the development of:
                     </p>
                 </div>
                 <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Bridges    
-                    </h1>
-                    <p className="text-[18px] leading-[32px] mb-5 font-normal ">
+                    <h1 className="text-2xl md:text-[28px] leading-[28px] my-5 font-semibold text-primary max-sm:text-start">Highways & Expressways</h1>
+                    <p className="text-base md:text-[18px] leading-[28px] md:leading-[32px] mb-5 font-normal">
+                        At CivilMantra, we understand the critical role that roads and bridges play in connecting communities, facilitating trade, and driving economic prosperity. Our team of skilled engineers and experienced project managers works collaboratively with clients to design, construct, and supervise the development of:
+                    </p>
+                </div>
+                {/* <div>
+                    <h1 className="text-2xl md:text-[28px] leading-[28px] my-5 font-semibold text-primary">Bridges</h1>
+                    <p className="text-base md:text-[18px] leading-[28px] md:leading-[32px] mb-5 font-normal">
                         Our bridge design expertise encompasses a broad spectrum, from elegant pedestrian bridges to complex multi-span structures. We prioritize aesthetics, functionality, and long-term sustainability, considering factors like traffic volume, seismic resilience, and ease of maintenance.
-                        Rural Roads: We recognize the unique challenges faced by rural communities in terms of accessibility and infrastructure development. Our team designs and implements rural road projects that improve connectivity to essential services, markets, and educational
                     </p>
-                </div>
+                </div> */}
                 <div>
-                    <h1 className="text-[28px] leading-[28px] my-5 font-semibold text-primary">Rural Roads   
-                    </h1>
-                    <p className="text-[18px] leading-[32px] mb-5 font-normal ">
-                    We recognize the unique challenges faced by rural communities in terms of accessibility and infrastructure development. Our team designs and implements rural road projects that improve connectivity to essential services, markets, and educational
-                         
+                    <h1 className="text-2xl md:text-[28px] leading-[28px] my-5 font-semibold text-primary max-sm:text-start">Rural Roads</h1>
+                    <p className="text-base md:text-[18px] leading-[28px] md:leading-[32px] mb-5 font-normal">
+                        We recognize the unique challenges faced by rural communities in terms of accessibility and infrastructure development. Our team designs and implements rural road projects that improve connectivity to essential services, markets, and educational opportunities.
                     </p>
-                </div>
                 </div>
             </div>
-
-    
+        </div>
     );
 };
 
 export default Roadsbridges;
-

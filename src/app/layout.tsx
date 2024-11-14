@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import ScrollToTopButton from "../../components/Scrolltotop"; 
 
 
+
 const leagueSpartan = League_Spartan({
     subsets: ["latin"],
     weight: ["100", "400", "900"], // Adjust as needed
@@ -36,6 +37,7 @@ export default function RootLayout({
                 {children}
                 <Footer />
                 <ScrollToTopButton /> 
+                
             </body>
         </html>
     );

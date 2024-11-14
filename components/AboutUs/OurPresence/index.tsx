@@ -69,7 +69,7 @@ const OurPresence = () => {
                                 className="relative border-[3px] rounded-md border-gray-600 p-5 h-28 text-center flex items-center justify-center overflow-hidden group shadow-2xl"
                                 href={item.url}
                             >
-                                <span className="absolute inset-0 transition-transform duration-500 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full lg:-translate-x-[-500px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
+                                <span className="absolute inset-0 transition-transform duration-500 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full  xl:-translate-x-[-490px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
                                 <span className="relative z-10 text-black group-hover:text-white transition-colors duration-300 text-lg md:text-xl">
                                     {item.text}
                                 </span>

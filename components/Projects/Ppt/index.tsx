@@ -23,15 +23,14 @@ const Projectpdf = () => {
 
   return (
     <>
-      <div className="px-16 max-w-[88vw] mx-auto mb-10">
+      <div className="px-4 md:px-16 max-w-[88vw] mx-auto mb-10">
         {/* Button to Open Excel Data in View Mode */}
         <button
           onClick={() => setIsViewing(true)}
-          className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 ease-in-out "
+          className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 ease-in-out"
         >
-         View More Projects
+          View More Projects
         </button>
-        
 
         {/* Displaying Excel Data in a Table */}
         {isViewing && (
@@ -42,29 +41,32 @@ const Projectpdf = () => {
             >
               Close
             </button>
-            <table className="table-auto w-full text-left border-collapse">
-              <thead>
-                <tr>
-                  {excelData.length > 0 &&
-                    excelData[0].map((header: string, index: number) => (
-                      <th key={index} className="border px-4 py-2">
-                        {header}
-                      </th>
-                    ))}
-                </tr>
-              </thead>
-              <tbody>
-                {excelData.slice(1).map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {row.map((cell: string, cellIndex: number) => (
-                      <td key={cellIndex} className="border px-4 py-2">
-                        {cell}
-                      </td>
-                    ))}
+
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full text-left border-collapse">
+                <thead>
+                  <tr>
+                    {excelData.length > 0 &&
+                      excelData[0].map((header: string, index: number) => (
+                        <th key={index} className="border px-4 py-2 text-sm sm:text-base">
+                          {header}
+                        </th>
+                      ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {excelData.slice(1).map((row, rowIndex) => (
+                    <tr key={rowIndex}>
+                      {row.map((cell: string, cellIndex: number) => (
+                        <td key={cellIndex} className="border px-4 py-2 text-sm sm:text-base">
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {/* Close Button */}
             <button

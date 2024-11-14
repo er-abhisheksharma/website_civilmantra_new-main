@@ -186,7 +186,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="max-w-full mx-auto my-20 px-4 sm:px-8">
+    <div className="max-w-[88vw] mx-auto my-20  ">
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -20 },
@@ -233,7 +233,7 @@ const Gallery = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {currentYearData?.images.map((item, index) => (
             <motion.div

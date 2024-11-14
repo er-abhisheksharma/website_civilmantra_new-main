@@ -12,14 +12,14 @@ const stages = [
 ];
 
 const BusinessGrowthStages = () => {
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null); // Type it as number or null
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null); 
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHoverIndex((prevIndex) => (prevIndex === null ? 0 : (prevIndex + 1) % stages.length)); // 
-    }, 1300); 
+      setHoverIndex((prevIndex) => (prevIndex === null ? 0 : (prevIndex + 1) % stages.length)); 
+    }, 800); 
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -30,15 +30,19 @@ const BusinessGrowthStages = () => {
           <motion.div
             key={index}
             className="flex flex-col items-center text-center transition-transform duration-300 group"
-            animate={{
-              scale: hoverIndex === index ? 1.1 : 1, 
-              y: hoverIndex === index ? -19 : -19, 
+            whileHover={{
+              scale: 1.1,  
+              opacity: 1,
             }}
             transition={{
-              duration: 1,
+              duration: 0.2, 
+            }}
+            animate={{
+              scale: hoverIndex === index ? 1.2 : 1, 
+              y: hoverIndex === index ? -19 : -19, 
             }}
           >
-            {/* Stage Container with increasing height */}
+            
             <div
               className={`w-24 lg:w-40 ${stage.height} ${stage.color} text-white font-semibold rounded-t-lg flex flex-col justify-center transition-transform`}
             >
@@ -52,15 +56,13 @@ const BusinessGrowthStages = () => {
             {/* Stage Info */}
             <div className="bg-white w-24 lg:w-40 text-center shadow-md rounded-b-lg py-3">
               <p className="text-sm font-bold">{stage.stage}</p>
-              <p className="text-md font-medium group-hover:text-black group-hover:scale-125 transition-transform duration-200 group-hover:font-semibold text-gray-800">
+              <p className="text-md font-medium text-gray-800 group-hover:text-black group-hover:scale-125 transition-transform duration-200 group-hover:font-semibold">
                 {stage.range}
               </p>
             </div>
 
             {/* Zone Info */}
-            <p className="mt-2 text-sm text-gray-800 font-medium transition-transform duration-200 group-hover:scale-110 group-hover:text-black"
-            >
-
+            <p className="mt-2 text-sm text-gray-800 font-medium group-hover:scale-110 group-hover:text-black transition-transform duration-200">
               {stage.zone}
             </p>
           </motion.div>

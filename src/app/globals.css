@@ -173,6 +173,31 @@ body {
   -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+
+
+/* Tablet */
+@media only screen and (max-width: 1072px) {
+  .apply-btn{
+      width: 100%;
+  }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 479px) {
+  .vacancy-box{
+      gap: 10px;
+      padding: 10px 15px;
+      flex-direction: column;
+  }
+  .position-title{
+      font-size: 20px;
+  }
+  .apply-btn{
+      width: 100%;
+  }
+}
+
 .vacancy-box, .position-title, .apply-btn{
   transition: 0.3s all linear;
 }
@@ -342,3 +367,6 @@ input{
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
+
+
+
