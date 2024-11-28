@@ -55,7 +55,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
         url: "/LehProject",
     },
-    // Add other project objects as needed
+    
 ];
 
 const Highlighted = () => {
@@ -99,9 +99,9 @@ const Highlighted = () => {
                                 <p className="text-sm md:text-base text-left">
                                     <span className="font-bold">Description:</span> {item.description}
                                 </p>
-                                <button className="mt-2 text-primary text-lg md:text-xl rounded-sm">
+                                {/* <button className="mt-2 text-primary text-lg md:text-xl rounded-sm">
                                     <a href={item.url}>View more &gt;&gt;</a>
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </SwiperSlide>

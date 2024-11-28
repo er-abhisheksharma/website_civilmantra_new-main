@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const img = [
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
+    { image: "/images/Sectors/Railway/pexels-aryan-sharma-471587287-17657962.jpg" },
+    { image: "/images/Sectors/Railway/WhatsApp Image 2024-11-26 at 1.09.34 PM.jpeg" },
+    { image: "/images/Sectors/Railway/pexels-expressionswala-3584629.jpg" },
 ];
 
 const Railway = () => {
@@ -35,7 +35,7 @@ const Railway = () => {
                 {/* Responsive text content */}
                 <div className="text-justify px-4 sm:px-2">
                     <div>
-                        <h1 className="text-[24px] md:text-[28px] leading-[28px] my-5 font-semibold text-primary">
+                        <h1 className="text-[24px] max-sm:text-left md:text-[28px] leading-[28px] my-5 font-semibold text-primary">
                             Railway Station Design:
                             <span className="text-brown font-normal"> Enhancing Passenger Experience and Operational Efficiency</span>
                         </h1>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { usePathname } from 'next/navigation'; // Import usePathname for current route detection
 import { motion } from "framer-motion";
+import { prefetchDNS } from "react-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,17 +45,17 @@ const NavBar = () => {
         {/* Logo */}
         <div className="mb-2 sm:mb-0">
           <Image
-            src={"/images/logo/logo2.png"}
+            src={"/images/logo/Untitled design.png"}
             alt="Image"
             height={50}
             width={100}
-            className="animate-spin-slow py-[10px]"
+            className="animate-spin-slow py-[7px]"
           />
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden bg-white px-4 py-2 rounded-md"
+          className="lg:hidden  px-4 py-2 rounded-md"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <Image
@@ -71,16 +72,17 @@ const NavBar = () => {
             { name: "Home", url: "/" },
             { name: "About us", url: "/AboutUs" },
             { name: "Sectors", url: "/Sectors" },
-            { name: "Project", url: "/Projects" },
+            { name: "Projects", url: "/Projects" },
             { name: "Innovation", url: "/Innovation" },
             { name: "Career", url: "/Career" },
           ].map((link, index) => (
             <Link
               key={index}
               href={link.url}
+              prefetch={false} 
               className={`px-2 py-1 rounded-lg text-xl relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
-                ? 'scale-125 text-gray-800 font-bold hover:no-underline hover:bg-white hover:text-black'
-                : 'hover:bg-white hover:text-black'
+                  ? 'scale-125 tracking-wide text-gray-800 font-bold hover:no-underline hover:text-black'
+                  : 'hover:text-black'
                 }`}
             >
               {link.name}
@@ -89,6 +91,7 @@ const NavBar = () => {
 
           <Link
             href="/ContactUs"
+            prefetch={false} 
             className={`relative inline-flex items-center justify-start px-6 py-2 overflow-hidden font-medium transition-all bg-white rounded-full  group ml-2 border-gray-800 border-[2px] text-xl ${pathname === '/ContactUs' ? 'bg-primary scale-110 text-white' : 'hover:border-white'
               }`}
           >
@@ -110,7 +113,7 @@ const NavBar = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.1, delay: 0 }}
-            className={`lg:hidden absolute top-16 left-0 w-full bg-grays text-gray-700 flex flex-col rounded-b-md z-10 max-sm:mt-[28px] mt-[20px]
+            className={`lg:hidden absolute top-[66px] left-0 w-full bg-gray-200 text-gray-700 flex flex-col rounded-b-md z-10 max-sm:mt-[28px] mt-[20px]
             transform transition-transform duration-500 ease-in-out opacity-0
             ${isMenuOpen ? 'translate-y-0 opacity-100' : ''}`}
           >
@@ -123,6 +126,7 @@ const NavBar = () => {
               { name: "Career", url: "/Career" },
             ].map((link, index) => (
               <Link
+              prefetch={false} 
                 key={index}
                 href={link.url}
                 className={`px-3 py-2 hover:bg-gray-800 ${pathname === link.url ? ' scale-125 text-black font-bold' : ''

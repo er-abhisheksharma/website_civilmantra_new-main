@@ -2,38 +2,40 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Presence = [
-    { text: "HIGHWAYS & EXPRESSWAYS", url: "" },
-    { text: "BRIDGES AND FLYOVER", url: "" },
-    { text: "DAM AND IRRIGATION", url: "" },
-    { text: "URBAN INFRASTRUCTURE", url: "" },
-    { text: "AIRPORT/EMERGENCY LANDING", url: "" },
-    { text: "METRO & RAILWAYS", url: "" },
+    { text: "HIGHWAYS & EXPRESSWAYS", url: "/Sectors#roadsbridges" },
+    { text: "BRIDGES & FLYOVER", url: "/Sectors#bridges" },
+    { text: "TUNNELS", url: "/Sectors#tunnels" },
+    { text: "URBAN INFRASTRUCTURE", url: "/Sectors#Urban" },
+    { text: "METRO & RAILWAYS", url: "/Sectors#metro" },
+    { text: "WATERWAYS", url: "/Sectors#water" },
+    
 ];
 
 const Projects = [
-    { place: "Himachal Pradesh" },
-    { place: "Jammu & Kashmir" },
-    { place: "Haryana" },
-    { place: "Uttarakhand" },
-    { place: "Punjab" },
-    { place: "Rajasthan" },
-    { place: "Delhi" },
-    { place: "Uttar Pradesh" },
-    { place: "Jharkhand" },
-    { place: "Bihar" },
-    { place: "Madhya Pradesh" },
-    { place: "Maharashtra" },
-    { place: "Orissa" },
-    { place: "Chhattisgarh" },
-    { place: "Karnataka" },
-    { place: "Tamilnadu" },
-    { place: "Telangana" },
-    { place: "Nagaland" },
-    { place: "Assam" },
-    { place: "West Bengal" },
-    { place: "Mizoram" },
-    { place: "Arunachal Pradesh" },
-    { place: "Gujarat" },
+        { place: "Arunachal Pradesh" },
+        { place: "Assam" },
+        { place: "Bihar" },
+        { place: "Chhattisgarh" },
+        { place: "Delhi" },
+        { place: "Gujarat" },
+        { place: "Haryana" },
+        { place: "Himachal Pradesh" },
+        { place: "Jharkhand" },
+        { place: "Karnataka" },
+        { place: "Madhya Pradesh" },
+        { place: "Maharashtra" },
+        { place: "Mizoram" },
+        { place: "Nagaland" },
+        { place: "Orissa" },
+        { place: "Punjab" },
+        { place: "Rajasthan" },
+        { place: "Tamilnadu" },
+        { place: "Telangana" },
+        { place: "Uttar Pradesh" },
+        { place: "Uttarakhand" },
+        { place: "West Bengal" }
+     
+      
 ];
 
 const OurPresence = () => {
@@ -67,9 +69,9 @@ const OurPresence = () => {
                             key={index} className="px-2">
                             <Link
                                 className="relative border-[3px] rounded-md border-gray-600 p-5 h-28 text-center flex items-center justify-center overflow-hidden group shadow-2xl"
-                                href={item.url}
+                                href={item.url} // Link to the specific section on the target page
                             >
-                                <span className="absolute inset-0 transition-transform duration-500 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full  xl:-translate-x-[-490px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
+                                <span className="absolute inset-0 transition-transform duration-500 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full xl:-translate-x-[-490px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
                                 <span className="relative z-10 text-black group-hover:text-white transition-colors duration-300 text-lg md:text-xl">
                                     {item.text}
                                 </span>
@@ -119,10 +121,10 @@ const OurPresence = () => {
                         whileInView="visible"
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-lg md:text-xl font-bold   mt-2 py-2">Project Locations</motion.h2>
+                        className="text-lg md:text-xl font-bold mt-2 py-2">Project Locations</motion.h2>
 
                     <div className="px-4">
-                        <ul className="flex  flex-wrap gap-2 md:gap-3 marker:text-lg marker:text-primary">
+                        <ul className="flex lg:justify-between flex-wrap gap-2 md:gap-3 marker:text-lg marker:text-primary">
                             {Projects.map((item, index) => (
                                 <motion.li
                                     variants={{

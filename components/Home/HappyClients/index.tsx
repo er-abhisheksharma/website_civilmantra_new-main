@@ -6,20 +6,38 @@ import { motion } from 'framer-motion';
 
 const info = [
     {
-        img: "/images/AboutUs/Keymembers/helo.png",
-        name: "John Doe",
+        img: "/images/Home/clients/dmr.png",
+        name: "DMR Builders Pvt. Ltd.",
         review: "Amazing service! Couldn't ask for better.",
         rating: 5
     },
     {
-        img: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Jane Smith",
+        img: "/images/Home/clients/rkc.png",
+        name: "RKC Infrabuilt Pvt. Ltd.",
         review: "The team was extremely professional and delivered on time.",
         rating: 4
     },
     {
-        img: "/images/AboutUs/Keymembers/download (2).jpg",
-        name: "Mike Johnson",
+        img: "/images/Home/clients/gawar.png",
+        name: "Gawar Constructions Limited",
+        review: "Highly recommend their services for any construction needs!",
+        rating: 5
+    },
+    {
+        img: "/images/Home/clients/bharat.png",
+        name: "Bharat Constructions",
+        review: "Highly recommend their services for any construction needs!",
+        rating: 5
+    },
+    {
+        img: "/images/Home/clients/monte.png",
+        name: "MonteCarlo",
+        review: "Highly recommend their services for any construction needs!",
+        rating: 5
+    },
+    {
+        img: "/images/Home/clients/grtc.png",
+        name: "GRTC (Gour Road Tar Coat Pvt. Ltd.)",
         review: "Highly recommend their services for any construction needs!",
         rating: 5
     },
@@ -83,7 +101,7 @@ const Clients = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     centerPadding: '20px',
                 },
             },
@@ -110,7 +128,7 @@ const Clients = () => {
             <p className="unip text-center pb-8">
                 We take pride in delivering exceptional service and value to our clients.
             </p>
-            
+
             <Slider {...settings}>
                 {info.map((client, index) => (
                     <motion.div
@@ -125,19 +143,21 @@ const Clients = () => {
                         key={index}
                         className="px-5 mb-5"
                     >
-                        <div className="bg-white px-5 md:px-10 py-8 rounded-2xl h-[300px] md:h-[320px]  md:mx-8 shadow-lg">
+                        <div className="bg-white px-5 md:px-10 py-8 rounded-2xl h-[300px] lg:h-[300px] md:h-[360px] md:mx-8 shadow-lg">
                             <img
                                 src={client.img}
                                 alt={client.name}
-                                className="rounded-full w-16 h-16 md:w-20 md:h-20"
+                                className={`h-16 md:h-20 ${[2, 3, 1].includes(index) ? "w-[150px]" : "w-16 md:w-20"}`}
                             />
-                            <h3 className="text-lg md:text-xl font-bold my-2 ">{client.name}</h3>
+
+                            <h3 className="text-lg md:text-xl font-bold my-2">{client.name}</h3>
                             <StarRating rating={client.rating} />
                             <p className="text-gray-800 mt-2 text-sm md:text-base">"{client.review}"</p>
                         </div>
                     </motion.div>
                 ))}
             </Slider>
+
         </div>
     );
 };

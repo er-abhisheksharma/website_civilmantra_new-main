@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { url } from "inspector";
 
 // Social media icons and links
 const Socialmedia = [
     { image: "/images/Footer/facebook.png", link: "https://www.facebook.com/CivilMantra/" },
-    { image: "/images/Footer/instagram.png", link: "https://www.instagram.com" },
-    { image: "/images/Footer/twitter.png", link: "https://www.twitter.com" },
+    // { image: "/images/Footer/instagram (1).png", link: "https://www.instagram.com" },
+    // { image: "/images/Footer/twitter.png", link: "https://www.twitter.com" },
     { image: "/images/Footer/linkedin.png", link: "https://www.linkedin.com/company/civilmantra-infrastructure-consultant/" },
 ];
 
@@ -25,14 +26,13 @@ const Quicklinks = [
 ];
 
 const Services = [
-    { name: "Roads & Bridges" },
-    { name: "Tunnels" },
-    { name: "Transport Planning" },
-    { name: "Urban Infrastructure" },
-    { name: "Railway" },
-    { name: "Expressway" },
-    { name: "Metro" },
-    { name: "Waterways" },
+    { name: "Expressway",url: "/Sectors#roadsbridges" },
+    { name: "Tunnels",url: "/Sectors#tunnels" },
+    { name: "Urban Infrastructure",url: "/Sectors#Urban" },
+    { name: "Railway",url: "/Sectors#Railway" },
+    { name: "Bridges",url: "/Sectors#roadsbridges" },
+    { name: "Metro",url: "/Sectors#roadsbridges" },
+    { name: "Waterways",url: "/Sectors#roadsbridges" },
 ];
 
 const Footer = () => {
@@ -40,19 +40,19 @@ const Footer = () => {
 
     const handleLogoClick = () => {
         setClickCount((prevCount: number) => prevCount + 1);
-        if (clickCount + 1 === 5) {
-            window.location.href = "AdminPanel"; 
+        if (clickCount + 1 === 1) {
+            window.location.href = "";
         }
     };
 
     return (
         <>
             <div className="bg-grays ">
-                <div className="max-w-[88vw] mx-auto pb-3 pt-8   flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 lg:flex-row lg:justify-between space-y-8 lg:space-y-0 ">
+                <div className="max-w-[88vw] mx-auto py-7   flex flex-col max-lg:grid max-lg:grid-cols-2 gap-x-5 max-lg:gap-x-8 lg:flex-row lg:justify-between gap-y-8 lg:gap-y-0 ">
                     {/* Logo and Address */}
-                    <div className="lg:w-1/4 max-lg:mt-9">
+                    <div className="lg:w-1/4 ">
                         <Image
-                            src={"/images/logo/logo2.png"}
+                            src={"/images/logo/Untitled design.png"}
                             alt="Logo"
                             height={100}
                             width={100}
@@ -68,7 +68,7 @@ const Footer = () => {
                             whileInView="visible"
                             transition={{ duration: 1, delay: 0 }}
                             viewport={{ once: true }}>
-                            <h1 className="max-w-[250px] text-sm sm:text-base md:text-lg lg:text-base font-bold text-gray-700 hover:text-primary cursor-pointer">
+                            <h1 className=" text-sm sm:text-base md:text-lg lg:text-lg font-bold text-gray-700 hover:text-primary cursor-pointer">
                                 <a
                                     href="https://maps.app.goo.gl/qmEY2k2LH61BnPwq5?g_st=com.google.maps.preview.copy"
                                     target="_blank"
@@ -81,12 +81,13 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div className="lg:w-1/4 lg:ml-28">
-                        <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-primary">Quick Links</h1>
-                        <div>
+                    <div className=" ">
+                        <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-primary ">Quick Links</h1>
+                        <ul className="grid grid-cols-2 gap-4 mt-2 gap-x-12 text-sm sm:text-base md:text-lg lg:text-base text-gray-800 max-lg:gap-x-6">
                             {Quicklinks.map((link, index) => (
-                                <motion.div
+                                <motion.li
                                     key={index}
+                                    className=""
                                     variants={{
                                         hidden: { opacity: 0, y: -20 },
                                         visible: { opacity: 1, y: 0 },
@@ -94,24 +95,24 @@ const Footer = () => {
                                     initial="hidden"
                                     whileInView="visible"
                                     transition={{ duration: 1, delay: 0 }}
-                                    viewport={{ once: true }}>
-                                    <ul className="mt-2 text-sm sm:text-base md:text-lg lg:text-base text-gray-800">
-                                        <li className="mt-1 cursor-pointer hover:text-primary">
-                                            <Link href={link.url}>{link.page}</Link>
-                                        </li>
-                                    </ul>
-                                </motion.div>
+                                    viewport={{ once: true }}
+                                >
+                                    <Link className="cursor-pointer hover:text-primary  " href={link.url}>{link.page}</Link>
+                                </motion.li>
                             ))}
-                        </div>
+                        </ul>
+
                     </div>
+
 
                     {/* Services */}
-                    <div className="lg:w-1/4">
-                        <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-primary">Services</h1>
-                        <div>
+                    <div className="">
+                        <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-primary ">Services</h1>
+                        <ul className="grid grid-cols-2 gap-y-4 gap-x-12 mt-2 text-sm sm:text-base md:text-lg lg:text-base text-gray-800 max-lg:gap-x-6">
                             {Services.map((service, index) => (
-                                <motion.div
+                                <motion.li
                                     key={index}
+                                    className=" "
                                     variants={{
                                         hidden: { opacity: 0, y: -20 },
                                         visible: { opacity: 1, y: 0 },
@@ -119,19 +120,17 @@ const Footer = () => {
                                     initial="hidden"
                                     whileInView="visible"
                                     transition={{ duration: 1, delay: 0 }}
-                                    viewport={{ once: true }}>
-                                    <ul className="mt-2 text-sm sm:text-base md:text-lg lg:text-base ">
-                                        <li className="mt-1 cursor-pointer hover:text-primary text-gray-800">
-                                            {service.name}
-                                        </li>
-                                    </ul>
-                                </motion.div>
+                                    viewport={{ once: true }}
+                                >
+                                    <Link className="cursor-pointer hover:text-primary " href={service.url}>{service.name}</Link>
+                                </motion.li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
 
+
                     {/* Contact Info and Social Media */}
-                    <div className="lg:w-1/4">
+                    <div className="">
                         <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-primary">Contact Us</h1>
                         <motion.div
                             variants={{
@@ -148,7 +147,7 @@ const Footer = () => {
                                         <Image
                                             src={"/images/Footer/mail.png"}
                                             alt="Email"
-                                            width={40}
+                                            width={30}
                                             height={40}
                                             className="max-md:w-7 max-md:h-7 cursor-pointer transition-transform duration-300 ease-in-out group-hover:-translate-y-1 group-hover:scale-125 group-hover:filter  "
                                         />
@@ -171,7 +170,7 @@ const Footer = () => {
                                     <Image
                                         src={"/images/Footer/telephone.png"}
                                         alt="Phone"
-                                        width={40}
+                                        width={30}
                                         height={20}
                                         className="max-md:w-7 max-md:h-7 cursor-pointer group-hover:-translate-y-1 group-hover:scale-125 transition-transform duration-300 ease-in-out"
                                     />
@@ -190,7 +189,7 @@ const Footer = () => {
                             whileInView="visible"
                             transition={{ duration: 1, delay: 0 }}
                             viewport={{ once: true }}>
-                            <div className="flex gap-x-5 max-sm:gap-x-0 max-sm:grid grid-cols-2 mt-5 ">
+                            <div className="flex gap-x-5 max-sm:gap-x-0 max-sm:grid grid-cols-2 md:mt-5 ">
                                 {Socialmedia.map((social, index) => (
                                     <div key={index}>
                                         <a href={social.link} target="_blank" rel="noopener noreferrer">

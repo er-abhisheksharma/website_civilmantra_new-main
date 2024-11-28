@@ -87,12 +87,12 @@ const ContactForm = () => {
 
   return (
     <>
-      
+
 
       {/* Contact Form Section */}
       <div className="relative mt-20 lg:mr-24">
-        <div className=" max-sm:hidden absolute top-0 left-0 w-full h-full opacity-60"></div>
-        <div className="max-sm:flex-col flex max-[1024px]:justify-around justify-center items-start max-[1024px]:gap-10 gap-28 max-sm:gap-6 max-sm:px-4 max-sm:py-0 px-10 max-sm:mt-0 pb-20 poppins relative z-10">
+        <div className=" max-sm:hidden absolute  top-0 left-0 w-full h-full opacity-60"></div>
+        <div className="max-sm:flex-col flex max-[1024px]:justify-around justify-center items-start max-[1024px]:gap-10 gap-28 max-sm:gap-6 max-w-[88vw] mx-auto  max-sm:py-0 max-sm:mt-0 pb-20  relative z-10 ">
           <ToastContainer
             newestOnTop
             draggable
@@ -102,7 +102,7 @@ const ContactForm = () => {
             position="top-center"
             pauseOnFocusLoss={false}
           />
-          <div className="max-[1024px]:w-[45%] max-sm:w-full max-sm:px-4 p-8 px-12 rounded-lg shadow-[0_0_45px_1px_rgba(0,0,0,0.1)] w-[36vw] bg-white bg-opacity-100">
+          <div className=" w-1/2 max-sm:w-full max-sm:px-4 p-8 px-12 rounded-lg shadow-[0_0_45px_1px_rgba(0,0,0,0.1)]  bg-white bg-opacity-100">
             <form className="space-y-6" onSubmit={handleSubmit}>
 
               <div>
@@ -172,7 +172,7 @@ const ContactForm = () => {
           </div>
 
           {/* Contact Info Section */}
-          <div className="max-md:mb-10 max-[1024px]:w-[50vw] max-sm:w-full bg-white px-8 max-sm:px-2 w-[35vw] rounded-lg py-10  shadow-[0_0_45px_1px_rgba(0,0,0,0.1)] ">
+          <div className="max-md:mb-10 w-1/2 max-sm:w-full bg-white px-8 max-sm:px-2  rounded-lg  py-7  shadow-[0_0_45px_1px_rgba(0,0,0,0.1)] ">
             <h2 className=" blue text-4xl font-semibold mb-4 text-primary">Connect with us</h2>
             <p className=" darkgray mb-6 lg:w-[26vw]">For any kind of query, contact us with the details below.</p>
             <div className="max-[1024px]:w-full max-sm:w-full w-[20vw] my-6 flex gap-2 items-start">
@@ -193,8 +193,26 @@ const ContactForm = () => {
                 <p className="darkgray block blue text-lg cursor-pointer">3rd Floor, Tower 3A, Dlf Corporate Greens, Sector 74A, Gurugram- 122004, India.</p>
               </div>
             </div>
+            <div id="Mapdiv" className=" flex justify-center items-center">
+              {/* Google Map Embed */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14000.589839642906!2d77.0280247!3d28.3945449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1971e56c7b4d%3A0x213d8b8e1e7f2296!2sDLF%20Corporate%20Greens%2C%20Sector%2074A%2C%20Gurugram%2C%20Haryana%20122004%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="120"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+                className="mx-auto max-w-[82vw] rounded-lg"
+              ></iframe>
+            </div>
+
+
           </div>
         </div>
+
+
       </div>
     </>
   );

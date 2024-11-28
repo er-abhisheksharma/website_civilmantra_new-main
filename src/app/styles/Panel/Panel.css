@@ -1,0 +1,11 @@
+.testimonialpanelpost .slick-slide,
+.blogpanelpost .slick-slide,
+.careerpanelpost .slick-slide {
+	padding: 0 5px !important;
+}
+
+.testimonialpanelpost .slick-track,
+.careerpanelpost .slick-track,
+.blogpanelpost .slick-track {
+	margin: 0 !important;
+}

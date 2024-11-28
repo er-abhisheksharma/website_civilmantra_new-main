@@ -24,12 +24,13 @@ export default function Home() {
     <>
       
       <Hero />
-      <BusinessGrowthStages/>
+      {/* <BusinessGrowthStages/> */}
       <Aboutus/>
       <Projects/>
       <Business/>
       <Associate/>
-      <Clients/>
+      {/* <Clients/> */}
+      
       
       
 

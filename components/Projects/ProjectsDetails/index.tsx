@@ -98,78 +98,78 @@ const data: ProjectData[] = [
     //         },
     //     ],
     // },
-    {
-        id: 2,
-        description: "Government Projects",
-        businessdata: [
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-            {
-                location: "Leh",
-                head: "4-Lane ",
-                km: "48.32 Km",
-                work: "Highway",
-                duration: "5 Months",
-                client: "NHIDCL",
-                Department: "NHIDCL",
-                paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
-                flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
-            },
-        ],
-    },
+    // {
+    //     id: 2,
+    //     description: "Government Projects",
+    //     businessdata: [
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //         {
+    //             location: "Leh",
+    //             head: "4-Lane ",
+    //             km: "48.32 Km",
+    //             work: "Highway",
+    //             duration: "5 Months",
+    //             client: "NHIDCL",
+    //             Department: "NHIDCL",
+    //             paragraph: "Consultancy Services for Preparation of Detailed Project Report and providing Pre-Construction activities for Construction of 03 Nos By-Pass roads at Leh in the Union Territory of Ladakh-2nd Call",
+    //             flipimage: "/images/Home/BusinessHelp/Leh.jpeg",
+    //         },
+    //     ],
+    // },
     {
         id: 3,
         description: "Completed Projects",
@@ -393,7 +393,7 @@ const ProjectDetails = () => {
                 {data.map((projectItem) => (
                     <button
                         key={projectItem.id}
-                        className={`px-4 py-2 mb-10 
+                        className={`px-4 py-2  
                         ${selectedProject.id === projectItem.id
                                 ? 'bg-primary text-white relative -translate-y-1 scale-110 transition-transform duration-300 ease-in-out'
                                 : 'bg-white text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out shadow-xl hover:scale-110 '} 
@@ -502,7 +502,7 @@ const ProjectDetails = () => {
         }
       `}</style>
         </div>
-        
+
     );
 };
 

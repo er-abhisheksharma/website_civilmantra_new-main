@@ -2,6 +2,16 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
+const serviceItems = [
+    { name: "Expressway", image: "/images/Home/herorail/motorway.png" },
+    { name: "Tunnels", image: "/images/Home/herorail/tunnel.png" },
+    { name: "Urban Infrastructure", image: "/images/Home/herorail/buildings.png" },
+    { name: "Railway", image: "/images/Home/herorail/train-station.png" },
+    { name: "Bridges", image: "/images/Home/herorail/vincent-thomas-bridge.png" },
+    { name: "Metro", image: "/images/Home/herorail/metro.png" },
+    { name: "Waterways", image: "/images/Home/herorail/waterfall_6735800.png" },
+];
+
 // Custom Hook for Typing Effect
 const useTypingEffect = (fullText: string, speed: number = 20, delay: number = 400) => {
     const [displayedText, setDisplayedText] = useState<string>("");
@@ -74,89 +84,116 @@ const Hero = () => {
             </Head>
 
             <div className="mb-10">
-            <div  className="relative w-full h-[88vh] ">
-                {/* Background video */}
-                <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
-                    <source src="/videos/Home/20123298-uhd_3840_2160_25fps.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div className="relative w-full h-[88vh] ">
+                    {/* Background video */}
+                    <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
+                        <source src="/videos/Home/20123298-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                {/* Dark overlay */}
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
+                    {/* Dark overlay */}
+                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
 
-                {/* Centered Heading Content */}
-                <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
-                    <div className=" text-white max-w-[70vw] mt-[62px]">
-                        <motion.div
-                            variants={{
-                                hidden: { opacity: 0, y: -20 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.8, delay: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <h2 className="font-semibold leading-7 lg:text-xl md:text-lg sm:text-base">We make a Difference</h2>
-                            <h1 className="mt-3 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl">
-                                <span className="text-secondary">We Don't Just Build</span>{" "}
-                                <span className="text-red-600 text-6xl">Structures</span>
-                            </h1>
-                            <h2 className="mt-1 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl text-secondary">
-                                We Build a Better <span className="text-red-600 text-6xl">Tomorrow</span>
-                            </h2>
-                        </motion.div>
+                    {/* Centered Heading Content */}
+                    <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
+                        <div className=" text-white max-w-[70vw] mt-[62px]">
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: -20 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                initial="hidden"
+                                whileInView="visible"
+                                transition={{ duration: 0.8, delay: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <h2 className="font-semibold leading-7 lg:text-xl md:text-lg sm:text-base">We make a Difference</h2>
+                                <h1 className="mt-3 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl">
+                                    <span className="text-secondary">We Don't Just Build</span>{" "}
+                                    <span className="text-red-600 text-6xl">Structures</span>
+                                </h1>
+                                <h2 className="mt-1 lg:text-5xl md:text-4xl sm:text-4xl max-sm:text-4xl text-secondary">
+                                    We Build a Better <span className="text-red-600 text-6xl">Tomorrow</span>
+                                </h2>
+                            </motion.div>
 
-                        {/* Typing animation for paragraph */}
-                        <motion.p
-                            className="mt-5 font-normal leading-7 lg:text-xl md:text-lg sm:text-base max-sm:hidden text-justify"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 2 }}
-                        >
-                            {Text}
-                        </motion.p>
+                            {/* Typing animation for paragraph */}
+                            <motion.p
+                                className="mt-5 font-normal leading-7 lg:text-xl md:text-lg sm:text-base max-sm:hidden text-justify"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 2 }}
+                            >
+                                {Text}
+                            </motion.p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Sliding Section */}
-            <motion.div
-                            variants={{
-                                hidden: { opacity: 0, y: 0 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.8, delay: 0 }}
-                            viewport={{ once: true }}
-                         className="bg-primary overflow-hidden ">
-                <ul className="flex gap-x-52  py-2 cursor-default whitespace-nowrap animate-slide text-white text-xl ">
-                    <li>Roads & Bridges</li>
-                    <li>Tunnels</li>
-                    <li>Transport Planning</li>
-                    <li>Urban Infrastructure</li>
-                    <li>Railway</li>
-                    <li>Expressway</li>
-                    <li>Metro</li>
-                    <li>Waterways</li>
-                </ul>
+                {/* Sliding Section */}
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 0 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.8, delay: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-primary overflow-hidden"
+                >
+                    <div className="relative overflow-hidden">
+                        <ul className="flex gap-x-52  py-2 cursor-default whitespace-nowrap animate-slide text-white text-xl">
+                            {/* Original List */}
+                            {serviceItems.map((item, index) => (
+                                <li key={index} className="flex items-center gap-x-2">
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-8 h-8 invert"
+                                    />
+                                    <span className="mt-2">{item.name}</span>
+                                </li>
+                            ))}
+                            {/* Duplicate List */}
+                            {serviceItems.map((item, index) => (
+                                <li key={`duplicate-${index}`} className="flex items-center gap-x-2">
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-8 h-8 invert"
+                                    />
+                                    <span className="mt-2">{item.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                <style jsx>{`
-                    @keyframes slide {
-                        0% {
-                            transform: translateX(10%);
+                    <style jsx>{`
+                        @keyframes slide {
+                            0% {
+                                transform: translateX(0%);
+                            }
+                            100% {
+                                transform: translateX(-100%);
+                            } G
                         }
-                        100% {
-                            transform: translateX(-50%);
-                        }
-                    }
 
-                    .animate-slide {
-                        animation: slide 20s linear infinite;
-                    }
-                `}</style>
-            </motion.div>
+                        .animate-slide {
+                            animation: slide 30s linear infinite; /* Default for large screens */
+                            animation-timing-function: linear;
+                        }
+
+                        @media (max-width: 768px) {
+                            .animate-slide {
+                                animation: slide 5s linear infinite; /* Faster animation for small screens */
+                            }
+                        }
+                    `}</style>
+
+                </motion.div>
+
+
             </div>
         </>
     );

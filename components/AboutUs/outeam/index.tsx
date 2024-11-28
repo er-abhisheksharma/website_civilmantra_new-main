@@ -121,14 +121,14 @@ const Ourteam = () => {
                     className="flex flex-col items-center"
                 >
                     <Image
-                        src="/images/AboutUs/Keymembers/download (3).png"
+                        src="/images/AboutUs/keymembers/Susheel bhardwaj.png"
                         alt="Director"
-                        width={120}
+                        width={150}
                         height={150}
-                        className="rounded-xl object-cover"
+                        className="rounded-xl h-[250px] w-[200px] object-cover"
                     />
-                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr. Head</h1>
-                    <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">Director</p>
+                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr.Susheel Bhardwaj</h1>
+                    <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">MD</p>
                 </motion.div>
 
                 {/* Carousel for key members */}

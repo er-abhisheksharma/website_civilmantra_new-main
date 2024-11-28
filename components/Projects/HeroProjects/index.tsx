@@ -10,7 +10,7 @@ const Heroprojects = () => {
             <div className='relative flex flex-col justify-center items-center text-center mb-0 max-sm:px-4 text-white '>
                 {/* Background Video */}
                 <Image
-                    src="/images/Projects/pexels-yashwanth-186691934-11373628.jpg"
+                    src="/images/Projects/scott-graham-5fNmWej4tAA-unsplash (1).jpg"
                     alt="Background"
                     layout="fill"
                     objectFit="cover"

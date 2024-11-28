@@ -5,15 +5,16 @@ import Image from "next/image";
 
 const data = [
     {
-        image: "/images/Home/Projects/teammembers.png",
-        id: 300,
-        name: "TEAM MEMBERS",
+        image: "/images/Home/Projects/growingscale.png",
+        id: 8,
+        name: "SUCCESSFULL YEARS",
     },
     {
-        image: "/images/Home/Projects/growingscale.png",
-        id: 10,
-        name: "GROWING SCALE",
+        image: "/images/Home/Projects/teammembers.png",
+        id: 500,
+        name: "TEAM MEMBERS",
     },
+    
     {
         image: "/images/Home/Projects/clients.png",
         id: 350,
@@ -21,7 +22,7 @@ const data = [
     },
     {
         image: "/images/Home/Projects/projects.png",
-        id: 1900,
+        id: 3000,
         name: "PROJECTS",
     }
 ];

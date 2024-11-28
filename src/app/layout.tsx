@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import ScrollToTopButton from "../../components/Scrolltotop"; 
+import SocialIcon from "../../components/SocialMediaIcons";
 
 
 
@@ -34,6 +35,7 @@ export default function RootLayout({
             </head>
             <body className="font-league-spartan">
                 <NavBar />
+                <SocialIcon/>
                 {children}
                 <Footer />
                 <ScrollToTopButton /> 

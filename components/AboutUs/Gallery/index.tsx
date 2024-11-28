@@ -14,92 +14,24 @@ type YearData = {
 
 const data = [
   {
-      year: 2016,
+      year: 2024,
       images: [
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
+          { image: "/images/AboutUs/Gallery/2024/Birthday.jpg",
+              text: "Birthday Celebration @ CivilMantra" },
+          { image: "/images/AboutUs/Gallery/2024/diwali.jpg",
+              text: "Diwali Celebration @ CivilMantra" },
+          { image: "/images/AboutUs/Gallery/2024/Trip.jpg",
+              text: "Travel with Team"  },
+          { image: "/images/AboutUs/Gallery/2024/womenday.jpg",
+              text: "Women's Day Celebration"  },
+          { image: "/images/AboutUs/Gallery/2024/8thfoundation.jpg",
+              text: "8th Foundation Day of CivilMantra"  },
+          { image: "/images/AboutUs/Gallery/2024/holi.jpg",
+              text: "Holi Celebration @ CivilMantra"  },
       ],
   },
   {
-      year: 2017,
-      images: [
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-      ],
-  },
-  {
-      year: 2018,
-      images: [
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-      ],
-  },
-  {
-      year: 2019,
-      images: [
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-      ],
-  },
-  {
-      year: 2020,
-      images: [
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date" },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
-              text: "this event is held on date"  },
-          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
-              text: "this event is held on date"  },
-      ],
-  },
-  {
-      year: 2021,
+      year: 2023,
       images: [
           { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
               text: "this event is held on date" },
@@ -133,7 +65,7 @@ const data = [
       ],
   },
   {
-      year: 2023,
+      year: 2021,
       images: [
           { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
               text: "this event is held on date" },
@@ -150,7 +82,75 @@ const data = [
       ],
   },
   {
-      year: 2024,
+      year: 2020,
+      images: [
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+      ],
+  },
+  {
+      year: 2019,
+      images: [
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+      ],
+  },
+  {
+      year: 2018,
+      images: [
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+      ],
+  },
+  {
+      year: 2017,
+      images: [
+          { image: "/images/AboutUs/Gallery/2024/Birthday.jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date" },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-jplenio-2566850 (1).jpg",
+              text: "this event is held on date"  },
+          { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
+              text: "this event is held on date"  },
+      ],
+  },
+  {
+      year: 2016,
       images: [
           { image: "/images/AboutUs/journey/pexels-life-of-pix-2489 (1).jpg",
               text: "this event is held on date" },
@@ -226,7 +226,7 @@ const Gallery = () => {
         ))}
       </motion.div>
 
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         <motion.div
           key={selectedYear}
           initial={{ opacity: 0, y: -20 }}
@@ -250,7 +250,7 @@ const Gallery = () => {
                 className="rounded-lg w-full h-64 sm:h-48 lg:h-64"
               />
 
-              {/* Text overlay */}
+             
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end transition-all duration-300 opacity-0 hover:opacity-100 rounded-lg">
                 <div className="p-2 text-white text-sm sm:text-base font-semibold bg-black bg-opacity-70 w-full text-center">
                   {item.text}
@@ -259,7 +259,48 @@ const Gallery = () => {
             </motion.div>
           ))}
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <AnimatePresence mode="wait">
+  <motion.div
+    key={selectedYear}
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.5 }}
+    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+  >
+    {currentYearData?.images.map((item, index) => (
+      <motion.div
+        key={index}
+        className={`relative overflow-hidden shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 ease-in-out ${
+          index % 5 === 0
+            ? "row-span-2 col-span-2"
+            : index % 3 === 0
+            ? "row-span-1 col-span-2"
+            : "row-span-1 col-span-1"
+        }`}
+        onClick={() => openModal(item.image)}
+      >
+        <Image
+          src={item.image}
+          alt={`Gallery Image ${index + 1}`}
+          width={500}
+          height={300}
+          style={{ objectFit: "cover" }}
+          className="rounded-lg w-full h-full"
+        />
+
+        {/* Text overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end transition-all duration-300 opacity-0 hover:opacity-100 rounded-lg">
+          <div className="p-2 text-white text-sm sm:text-base font-semibold bg-black bg-opacity-70 w-full text-center">
+            {item.text}
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </motion.div>
+</AnimatePresence>
+
 
       {/* Fullscreen Modal */}
       {isModalOpen && (

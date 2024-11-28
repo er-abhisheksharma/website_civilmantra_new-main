@@ -5,15 +5,12 @@ const HeroCareer = () => {
         <>
             <div className='relative flex flex-col justify-center items-center text-center mb-0 max-sm:px-4 text-white '>
                 {/* Background Video */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    className='absolute inset-0 w-full h-full object-cover z-0'
-                >
-                    <source src="/videos/WhatsApp Video 2024-11-14 at 12.43.45 PM.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <img
+                    src="/images/Career/typing-849806_1280.jpg"
+                    alt="Background"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                />
+
                 <div className=" absolute top-[1px] left-0 w-full h-full bg-black opacity-60"></div>
 
                 <motion.div
@@ -29,13 +26,13 @@ const HeroCareer = () => {
                         Join our world-class team of creators and dreamers
                     </p>
                     <motion.p
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 },
-                    }}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.8, delay: 0.2 }} className='max-sm:text-base max-sm:w-full max-[1024px]:mt-4 w-[65%] text-gray-200 text-lg max-lg:hidden'>
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.8, delay: 0.2 }} className='max-sm:text-base max-sm:w-full max-[1024px]:mt-4 w-[65%] text-gray-200 text-lg max-lg:hidden'>
                         At Civilmantra, we believe in staying one step ahead of cyber attackers, keeping our customers' assets safe and secure.
                     </motion.p>
                 </motion.div>

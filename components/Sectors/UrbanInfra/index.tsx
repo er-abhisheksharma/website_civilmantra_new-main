@@ -1,9 +1,10 @@
 import Image from "next/image";
 
 const img = [
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
-    { image: "/images/Sectors/Herosectors/Tunnel.jpg" },
+    { image: "/images/Sectors/urban/pexels-rahulp9800-3038888.jpg" },
+    { image: "/images/Sectors/urban/pexels-soumya-ranjan-205042-633631.jpg" },
+    { image: "/images/Sectors/Herosectors/arq-2645763_1280.jpg" },
+    
 ];
 
 const Urbaninfra = () => {

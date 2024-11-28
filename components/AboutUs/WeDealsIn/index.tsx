@@ -72,7 +72,7 @@ const Dealsin = () => {
                             whileInView="visible"
                             transition={{ duration: 0.5, delay: 0 }}
                             viewport={{ once: true }}
-                            className="text-base md:text-lg lg:text-xl mb-4 :mt-20 lg:mt-0  max-sm:mt-0 text-justify"
+                            className="text-base md:text-lg lg:text-xl mb-4 sm:mt-20 lg:mt-0  max-sm:mt-0 text-justify"
                         >
                             <span className="text-primary">CIVIL</span><span className="text-brown">MANTRA</span> is providing services in various sectors like Roads & Bridges, Expressways, Tunnels, Irrigation, Urban Development. The team of CIVILMANTRA has vast experience in designing various types of roads. Currently, we are executing detailed Project Reports/ Detailed Design of over 3500 km of major NH projects and providing consultancy for another 32,000 km of NH/SH.
                         </motion.h2>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 const images = [
-    "/images/AboutUs/Top/tunnel-6723643_1280.jpg",
     "/images/AboutUs/Top/traffic-7272520_1280.jpg",
+    "/images/AboutUs/Top/tunnel-6723643_1280.jpg",   
     "/images/AboutUs/Top/tunnel-4427609_1280.jpg",
     "/images/AboutUs/Top/pexels-anilsharma65-10504911.jpg"
 ];
@@ -62,9 +62,9 @@ const Top = () => {
 }
 
 
-                /* Apply slideshow keyframes */
+               
                 .bg-slideshow {
-                    animation: slideshow 20s infinite ease-in-out;
+                    animation: slideshow 15s infinite ease-in-out;
                     background-size: cover;
                     background-position: center;
                 }

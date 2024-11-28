@@ -18,8 +18,8 @@ export default function Aboutus() {
      <Journey/>
      <Dealin/>
      <OurPresence/>
-     <Ourteam/>
-     <Gallery/>
+     {/* <Ourteam/> */}
+     {/* <Gallery/> */}
      
 
 
