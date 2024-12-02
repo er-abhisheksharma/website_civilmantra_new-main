@@ -84,7 +84,7 @@ const Hero = () => {
             </Head>
 
             <div className="mb-10">
-                <div className="relative w-full h-[88vh] ">
+                <div className="relative w-full h-[88vh] max-sm:h-[80vh] ">
                     {/* Background video */}
                     <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
                         <source src="/videos/Home/20123298-uhd_3840_2160_25fps.mp4" type="video/mp4" />
@@ -96,7 +96,7 @@ const Hero = () => {
 
                     {/* Centered Heading Content */}
                     <div className="flex  items-center h-full relative z-10 max-w-[88vw] mx-auto">
-                        <div className=" text-white max-w-[70vw] mt-[62px]">
+                        <div className=" text-white max-w-[70vw] max-sm:max-w-[80vw] mt-[62px]">
                             <motion.div
                                 variants={{
                                     hidden: { opacity: 0, y: -20 },

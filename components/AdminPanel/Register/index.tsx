@@ -19,7 +19,7 @@ const Register = () => {
 
     return (
         <div>
-            <div className="flex items-center gap-[5px] ">
+            <div className="flex mb-10 items-center gap-[5px] ">
                 <button className="text-logored" onClick={handleLogout}>
                     Logout
                 </button>

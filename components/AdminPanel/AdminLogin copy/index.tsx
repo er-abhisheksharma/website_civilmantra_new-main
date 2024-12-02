@@ -120,7 +120,7 @@ const AdminLogin = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full py-2 px-4 border border-transparent text-md font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-[#b80202] focus:outline-none"
+                    className="w-full py-2 px-4  border border-transparent text-md font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-[#b80202] focus:outline-none"
                 >
                     Login
                 </button>
