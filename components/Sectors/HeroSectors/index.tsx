@@ -123,15 +123,15 @@ const Herosectors = () => {
                   whileInView="visible"
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="h-[290px] w-80 flex flex-col relative overflow-hidden group cursor-pointer rounded-lg"
+                  className="h-[290px] w-80 flex flex-col relative overflow-hidden group cursor-pointer rounded-lg hover:border-white duration-100  hover:border-2"
                 >
                   <div
-                    className="absolute inset-0 transition-opacity duration-300 ease-in-out bg-cover bg-center opacity-100"
+                    className="absolute inset-0   transition-opacity duration-300 ease-in-out bg-cover bg-center opacity-100"
                     style={{ backgroundImage: `url(${item.bgimage})` }}
                   />
                   <div className="absolute inset-0 bg-black transition-opacity duration-300 ease-in-out opacity-35" />
-                  <div className="relative z-10 flex flex-col justify-between h-full p-5">
-                    <h2 className="text-[22px] font-semibold transition-transform duration-300 ease-in-out group-hover:scale-105">
+                  <div className="relative  z-10 flex flex-col justify-between h-full p-5">
+                    <h2 className="text-[22px] font-semibold transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:translate-x-5">
                       {item.Sector}
                     </h2>
                     <p className="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-gray-200 text-base font-normal">
