@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroAdmin = () => {
     return (
-        <div className="flex items-center justify-center ">
+        <div className="flex items-center justify-center mt-10">
             <div className="flex flex-col items-center justify-center gap-2">
                 <p className="text-red-600 font-semibold text-xl mb-5">Admin's Access Only</p>
                 <h1 className="text-5xl black font-normal">

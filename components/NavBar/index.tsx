@@ -44,13 +44,15 @@ const NavBar = () => {
       <div className="flex flex-row justify-between items-center text-center max-w-[88vw] mx-auto relative z-50">
         {/* Logo */}
         <div className="mb-2 sm:mb-0">
-          <Image
-            src={"/images/logo/Untitled design.png"}
-            alt="Image"
-            height={50}
-            width={100}
-            className="animate-spin-slow py-[7px]"
-          />
+          <a href="/">
+            <Image
+              src={"/images/logo/Untitled design.png"}
+              alt="Image"
+              height={50}
+              width={100}
+              className="animate-spin-slow py-[7px]"
+            />
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,10 +81,10 @@ const NavBar = () => {
             <Link
               key={index}
               href={link.url}
-              prefetch={false} 
-              className={`px-2 py-1 rounded-lg text-xl relative hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
-                  ? 'scale-125 tracking-wide text-gray-800 font-bold hover:no-underline hover:text-black'
-                  : 'hover:text-black'
+              prefetch={false}
+              className={`px-2 py-1 rounded-lg text-xl relative  hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
+                ? 'scale-110  text-gray-800 font-bold hover:no-underline hover:text-black'
+                : 'hover:text-black '
                 }`}
             >
               {link.name}
@@ -91,14 +93,12 @@ const NavBar = () => {
 
           <Link
             href="/ContactUs"
-            prefetch={false} 
-            className={`relative inline-flex items-center justify-start px-6 py-2 overflow-hidden font-medium transition-all bg-white rounded-full  group ml-2 border-gray-800 border-[2px] text-xl ${pathname === '/ContactUs' ? 'bg-primary scale-110 text-white' : 'hover:border-white'
-              }`}
+            prefetch={false}
+            className="px-6 py-2 overflow-hidden font-medium transition-all text-white rounded-full  group ml-2 bg-primary text-xl hover:shadow-2xl duration-300 shadow-black hover:scale-105"
           >
-            <span className="w-48 h-48  rotate-[-40deg] bg-primary  absolute bottom-0 left-0 -translate-x-[188px] transition-all ease-out duration-[1500ms] translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-            <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+            
               Contact us
-            </span>
+          
           </Link>
 
         </div>
@@ -126,7 +126,7 @@ const NavBar = () => {
               { name: "Career", url: "/Career" },
             ].map((link, index) => (
               <Link
-              prefetch={false} 
+                prefetch={false}
                 key={index}
                 href={link.url}
                 className={`px-3 py-2 hover:bg-gray-800 ${pathname === link.url ? ' scale-125 text-black font-bold' : ''

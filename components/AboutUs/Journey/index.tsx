@@ -125,7 +125,7 @@ const Journey = () => {
 
 
 
-                                            <h2 className="text-[40px] underline underline-offset-8 decoration-white">Turnover - <span className="text-primary">{item.turnover}</span></h2>
+                                            {/* <h2 className="text-[40px] underline underline-offset-8 decoration-white">Turnover - <span className="text-primary">{item.turnover}</span></h2> */}
 
                                         </div>
                                     </motion.div>

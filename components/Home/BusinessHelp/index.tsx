@@ -76,7 +76,7 @@ const Business = () => {
                 {/* Flip Container */}
                 <div className="rotate-container">
                   {/* front Side */}
-                  <div className="front-side bg-gray-100 rounded-lg shadow-lg relative flex items-center justify-center  ">
+                  <div className="front-side border-white duration-1000 hover:border-[190px] bg-gray-100 rounded-lg shadow-lg relative flex items-center justify-center  ">
                     <Image
                       src={item.flipimage}
                       alt="Back Side Image"
