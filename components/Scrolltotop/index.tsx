@@ -1,16 +1,11 @@
-// components/ScrollToTopButton.tsx
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
 
 const ScrollToTopButton = () => {
-    const [visible, setVisible] = useState<boolean>(false);
+    const [visible, setVisible] = useState(false);
 
     const handleScroll = () => {
-        if (window.scrollY > 300) {
-            setVisible(true);
-        } else {
-            setVisible(false);
-        }
+        setVisible(window.scrollY > 300);
     };
 
     const scrollToTop = () => {
@@ -30,10 +25,22 @@ const ScrollToTopButton = () => {
             className={`fixed z-10 max-sm:right-2 bottom-10 right-6 transition-opacity duration-300 
             ${visible ? 'opacity-100' : 'opacity-0'} 
             bg-primary text-white py-2 px-2 rounded-lg shadow-lg hover:bg-blue-700`}
-            style={{ display: visible ? 'block' : 'none' }} // Additional visibility control
+            aria-label="Scroll to top"
         >
-            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <svg
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M18 15L12 9L6 15"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
             </svg>
         </button>
     );

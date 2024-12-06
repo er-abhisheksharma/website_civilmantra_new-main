@@ -7,40 +7,40 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
 const businessdata = [
-    {
-        location: "Mumbai - Nagpur",
-        head: "Lane 6, expandable to 8 ",
-        km: "701 Km",
-        work: "Expressway ",
-        duration: "Dec,2022 - Ongoing",
-        client: "MSRDC",
-        Department: "MSRDC",
-        paragraph: "The Mumbai-Nagpur Expressway spans 701 kilometers, linking Mumbai and Nagpur in Maharashtra, India. It features remarkable tunnels, including India's widest at 17.5 meters and Maharashtra's longest, stretching 8 kilometers.",
-        flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-28 133505.png",
-    },
-    {
-        location: "Delhi-Gurugram",
-        head: "6-lane elevated expressway ",
-        km: "29  Km",
-        work: "Expressway",
-        duration: "March,2024 - Ongoing",
-        client: "NHAI",
-        Department: "NHAI",
-        paragraph: "The Dwarka Expressway is a 29-kilometer, 8-lane highway linking Dwarka in Delhi to Gurgaon in Haryana. It features numerous flyovers, underpasses, and bridges.",
-        flipimage: "/images/Home/BusinessHelp/DelhiFlyover_EDITED.jpg",
-    },
-    {
-        location: "Delhi-Dehradun",
-        head: "6-Lane ",
-        km: "210 Km",
-        work: "Expressway",
-        duration: "January,2021 - Ongoing",
-        client: "NHAI",
-        Department: "NHAI",
-        paragraph: "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
-        flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-27 145324.png",
-    },
-    
+  {
+    location: "Mumbai - Nagpur",
+    head: "Lane 6, expandable to 8 ",
+    km: "701 Km",
+    work: "Expressway ",
+    duration: "Dec,2022 - Ongoing",
+    client: "MSRDC",
+    Department: "MSRDC",
+    paragraph: "The Mumbai-Nagpur Expressway spans 701 kilometers, linking Mumbai and Nagpur in Maharashtra, India. It features remarkable tunnels, including India's widest at 17.5 meters and Maharashtra's longest, stretching 8 kilometers.",
+    flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-28 133505.png",
+  },
+  {
+    location: "Delhi-Gurugram",
+    head: "6-lane elevated expressway ",
+    km: "29  Km",
+    work: "Expressway",
+    duration: "March,2024 - Ongoing",
+    client: "NHAI",
+    Department: "NHAI",
+    paragraph: "The Dwarka Expressway is a 29-kilometer, 8-lane highway linking Dwarka in Delhi to Gurgaon in Haryana. It features numerous flyovers, underpasses, and bridges.",
+    flipimage: "/images/Home/BusinessHelp/DelhiFlyover_EDITED.jpg",
+  },
+  {
+    location: "Delhi-Dehradun",
+    head: "6-Lane ",
+    km: "210 Km",
+    work: "Expressway",
+    duration: "January,2021 - Ongoing",
+    client: "NHAI",
+    Department: "NHAI",
+    paragraph: "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
+    flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-27 145324.png",
+  },
+
 
 ];
 const Business = () => {
@@ -76,14 +76,15 @@ const Business = () => {
                 {/* Flip Container */}
                 <div className="rotate-container">
                   {/* front Side */}
-                  <div className="front-side border-white duration-1000 hover:border-[190px] bg-gray-100 rounded-lg shadow-lg relative flex items-center justify-center  ">
+                  <div className="front-side  duration-1000  bg-gray-100 rounded-lg shadow-lg relative flex items-center justify-center  ">
                     <Image
                       src={item.flipimage}
                       alt="Back Side Image"
-                      layout="fill"
-                      objectFit="cover"
+                      fill 
+                      style={{ objectFit: "cover" }} 
                       className="rounded-lg"
                     />
+
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg"></div>
                     <motion.div
                       variants={{
@@ -104,9 +105,9 @@ const Business = () => {
                           Client : <span className="text-gray-100 font-normal">{item.client}</span>
                         </li>
                         <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
-                            Location : <span className="text-gray-100 font-normal">{item.location}</span>
-                          </li>
-                       
+                          Location : <span className="text-gray-100 font-normal">{item.location}</span>
+                        </li>
+
                       </ul>
                     </motion.div>
                   </div>
@@ -119,15 +120,15 @@ const Business = () => {
                       }}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ duration: 0.5, delay:index* 0.1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className="flex flex-col justify-between h-full"
                     >
                       <div className="">
                         <ul className="space-y-2 sm:space-y-3">
-                        <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
-                          Department : <span className="text-primary font-normal">{item.Department}</span>
-                        </li>
+                          <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
+                            Department : <span className="text-primary font-normal">{item.Department}</span>
+                          </li>
                           <li className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2">
                             {item.head}
                           </li>
