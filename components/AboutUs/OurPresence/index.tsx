@@ -91,7 +91,7 @@ const OurPresence = () => {
                         whileInView="visible"
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}>
-                        <h1 className="text-xl md:text-2xl font-bold">Our Locations</h1>
+                        {/* <h1 className="text-xl md:text-2xl font-bold">Our Locations</h1> */}
                         <h2 className="text-lg md:text-xl font-bold mt-2 py-2">Offices</h2>
                     </motion.div>
 
@@ -106,9 +106,14 @@ const OurPresence = () => {
                         viewport={{ once: true }}
                         className="px-4">
                         <ul className="list-disc marker:text-lg marker:text-primary text-justify space-y-2">
-                            <li><span className="text-primary">Registered Office</span> - Delhi-277, Hiran Kudna, New Delhi - 110041</li>
+                            <li><span className="text-primary">Registered Office</span> - 277 VPO, Hiran Kudna West Delhi 110041</li>
                             <li><span className="text-primary">Corporate Office</span> - 3rd Floor, Tower 3A, DLF CORPORATE GREENS, Sector 74A, Gurugram, Haryana 122004</li>
                             <li><span className="text-primary">Regional Office</span> - Vasantam Hotel, Deotsidh road, Barsar, Himachal Pradesh - 174305</li>
+                            <li><span className="text-primary">Site Office</span> - House No 11, Village Saini Majra, Tehsil and District S.A.S Nagar, Mohali</li>
+                            <li><span className="text-primary">Site Office</span> - 071, Opposite Energy Park , MOWB - 1, Papum Pare, Itanagar 791111 Arunachal Pardesh</li>
+                            <li><span className="text-primary">Site Office</span> - 1st & 2nd Floor, Talwal(Tandwal), Near J&K Bank, Rajouri Tehsil & District Rajouri U.T of J&K</li>
+                            <li><span className="text-primary">Site Office</span> - Kanispora, Tehsil and District Baramulla, J&K</li>
+                            <li><span className="text-primary">Site Office</span> - Singpora Pattan, District Baramulla, J&K</li>
                         </ul>
                     </motion.div>
 

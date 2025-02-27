@@ -10,33 +10,48 @@ import "slick-carousel/slick/slick-theme.css";
 const keymembers = [
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Alina Burger",
-        position: "Manager",
+        name: "Maninder Kumar",
+        position: "CFO Accounts",
     },
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "John Doe",
-        position: "Engineer",
+        name: "Sumit Bhati",
+        position: "COO Pre engineering",
     },
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Jane Smith",
-        position: "Architect",
+        name: "Akshay Kumar",
+        position: "BU Head Highway",
     },
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Michael Johnson",
-        position: "Designer",
+        name: "Ankush Sharma",
+        position: "Deputy Director",
     },
     {
         image: "/images/AboutUs/Keymembers/helo.png",
-        name: "Sarah Connor",
-        position: "Developer",
+        name: "Sumit Magotra",
+        position: "BU Head Structure",
     },
     {
         image: "/images/AboutUs/Keymembers/download (3).png",
-        name: "Bruce Wayne",
-        position: "CEO",
+        name: "Nikhil Sharma",
+        position: "Asst. Director Prebid cum DPR",
+    },
+    {
+        image: "/images/AboutUs/Keymembers/download (3).png",
+        name: "Shekhar Bhardwaj",
+        position: "Hr-Admin Head Admin",
+    },
+    {
+        image: "/images/AboutUs/Keymembers/download (3).png",
+        name: "Jyoti Swaroop",
+        position: "GM Liasing Bidding",
+    },
+    {
+        image: "/images/AboutUs/Keymembers/download (3).png",
+        name: "Vinay Sharma",
+        position: "Manager Bidding",
     },
 ];
 
@@ -128,7 +143,7 @@ const Ourteam = () => {
                         className="rounded-xl h-[250px] w-[200px] object-cover"
                     />
                     <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr.Susheel Bhardwaj</h1>
-                    <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">MD</p>
+                    <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">Managing Director</p>
                 </motion.div>
 
                 {/* Carousel for key members */}
