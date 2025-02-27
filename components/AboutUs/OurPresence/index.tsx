@@ -106,7 +106,7 @@ const OurPresence = () => {
                         viewport={{ once: true }}
                         className="px-4">
                         <ul className="list-disc marker:text-lg marker:text-primary text-justify space-y-2">
-                            <li><span className="text-primary">Registered Office</span> - Delhi-277, Hiran Kudwa, New Delhi - 110041</li>
+                            <li><span className="text-primary">Registered Office</span> - Delhi-277, Hiran Kudna, New Delhi - 110041</li>
                             <li><span className="text-primary">Corporate Office</span> - 3rd Floor, Tower 3A, DLF CORPORATE GREENS, Sector 74A, Gurugram, Haryana 122004</li>
                             <li><span className="text-primary">Regional Office</span> - Vasantam Hotel, Deotsidh road, Barsar, Himachal Pradesh - 174305</li>
                         </ul>

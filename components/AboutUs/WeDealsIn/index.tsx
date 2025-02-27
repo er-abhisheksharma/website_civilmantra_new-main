@@ -94,21 +94,12 @@ const Dealsin = () => {
                             <li>Detailed Project Report (DPR)</li>
                             <li>Project Management Consultancy (PMC)</li>
                             <li>Authority Engineer (AE)</li>
+                            <li>Independent Engineer (IE)</li>
+                            <li>Financial Modeling</li>
+                            <li>Due Diligence</li>
                         </motion.ul>
 
-                        <motion.p
-                            variants={{
-                                hidden: { opacity: 0, y: -20 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className="text-sm md:text-base text-justify "
-                        >
-                            The following abstract shows the complete order book scenario: CivilMantra is an Engineering & Management Consultancy providing services for Design and Construction Supervision, Pre-bid services for National Highway Authority of India, Ministry of Surface Transport, Government of India, and Private Developers/ Contractors.
-                        </motion.p>
+                        
                     </div>
                 </div>
             </div>
