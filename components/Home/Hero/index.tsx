@@ -86,10 +86,18 @@ const Hero = () => {
             <div className="mb-10">
                 <div className="relative w-full h-[88vh] max-sm:h-[80vh] ">
                     {/* Background video */}
-                    <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay loop muted>
+                    <video
+                        className="absolute top-0 left-0 w-full h-full object-cover -z-10 pointer-events-none"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        webkit-playsinline
+                    >
                         <source src="/videos/Home/20123298-uhd_3840_2160_25fps.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+
 
                     {/* Dark overlay */}
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>

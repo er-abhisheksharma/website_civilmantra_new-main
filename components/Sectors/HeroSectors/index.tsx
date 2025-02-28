@@ -7,13 +7,13 @@ import Link from 'next/link';
 
 const Sectors = [
   {
-    Sector: "Expressway",
+    Sector: "Roads/Engineering",
     bgimage: "/images/Sectors/Herosectors/1730806663019.jpg",
     discription: "Expert expressway construction services ensuring efficiency, durability, and safety.",
     url: "#roadsbridges",
   },
   {
-    Sector: "Tunnels",
+    Sector: "Tunelling/Underground",
     bgimage: "/images/Sectors/Herosectors/Tunnel.jpg",
     url: "#tunnels",
     discription: "Professional tunnel construction services with a focus on safety, precision, and durability.",

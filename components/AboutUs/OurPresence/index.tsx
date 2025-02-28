@@ -108,12 +108,12 @@ const OurPresence = () => {
                         <ul className="list-disc marker:text-lg marker:text-primary text-justify space-y-2">
                             <li><span className="text-primary">Registered Office</span> - 277 VPO, Hiran Kudna West Delhi 110041</li>
                             <li><span className="text-primary">Corporate Office</span> - 3rd Floor, Tower 3A, DLF CORPORATE GREENS, Sector 74A, Gurugram, Haryana 122004</li>
-                            <li><span className="text-primary">Regional Office</span> - Vasantam Hotel, Deotsidh road, Barsar, Himachal Pradesh - 174305</li>
-                            <li><span className="text-primary">Site Office</span> - House No 11, Village Saini Majra, Tehsil and District S.A.S Nagar, Mohali</li>
+                            <li><span className="text-primary">Regional Offices</span> -  (Himachal Pradesh - 174305), (S.A.S Nagar - Mohali),( Itanagar 791111 Arunachal Pardesh), (Rajouri Tehsil & District Rajouri U.T of J&K), (Baramulla - J&K), (Singpora Pattan, District Baramulla, J&K)</li>
+                            {/* <li><span className="text-primary">Site Office</span> - House No 11, Village Saini Majra, Tehsil and District S.A.S Nagar, Mohali</li>
                             <li><span className="text-primary">Site Office</span> - 071, Opposite Energy Park , MOWB - 1, Papum Pare, Itanagar 791111 Arunachal Pardesh</li>
                             <li><span className="text-primary">Site Office</span> - 1st & 2nd Floor, Talwal(Tandwal), Near J&K Bank, Rajouri Tehsil & District Rajouri U.T of J&K</li>
                             <li><span className="text-primary">Site Office</span> - Kanispora, Tehsil and District Baramulla, J&K</li>
-                            <li><span className="text-primary">Site Office</span> - Singpora Pattan, District Baramulla, J&K</li>
+                            <li><span className="text-primary">Site Office</span> - Singpora Pattan, District Baramulla, J&K</li> */}
                         </ul>
                     </motion.div>
 

@@ -9,59 +9,57 @@ import "slick-carousel/slick/slick-theme.css";
 // Array of key members with their details
 const keymembers = [
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Maninder Kumar",
         position: "CFO Accounts",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Sumit Bhati",
         position: "COO Pre engineering",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Akshay Kumar",
         position: "BU Head Highway",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Ankush Sharma",
         position: "Deputy Director",
     },
     {
-        image: "/images/AboutUs/Keymembers/helo.png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Sumit Magotra",
         position: "BU Head Structure",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Nikhil Sharma",
         position: "Asst. Director Prebid cum DPR",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Shekhar Bhardwaj",
         position: "Hr-Admin Head Admin",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Jyoti Swaroop",
         position: "GM Liasing Bidding",
     },
     {
-        image: "/images/AboutUs/Keymembers/download (3).png",
+        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
         name: "Vinay Sharma",
         position: "Manager Bidding",
     },
 ];
 
-// Custom Arrow Components
-
 // Custom Next Arrow component
 const NextArrow = ({ onClick }: { onClick?: MouseEventHandler<HTMLDivElement> }) => {
     return (
         <div
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 rounded-full bg-gray-800 text-white cursor-pointer z-10"
+            className="absolute top-1/2 md:-right-10 -right-5 transform active:scale-95 -translate-y-1/2 p-2 rounded-full border-gray-500 border-[2px] text-gray-800 cursor-pointer z-10"
             onClick={onClick}
         >
             <FaArrowRight size={20} />
@@ -73,7 +71,7 @@ const NextArrow = ({ onClick }: { onClick?: MouseEventHandler<HTMLDivElement> })
 const PrevArrow = ({ onClick }: { onClick?: MouseEventHandler<HTMLDivElement> }) => {
     return (
         <div
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-full bg-gray-800 text-white cursor-pointer z-10"
+            className="absolute top-1/2 md:-left-10 -left-5 transform -translate-y-1/2 p-2 rounded-full active:scale-95 border-gray-500 border-[2px] cursor-pointer z-10"
             onClick={onClick}
         >
             <FaArrowLeft size={20} />
@@ -86,20 +84,30 @@ const Ourteam = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        nextArrow: <NextArrow onClick={undefined} />,  // Using custom NextArrow component
-        prevArrow: <PrevArrow onClick={undefined} />,  // Using custom PrevArrow component
+        autoplay: true,
+        autoplaySpeed: 3000, 
+        pauseOnHover: true,
+        nextArrow: <NextArrow onClick={undefined} />, 
+        prevArrow: <PrevArrow onClick={undefined} />,  
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1280, // Large screens
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 1024, // Tablets
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 768, // Mobile screens
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -120,11 +128,12 @@ const Ourteam = () => {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
-                <h1 className="unihead mb-10 text-center text-2xl md:text-3xl lg:text-4xl my-20">Our Members</h1>
+                <h1 className="unihead mb-10 text-center text-2xl md:text-3xl lg:text-4xl my-20">Our Key Members</h1>
             </motion.div>
 
             <div className="max-w-[85vw] mx-auto">
-                <motion.div
+                {/* Director Section */}
+                {/* <motion.div
                     variants={{
                         hidden: { opacity: 0, y: -20 },
                         visible: { opacity: 1, y: 0 },
@@ -140,11 +149,11 @@ const Ourteam = () => {
                         alt="Director"
                         width={150}
                         height={150}
-                        className="rounded-xl h-[250px] w-[200px] object-cover"
+                        className="rounded-xl h-[220px] w-[200px] object-cover"
                     />
-                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr.Susheel Bhardwaj</h1>
+                    <h1 className="mt-4 text-lg sm:text-xl lg:text-2xl font-bold text-brown">Mr. Susheel Bhardwaj</h1>
                     <p className="text-gray-700 text-sm sm:text-lg lg:text-xl font-semibold">Managing Director</p>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Carousel for key members */}
                 <motion.div
@@ -162,15 +171,15 @@ const Ourteam = () => {
                         {keymembers.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col items-center rounded-xl  p-6 transition-opacity duration-500 hover:opacity-90"
+                                className="flex flex-col items-center rounded-xl p-4 sm:p-6 transition-opacity duration-500 hover:opacity-90"
                             >
-                                <div className="flex items-center justify-center w-full h-full">
+                                <div className="flex items-center justify-center">
                                     <Image
                                         src={item.image}
                                         alt={item.name}
-                                        width={120}
-                                        height={120}
-                                        className="rounded-lg object-cover"
+                                        width={150}
+                                        height={150}
+                                        className="rounded-lg w-[220px] max-md:w-[250px] h-[250px] max-md:h-[270px] "
                                     />
                                 </div>
                                 <div className="mt-4 text-center">

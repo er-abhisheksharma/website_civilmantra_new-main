@@ -12,6 +12,8 @@ const Heroinovate = () => {
                     autoPlay
                     loop
                     muted
+                    playsInline
+                    webkit-playsinline
                     className='absolute inset-0 w-full h-full object-cover z-0'
                 >
                     <source src="/videos/WhatsApp Video 2024-11-14 at 12.44.41 PM.mp4" type="video/mp4" />

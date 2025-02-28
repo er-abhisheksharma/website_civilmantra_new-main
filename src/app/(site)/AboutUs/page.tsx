@@ -8,6 +8,7 @@ import Dealin from "../../../../components/AboutUs/WeDealsIn";
 import OurPresence from "../../../../components/AboutUs/OurPresence";
 import Ourteam from "../../../../components/AboutUs/outeam";
 import Gallery from "../../../../components/AboutUs/Gallery";
+import CeoSpeaks from "../../../../components/AboutUs/MdSpeaks";
 
 export default function Aboutus() {
 
@@ -15,9 +16,10 @@ export default function Aboutus() {
   return (
     <>
      <Top/>
+     <CeoSpeaks/>
+     <Ourteam/>
      <Journey/>
      <Dealin/>
-     <Ourteam/>
      <OurPresence/>
      {/* <Gallery/> */}
      
