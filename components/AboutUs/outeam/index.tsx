@@ -9,47 +9,47 @@ import "slick-carousel/slick/slick-theme.css";
 // Array of key members with their details
 const keymembers = [
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Maninder Kumar",
         position: "CFO Accounts",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Sumit Bhati",
         position: "COO Pre engineering",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Akshay Kumar",
         position: "BU Head Highway",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Ankush Sharma",
         position: "Deputy Director",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Sumit Magotra",
         position: "BU Head Structure",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Nikhil Sharma",
         position: "Asst. Director Prebid cum DPR",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Shekhar Bhardwaj",
         position: "Hr-Admin Head Admin",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Jyoti Swaroop",
         position: "GM Liasing Bidding",
     },
     {
-        image: "/images/AboutUs/keymembers/DSCN2961.JPG",
+        image: "/images/AboutUs/keymembers/123.JPG",
         name: "Vinay Sharma",
         position: "Manager Bidding",
     },

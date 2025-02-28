@@ -19,7 +19,7 @@ const CeoSpeaks = () => {
   {/* Text Content - 50% width */}
   <div className="w-full md:w-[60%] text-justify md:pr-20 max-md:mt-8">
     <h2 className="text-4xl font-bold">MD Speaks</h2>
-    <h3 className="text-2xl text-gray-800 font-semibold">MD NAME, Shusheel Bhardwaj</h3>
+    <h3 className="text-2xl text-gray-800 font-semibold">Mr. Shusheel Bhardwaj</h3>
     <p className="mt-4 text-base md:text-lg lg:text-xl leading-relaxed">
       Lorem ipsum dolor sit amet consectetur. Euismod eu ornare non hendrerit sed sed. 
       Purus at elit pellentesque sem nunc molestie volutpat eu mauris. Pulvinar fames at ut amet quam eget. 
