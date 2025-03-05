@@ -19,7 +19,7 @@ interface User {
 const manualData: User[] = [
     {
         emp_code: "E001",
-        profilepic: "",
+        profilepic: "/images/AboutUs/keymembers/Susheel bhardwaj.png",
         designation_name: "Managing Director",
         department_name: "Management",
         user_detail: { name: "Shusheel Bhardwaj", employee: "Employee 1" },
@@ -45,6 +45,23 @@ const manualData: User[] = [
                         designation_name: "CFO",
                         department_name: "Sales",
                         user_detail: { name: "Maninder", employee: "Employee 3" },
+                        subordinates: [],
+                    },
+                    
+                    {
+                        emp_code: "E003",
+                        profilepic: "",
+                        designation_name: "Senior VP",
+                        department_name: "Sales",
+                        user_detail: { name: "Sunil Kumar", employee: "Employee 3" },
+                        subordinates: [],
+                    },
+                    {
+                        emp_code: "E003",
+                        profilepic: "",
+                        designation_name: "VP",
+                        department_name: "Sales",
+                        user_detail: { name: "Rajveer Dangi", employee: "Employee 3" },
                         subordinates: [],
                     },
                     {
@@ -79,22 +96,6 @@ const manualData: User[] = [
                                 subordinates: [],
                             },
                         ],
-                    },
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "Senior VP",
-                        department_name: "Sales",
-                        user_detail: { name: "Sunil Kumar", employee: "Employee 3" },
-                        subordinates: [],
-                    },
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "VP",
-                        department_name: "Sales",
-                        user_detail: { name: "Rajveer Dangi", employee: "Employee 3" },
-                        subordinates: [],
                     },
 
                 ],
@@ -203,7 +204,7 @@ const HierarchyChain = () => {
 
                     <div className="hireachry-user-details " onClick={() => setShowSubordinates(!showSubordinates)}>
                         <img
-                            src={"/images/heirar/photoprofile.jpg"}
+                            src={user.profilepic}
                             alt="user-image"
                             style={{
                                 width: "100%",
