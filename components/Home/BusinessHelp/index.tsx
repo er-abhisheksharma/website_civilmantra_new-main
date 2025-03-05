@@ -8,6 +8,18 @@ import { Pagination, Navigation } from "swiper/modules";
 
 const businessdata = [
   {
+    location: "Shinkula Tunnel",
+    // head: "Lane 6, expandable to 8 ",
+    // km: "701 Km",
+    work: "Tunnelling ",
+    // duration: "Dec,2022 - Ongoing",
+    client: "DHARIWAL BUILDTECH LTD",
+    // Department: "MSRDC",
+    paragraph:
+      "Design and Construction of Un-Directional Twin Tunnels at Shinkun La Pass of Length 4.1km (Approximate Length) Including Civil and Electrical/Mechanical Work along with Approaches Connecting Darcha-Padam Highway to NHDL Specification in Himachal Pradesh and U.T. of Ladakh.",
+    flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-28 133505.png",
+  },
+  {
     location: "Mumbai - Nagpur",
     head: "Lane 6, expandable to 8 ",
     km: "701 Km",
@@ -15,7 +27,8 @@ const businessdata = [
     duration: "Dec,2022 - Ongoing",
     client: "MSRDC",
     Department: "MSRDC",
-    paragraph: "The Mumbai-Nagpur Expressway spans 701 kilometers, linking Mumbai and Nagpur in Maharashtra, India. It features remarkable tunnels, including India's widest at 17.5 meters and Maharashtra's longest, stretching 8 kilometers.",
+    paragraph:
+      "The Mumbai-Nagpur Expressway spans 701 kilometers, linking Mumbai and Nagpur in Maharashtra, India. It features remarkable tunnels, including India's widest at 17.5 meters and Maharashtra's longest, stretching 8 kilometers.",
     flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-28 133505.png",
   },
   {
@@ -26,7 +39,8 @@ const businessdata = [
     duration: "March,2024 - Ongoing",
     client: "NHAI",
     Department: "NHAI",
-    paragraph: "The Dwarka Expressway is a 29-kilometer, 8-lane highway linking Dwarka in Delhi to Gurgaon in Haryana. It features numerous flyovers, underpasses, and bridges.",
+    paragraph:
+      "The Dwarka Expressway is a 29-kilometer, 8-lane highway linking Dwarka in Delhi to Gurgaon in Haryana. It features numerous flyovers, underpasses, and bridges.",
     flipimage: "/images/Home/BusinessHelp/DelhiFlyover_EDITED.jpg",
   },
   {
@@ -37,11 +51,10 @@ const businessdata = [
     duration: "January,2021 - Ongoing",
     client: "NHAI",
     Department: "NHAI",
-    paragraph: "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
+    paragraph:
+      "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
     flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-27 145324.png",
   },
-
-
 ];
 const Business = () => {
   return (
@@ -51,9 +64,10 @@ const Business = () => {
         <div className="lg:max-w-[80vw] text-center mx-auto mb-10 px-4">
           <h1 className="unihead my-4 ">Key Projects</h1>
           <p className="unip ">
-            From concept to completion, CivilMantra Infracon offers a comprehensive suite of services to turn your
-            construction goals into reality, combining expert engineering with innovative solutions and a commitment to
-            the highest quality standards.
+            From concept to completion, CivilMantra Infracon offers a
+            comprehensive suite of services to turn your construction goals into
+            reality, combining expert engineering with innovative solutions and
+            a commitment to the highest quality standards.
           </p>
         </div>
 
@@ -80,8 +94,8 @@ const Business = () => {
                     <Image
                       src={item.flipimage}
                       alt="Back Side Image"
-                      fill 
-                      style={{ objectFit: "cover" }} 
+                      fill
+                      style={{ objectFit: "cover" }}
                       className="rounded-lg"
                     />
 
@@ -99,15 +113,23 @@ const Business = () => {
                     >
                       <ul className="list-none space-y-1 sm:space-y-2">
                         <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
-                          Sector : <span className="text-gray-100 font-normal">{item.work}</span>
+                          Sector :{" "}
+                          <span className="text-gray-100 font-normal">
+                            {item.work}
+                          </span>
                         </li>
                         <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
-                          Client : <span className="text-gray-100 font-normal">{item.client}</span>
+                          Client :{" "}
+                          <span className="text-gray-100 font-normal">
+                            {item.client}
+                          </span>
                         </li>
                         <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
-                          Location : <span className="text-gray-100 font-normal">{item.location}</span>
+                          Location :{" "}
+                          <span className="text-gray-100 font-normal">
+                            {item.location}
+                          </span>
                         </li>
-
                       </ul>
                     </motion.div>
                   </div>
@@ -127,16 +149,25 @@ const Business = () => {
                       <div className="">
                         <ul className="space-y-2 sm:space-y-3">
                           <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
-                            Department : <span className="text-primary font-normal">{item.Department}</span>
+                            Department :{" "}
+                            <span className="text-primary font-normal">
+                              {item.Department}
+                            </span>
                           </li>
                           <li className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2">
                             {item.head}
                           </li>
                           <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
-                            Length : <span className="text-primary font-normal">{item.km}</span>
+                          Length :{" "}
+                            <span className="text-primary font-normal">
+                              {item.km}
+                            </span>
                           </li>
                           <li className="text-base sm:text-lg md:text-xl mb-1  sm:mb-2 font-semibold">
-                            Duration : <span className="text-primary font-normal">{item.duration}</span>
+                          Duration :{" "}
+                            <span className="text-primary font-normal">
+                              {item.duration}
+                            </span>
                           </li>
                         </ul>
                         <p className="text-gray-800 pt-3 font-medium self-end text-sm sm:text-base">
