@@ -363,7 +363,7 @@ input{
 
 /* *******? new css : New Hierarchy Chain : START ?********* */
 
-  .hierarchy-container {
+  /* .hierarchy-container {
     border-radius: 16px;
     padding: 15px;
     margin-top: 80px;
@@ -456,9 +456,9 @@ input{
     right: 10px;
     top: 10px;
     cursor: pointer;
-  }
+  } */
 
-  /* .hierarchy-container {
+  .hierarchy-container {
     border-radius: 16px;
     padding: 15px;
    
@@ -492,11 +492,11 @@ input{
   
   .hierarchy-user-image {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 150px;
+    height: 140px;
+    border-radius: 8px;
     border: 1px solid #2576bc;
-    top: -27px;
+    top: -89px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -554,7 +554,7 @@ input{
     right: 10px;
     top: 10px;
     cursor: pointer;
-  } */
+  }
 
 
 

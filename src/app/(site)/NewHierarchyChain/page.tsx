@@ -4,8 +4,8 @@ import HierarchyChain from "../../../../components/NewHierarchyChain/HierarchyCh
 export default function NewHierarchyChain() {
   return (
     <>
-      <HierarchyChain/>
-      {/* <Heirartwo /> */}
+      {/* <HierarchyChain/> */}
+      <Heirartwo />
     </>
   );
 }
