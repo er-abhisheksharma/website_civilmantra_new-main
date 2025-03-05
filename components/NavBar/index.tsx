@@ -77,6 +77,7 @@ const NavBar = () => {
             { name: "Projects", url: "/Projects" },
             { name: "Innovation", url: "/Innovation" },
             { name: "Career", url: "/Career" },
+            { name: "Our Hierarchy", url: "/NewHierarchyChain" },
           ].map((link, index) => (
             <Link
               key={index}
