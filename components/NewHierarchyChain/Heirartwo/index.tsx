@@ -3,8 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
 // Online SVG Icons
-const DropdownArrowOption = "https://www.svgrepo.com/show/509054/chevron-down.svg";
-const DropdownArrowClosed = "https://www.svgrepo.com/show/509053/chevron-right.svg";
+const DropdownArrowOption =
+  "https://www.svgrepo.com/show/509054/chevron-down.svg";
+const DropdownArrowClosed =
+  "https://www.svgrepo.com/show/509053/chevron-right.svg";
 const Collapse = "https://www.svgrepo.com/show/509055/chevron-up.svg";
 const SearchBig = "https://www.svgrepo.com/show/80117/search.svg";
 const Employee = "https://www.svgrepo.com/show/509457/user.svg";
@@ -25,91 +27,90 @@ interface User {
 
 // Sample Manual Data
 const manualData: User[] = [
-    {
-        emp_code: "E001",
-        profilepic: "/images/AboutUs/keymembers/Susheel bhardwaj.png",
-        designation_name: "Managing Director",
-        department_name: "Management",
-        user_detail: { name: "Shusheel Bhardwaj", employee: "Employee 1" },
+  {
+    emp_code: "E001",
+    profilepic: "/images/AboutUs/keymembers/Susheel bhardwaj.png",
+    designation_name: "Managing Director",
+    department_name: "Management",
+    user_detail: { name: "Shusheel Bhardwaj", employee: "Employee 1" },
+    subordinates: [
+      {
+        emp_code: "E002",
+        profilepic: "/images/AboutUs/keymembers/123.JPG",
+        designation_name: "COO",
+        department_name: "Sales",
+        user_detail: { name: "Sumit Bhati", employee: "Employee 2" },
         subordinates: [
-            {
-                emp_code: "E002",
-                profilepic: "",
-                designation_name: "COO",
-                department_name: "Sales",
-                user_detail: { name: "Sumit Bhaati", employee: "Employee 2" },
-                subordinates: [
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "BDE Head",
-                        department_name: "Sales",
-                        user_detail: { name: "Bhaskar Lingham", employee: "Employee 3" },
-                        subordinates: [],
-                    },
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "CFO",
-                        department_name: "Sales",
-                        user_detail: { name: "Maninder", employee: "Employee 3" },
-                        subordinates: [],
-                    },
-                    
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "Senior VP",
-                        department_name: "Sales",
-                        user_detail: { name: "Sunil Kumar", employee: "Employee 3" },
-                        subordinates: [],
-                    },
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "VP",
-                        department_name: "Sales",
-                        user_detail: { name: "Rajveer Dangi", employee: "Employee 3" },
-                        subordinates: [],
-                    },
-                    {
-                        emp_code: "E003",
-                        profilepic: "",
-                        designation_name: "Design Head",
-                        department_name: "Sales",
-                        user_detail: { name: "Sumit Manghotra", employee: "Employee 3" },
-                        subordinates: [
-                            {
-                                emp_code: "E003",
-                                profilepic: "",
-                                designation_name: "BU Head (Highway)",
-                                department_name: "Sales",
-                                user_detail: { name: "Akshay Kumar", employee: "Employee 3" },
-                                subordinates: [],
-                            },
-                            {
-                                emp_code: "E003",
-                                profilepic: "",
-                                designation_name: "BU Head (Structure)",
-                                department_name: "Sales",
-                                user_detail: { name: "Ankush", employee: "Employee 3" },
-                                subordinates: [],
-                            },
-                            {
-                                emp_code: "E003",
-                                profilepic: "",
-                                designation_name: "BU Head (Speacial Structure)",
-                                department_name: "Sales",
-                                user_detail: { name: "Shashank", employee: "Employee 3" },
-                                subordinates: [],
-                            },
-                        ],
-                    },
+          {
+            emp_code: "E003",
+            profilepic: "/images/AboutUs/keymembers/Lingam1.jpg",
+            designation_name: "BDE Head",
+            department_name: "Sales",
+            user_detail: { name: "Bhaskar Lingam", employee: "Employee 3" },
+            subordinates: [],
+          },
+          {
+            emp_code: "E003",
+            profilepic: "/images/AboutUs/keymembers/Manindedr Kumar.JPG",
+            designation_name: "CFO",
+            department_name: "Sales",
+            user_detail: { name: "Maninder Kumar", employee: "Employee 3" },
+            subordinates: [],
+          },
 
-                ],
-            },
+          {
+            emp_code: "E003",
+            profilepic: "/images/AboutUs/keymembers/Sunil K.JPG",
+            designation_name: "Senior VP",
+            department_name: "Sales",
+            user_detail: { name: "Sunil Kumar", employee: "Employee 3" },
+            subordinates: [],
+          },
+          {
+            emp_code: "E003",
+            profilepic: "/images/AboutUs/keymembers/Rajveer Dangi.JPG",
+            designation_name: "VP",
+            department_name: "Sales",
+            user_detail: { name: "Rajveer Dangi", employee: "Employee 3" },
+            subordinates: [],
+          },
+          {
+            emp_code: "E003",
+            profilepic: "/images/AboutUs/keymembers/SumitMangotra.JPG",
+            designation_name: "Design Head",
+            department_name: "Sales",
+            user_detail: { name: "Sumit Magotra", employee: "Employee 3" },
+            subordinates: [
+              {
+                emp_code: "E003",
+                profilepic: "/images/AboutUs/keymembers/akshay.JPG",
+                designation_name: "BU Head (Highway)",
+                department_name: "Sales",
+                user_detail: { name: "Akshay Kumar", employee: "Employee 3" },
+                subordinates: [],
+              },
+              {
+                emp_code: "E003",
+                profilepic: "/images/AboutUs/keymembers/Ankush.JPG",
+                designation_name: "BU Head (Structure)",
+                department_name: "Sales",
+                user_detail: { name: "Ankush Sharma", employee: "Employee 3" },
+                subordinates: [],
+              },
+              {
+                emp_code: "E003",
+                profilepic: "/images/AboutUs/keymembers/Shshank Gupta.JPG",
+                designation_name: "BU Head (Speacial Structure)",
+                department_name: "Sales",
+                user_detail: { name: "Shashank", employee: "Employee 3" },
+                subordinates: [],
+              },
+            ],
+          },
         ],
-    },
+      },
+    ],
+  },
 ];
 
 const Heirartwo: React.FC = () => {
@@ -227,42 +228,41 @@ const Heirartwo: React.FC = () => {
     return (
       <div className="mt-14">
         <div className="main-hierarchy-div">
-        <div className="hierarchy-user-box">
-          <div className="hierarchy-user-details">
-            <span className="hierarchy-user-image">
-              <img
-                src={user.profilepic}
-                alt="user-image"
-                style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-              />
-            </span>
-            <div className="mt-5">
-            <h2>{user.user_detail.name}</h2>
-            <h5>{user.emp_code}</h5>
-            <p className="font-weight400">
-              {user.department_name}
-              <br />
-              {user.designation_name}
-            </p>
+          <div className="hierarchy-user-box">
+            <div className="hierarchy-user-details">
+              <span className="hierarchy-user-image">
+                <img
+                  src={user.profilepic}
+                  alt="user-image"
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              </span>
+              <div className="mt-5">
+                <h2>{user.user_detail.name}</h2>
+                <h5>{user.emp_code}</h5>
+                <p className="font-weight400">
+                  {user.department_name}
+                  <br />
+                  {user.designation_name}
+                </p>
+              </div>
+              <button
+                onClick={() => setShowSubordinates(!showSubordinates)}
+                className="hierarchy-toggle-button font-weight500"
+              >
+                {showSubordinates ? "▼" : "▶"}
+              </button>
             </div>
-            <button
-  onClick={() => setShowSubordinates(!showSubordinates)}
-  className="hierarchy-toggle-button font-weight500"
->
-  {showSubordinates ? "▼" : "▶"}
-</button>
-
           </div>
+
+          {showSubordinates && user.subordinates.length > 0 && (
+            <div className="hierarchy-subordinate-box">
+              {user.subordinates.map((sub) => (
+                <UserNode key={sub.emp_code} user={sub} />
+              ))}
+            </div>
+          )}
         </div>
-
-        {showSubordinates && user.subordinates.length > 0 && (
-          <div className="hierarchy-subordinate-box">
-            {user.subordinates.map((sub) => (
-              <UserNode key={sub.emp_code} user={sub} />
-            ))}
-          </div>
-        )}
-      </div>
       </div>
     );
   };
@@ -273,7 +273,10 @@ const Heirartwo: React.FC = () => {
         <button className="btn-action" onClick={handleShowMyself}>
           Show Myself <img src={Employee} alt="Employee" />
         </button>
-        <button className="btn-action" onClick={() => setShowSearchBox(!showSearchBox)}>
+        <button
+          className="btn-action"
+          onClick={() => setShowSearchBox(!showSearchBox)}
+        >
           Search <img src={SearchBig} alt="Search" />
         </button>
       </div>
@@ -290,7 +293,11 @@ const Heirartwo: React.FC = () => {
         </div>
       )}
 
-      <div className="hierarchy-container">{treeData.map((user) => <UserNode key={user.emp_code} user={user} />)}</div>
+      <div className="hierarchy-container">
+        {treeData.map((user) => (
+          <UserNode key={user.emp_code} user={user} />
+        ))}
+      </div>
     </div>
   );
 };

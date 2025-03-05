@@ -57,10 +57,10 @@ const useTypingEffect = (
 
 const Hero = () => {
   const backgroundVideos = [
-    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/1.mp4/",
-    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/2+(1).mp4/",
-    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/3.mp4/",
-    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/4.mp4/",
+    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/1.mp4",
+    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/2+(1).mp4",
+    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/3.mp4",
+    "https://cipl-aimantra.s3.ap-south-1.amazonaws.com/website/4.mp4",
   ];
 
   // State to track current video

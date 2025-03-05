@@ -24,6 +24,21 @@ const keymembers = [
     position: "CFO Accounts",
   },
   {
+    image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
+    name: "Sumit Magotra",
+    position: "BU Head Structure",
+  },
+  {
+    image: "/images/AboutUs/keymembers/Sunil K.JPG",
+    name: "Sunil Kumar",
+    position: "Senior VP",
+  },
+  {
+    image: "/images/AboutUs/keymembers/Rajveer Dangi.JPG",
+    name: "Rajveer Dangi",
+    position: "VP",
+  },
+  {
     image: "/images/AboutUs/keymembers/akshay.JPG",
     name: "Akshay Kumar",
     position: "BU Head Highway",
@@ -31,33 +46,12 @@ const keymembers = [
   {
     image: "/images/AboutUs/keymembers/Ankush.JPG",
     name: "Ankush Sharma",
-    position: "Deputy Director",
-  },
-  {
-    image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
-    name: "Sumit Magotra",
     position: "BU Head Structure",
   },
-
   {
-    image: "/images/AboutUs/keymembers/Nikhil Sharma.JPG",
-    name: "Nikhil Sharma",
-    position: "Asst. Director Prebid cum DPR",
-  },
-  {
-    image: "/images/AboutUs/keymembers/1.JPG",
-    name: "Shekhar Bhardwaj",
-    position: "Hr-Admin Head Admin",
-  },
-  {
-    image: "/images/AboutUs/keymembers/Jyoti Swaroop.JPG",
-    name: "Jyoti Swaroop",
-    position: "GM Liasing Bidding",
-  },
-  {
-    image: "/images/AboutUs/keymembers/123.JPG",
-    name: "Vinay Sharma",
-    position: "Manager Bidding",
+    image: "/images/AboutUs/keymembers/Shshank Gupta.JPG",
+    name: "Shashank Gupta",
+    position: "BU Head",
   },
 ];
 
