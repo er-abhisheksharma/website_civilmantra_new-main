@@ -68,10 +68,10 @@ const OurPresence = () => {
                             viewport={{ once: true }}
                             key={index} className="px-2">
                             <Link
-                                className="relative border-[3px] rounded-md border-gray-600 p-5 h-28 text-center flex items-center justify-center overflow-hidden group shadow-2xl"
+                                className="relative border-[3px] rounded-md border-gray-600 p-5 h-28 text-center flex items-center justify-center overflow-hidden group shadow-lg"
                                 href={item.url} // Link to the specific section on the target page
                             >
-                                <span className="absolute inset-0 transition-transform duration-500 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full xl:-translate-x-[-490px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
+                                <span className="absolute inset-0 duration-200 bg-primary transform -translate-x-[-280px] max-lg:-translate-x-full xl:-translate-x-[-490px] group-hover:translate-x-0 translate-y-10 rounded-sm hover:rounded-none group-hover:translate-y-0"></span>
                                 <span className="relative z-10 text-black group-hover:text-white transition-colors duration-300 text-lg md:text-xl">
                                     {item.text}
                                 </span>
@@ -141,7 +141,7 @@ const OurPresence = () => {
                                     transition={{ duration: 0.8, delay: index * 0.1 }}
                                     viewport={{ once: true }}
                                     key={index}
-                                    className="border-[2px] px-2 md:px-3 py-1 border-primary rounded-lg hover:bg-primary hover:text-white cursor-pointer shadow-xl text-sm md:text-base">
+                                    className="border-[2px] px-2 md:px-3 py-1 border-primary rounded-lg hover:bg-primary hover:text-white cursor-pointer shadow-md text-sm md:text-base">
                                     {item.place}
                                 </motion.li>
                             ))}
