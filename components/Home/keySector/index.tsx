@@ -11,8 +11,9 @@ interface SectorProps {
 
 const Sector = ({ icon, title, description, href }: SectorProps) => {
   return (
-    <Link href={href} className="group block">
-      <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md w-[400px] h-[280px] transition-all duration-300 hover:shadow-lg hover:scale-[1.01] border border-gray-100 cursor-pointer">
+    <div className="flex justify-center items-center">
+      <Link href={href} className="group block">
+      <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md  h-[280px] xl:w-[400px] xl:h-[280px] transition-all duration-300 hover:shadow-lg hover:scale-[1.01] border border-gray-100 cursor-pointer">
         <div className="p-3 bg-blue-50 rounded-full mb-4 transition-all duration-300 group-hover:bg-blue-100">
           <div className="text-blue-500 group-hover:text-primary">{icon}</div>
         </div>
@@ -32,6 +33,7 @@ const Sector = ({ icon, title, description, href }: SectorProps) => {
         </div>
       </div>
     </Link>
+    </div>
   )
 }
 
@@ -85,7 +87,7 @@ export default function KeySectors() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 gap-8 xl:gap-y-12 justify-center items-center">
           {sectors.map((sector, index) => (
             <Sector key={index} icon={sector.icon} title={sector.title} description={sector.description} href={sector.href} />
           ))}
