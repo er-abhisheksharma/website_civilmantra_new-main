@@ -10,7 +10,7 @@ import ProjectDetails from "../../../../components/Projects/ProjectsDetails";
 export default function Projects() {
   return (
     <>
-      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white">
+      <div className="">
         <Heroprojects />
         {/* <HighlightedDesign/> */}
         {/* <ProjectDetails/> */}

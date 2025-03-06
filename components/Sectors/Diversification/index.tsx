@@ -48,7 +48,7 @@ export default function DiversificationSection() {
   ]
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white">
+    <section className="w-full py-12 md:py-24 ">
       <div className="mx-auto  px-4 mt-10 max-w-[88vw] xl:w-full">
         <div className="mx-auto  px-4 mt-10 max-w-[88vw] xl:w-full">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">

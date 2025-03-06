@@ -372,7 +372,7 @@ const EnhancedProjectSectors = () => {
         key="prev"
         onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-primary/10  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Previous page"
       >
         <ChevronLeft className="h-4 w-4" />
@@ -387,8 +387,8 @@ const EnhancedProjectSectors = () => {
           onClick={() => handlePageChange(1)}
           className={`h-10 w-10 rounded-md border ${
             currentPage === 1
-              ? "bg-primary text-primary-foreground"
-              : "border-border bg-gray-600 text-white hover:bg-gray-700"
+              ? "bg-primary text-white"
+              : "border-border bg-white text-gray-900 hover:bg-primary/10 hover:bg-gray-700"
           }`}
         >
           1
@@ -418,8 +418,8 @@ const EnhancedProjectSectors = () => {
           onClick={() => handlePageChange(i)}
           className={`h-10 w-10 rounded-md border ${
             currentPage === i
-              ? "bg-black text-primary-foreground"
-              : "border-border bg-gray-600 text-white hover:bg-gray-700"
+              ? "bg-primary text-white"
+              : "border-border bg-white text-gray-900 hover:bg-primary/10 hover:bg-gray-700"
           }`}
         >
           {i}
@@ -447,8 +447,8 @@ const EnhancedProjectSectors = () => {
           onClick={() => handlePageChange(totalPages)}
           className={`h-10 w-10 rounded-md border ${
             currentPage === totalPages
-              ? "bg-primary text-primary-foreground"
-              : "border-border bg-gray-600 text-white hover:bg-gray-700"
+              ? "bg-primary text-white"
+              : "border-border bg-white text-gray-900 hover:bg-primary/10"
           }`}
         >
           {totalPages}
@@ -462,7 +462,7 @@ const EnhancedProjectSectors = () => {
         key="next"
         onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-primary/10  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Next page"
       >
         <ChevronRight className="h-4 w-4" />
@@ -512,8 +512,8 @@ const EnhancedProjectSectors = () => {
               onClick={() => handleSectorClick(sector.id as SectorType)}
               className={`px-4 py-2 rounded-md text-sm transition duration-300 ease-in-out ${
                 activeSector === sector.id
-                  ? "bg-white text-gray-900 "
-                  : "bg-card hover:bg-primary/10 border border-border"
+                  ? "bg-primary text-white "
+                  : "bg-white text-gray-900 hover:bg-primary/10 border border-border"
               }`}
             >
               {sector.name}
@@ -575,11 +575,11 @@ const EnhancedProjectSectors = () => {
           <div className="overflow-x-auto rounded-lg border border-border shadow-sm">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-muted/50">
+                <tr className="bg-primary/10">
                   {headers.map((header, index) => (
                     <th
                       key={index}
-                      className="border-b border-border px-4 py-3 text-sm font-medium text-muted-foreground"
+                      className="border-b border-border px-4 py-3 text-sm  font-medium text-muted-foreground"
                     >
                       {header}
                     </th>
@@ -594,7 +594,7 @@ const EnhancedProjectSectors = () => {
                       className={
                         rowIndex % 2 === 0
                           ? "bg-background text-gray-900"
-                          : "bg-muted/20"
+                          : "bg-primary/10"
                       }
                     >
                       {headers.map((header, cellIndex) => (
@@ -643,7 +643,7 @@ const EnhancedProjectSectors = () => {
                     setItemsPerPage(Number(e.target.value));
                     setCurrentPage(1); // Reset to first page when changing items per page
                   }}
-                  className="h-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 px-3 text-sm"
+                  className="h-10 rounded-md border border-border bg-white text-gray-900 hover:bg-primary/10 px-3 text-sm"
                 >
                   <option value={10}>10 per page</option>
                   <option value={25}>25 per page</option>

@@ -1,5 +1,6 @@
 import Bridges from "../../../../components/Sectors/Bridges";
 import DiversificationSection from "../../../../components/Sectors/Diversification";
+import FrequentlyAskedQuestions from "../../../../components/Sectors/FAQ";
 import Herosectors from "../../../../components/Sectors/HeroSectors";
 import Metro from "../../../../components/Sectors/Metro";
 import Railway from "../../../../components/Sectors/Railway";
@@ -14,6 +15,7 @@ export default function Sectors() {
     <>
       <Herosectors />
       <DiversificationSection />
+      <FrequentlyAskedQuestions/>
     </>
   );
 }

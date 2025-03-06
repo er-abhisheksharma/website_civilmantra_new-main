@@ -7,7 +7,7 @@ const CeoSpeaks = () => {
       <div className="w-full md:w-[40%] flex justify-center items-center">
         <div className="  bg-white rounded-lg overflow-hidden flex items-center justify-center ">
           <Image
-            src="/images/AboutUs/keymembers/Susheel bhardwaj.png"
+            src="/images/AboutUs/keymembers/1.JPG"
             alt="CEO"
             width={256}
             height={256}

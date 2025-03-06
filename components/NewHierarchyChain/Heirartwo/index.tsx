@@ -29,7 +29,7 @@ interface User {
 const manualData: User[] = [
     {
         emp_code: "E001",
-        profilepic: "/images/AboutUs/keymembers/Susheel bhardwaj.png",
+        profilepic: "/images/AboutUs/keymembers/1.JPG",
         designation_name: "Managing Director",
         department_name: "Management",
         user_detail: { name: "Shusheel Bhardwaj", employee: "Employee 1" },

@@ -17,7 +17,19 @@ const businessdata = [
     // Department: "MSRDC",
     paragraph:
       "Design and Construction of Un-Directional Twin Tunnels at Shinkun La Pass of Length 4.1km (Approximate Length) Including Civil and Electrical/Mechanical Work along with Approaches Connecting Darcha-Padam Highway to NHDL Specification in Himachal Pradesh and U.T. of Ladakh.",
-    flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-28 133505.png",
+    flipimage: "/images/Home/BusinessHelp/1.jpg",
+  },
+  {
+    location: "Amravati Chikhli",
+    // head: "Lane 6, expandable to 8 ",
+    // km: "701 Km",
+    work: "Roads&Bridges ",
+    // duration: "Dec,2022 - Ongoing",
+    client: "MCL",
+    // Department: "MSRDC",
+    paragraph:
+      "Design and Construction of Un-Directional Twin Tunnels at Shinkun La Pass of Length 4.1km (Approximate Length) Including Civil and Electrical/Mechanical Work along with Approaches Connecting Darcha-Padam Highway to NHDL Specification in Himachal Pradesh and U.T. of Ladakh.",
+    flipimage: "/images/Sectors/Herosectors/1.jpeg",
   },
   {
     location: "Mumbai - Nagpur",

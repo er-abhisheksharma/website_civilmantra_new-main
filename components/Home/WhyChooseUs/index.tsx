@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                 alt="Civil engineering project"
                 className="rounded-lg shadow-xl w-full"
               />
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white py-4 px-8 rounded-lg shadow-lg hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white py-4 px-8 rounded-lg shadow-lg hidden md:block">
                 <p className="text-2xl font-bold">9+ Years</p>
                 <p>of Excellence</p>
               </div>
