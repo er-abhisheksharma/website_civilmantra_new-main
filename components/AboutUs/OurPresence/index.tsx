@@ -141,7 +141,7 @@ const OurPresence = () => {
                                     transition={{ duration: 0.8, delay: index * 0.1 }}
                                     viewport={{ once: true }}
                                     key={index}
-                                    className="border-[2px] px-2 md:px-3 py-1 border-primary rounded-lg hover:bg-primary hover:text-white cursor-pointer shadow-md text-sm md:text-base">
+                                    className="border-[2px] px-2 md:px-3 py-1 border-primary rounded-lg  shadow-md text-sm md:text-base">
                                     {item.place}
                                 </motion.li>
                             ))}
