@@ -82,7 +82,7 @@ const NavBar = () => {
             <Link
               key={index}
               href={link.url}
-              prefetch={false}
+              // prefetch={false}
               className={`px-2 py-1 rounded-lg text-xl relative  hover:scale-110 transition-transform duration-300 ease-in-out ${
                 pathname === link.url
                   ? "scale-110  text-gray-800 font-bold hover:no-underline hover:text-black"
