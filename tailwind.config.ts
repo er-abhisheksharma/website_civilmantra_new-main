@@ -10,6 +10,11 @@ const config: Config = {
   
   theme: {
     extend: {
+      screens: {
+        '1600px': '1600px', // Add custom breakpoint
+      },
+
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

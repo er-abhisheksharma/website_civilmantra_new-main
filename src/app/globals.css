@@ -143,20 +143,14 @@ body {
 
 
 .unihead {
-  @apply text-[24px] leading-[30px] font-bold text-center
-    sm:text-[28px] sm:leading-[34px]
-    md:text-[32px] md:leading-[38px]
-    lg:text-[36px] lg:leading-[40px]
-    xl:text-[40px] xl:leading-[44px];
+  @apply text-3xl font-bold text-gray-900 text-center md:text-4xl;
 }
 
-.unip{
-  @apply text-[16px] leading-[24px] font-light my-2 text-center
-    sm:text-[18px] sm:leading-[26px]
-    md:text-[20px] md:leading-[28px]
-    lg:text-[22px] lg:leading-[30px]
-    xl:text-[24px] xl:leading-[32px];
+
+.unip {
+  @apply md:text-xl text-lg text-gray-600 mx-auto;
 }
+
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
