@@ -67,6 +67,18 @@ const businessdata = [
       "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
     flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-27 145324.png",
   },
+  {
+    location: "Delhi-Dehradun",
+    head: "6-Lane ",
+    km: "210 Km",
+    work: "Expressway",
+    duration: "January,2021 - Ongoing",
+    client: "NHAI",
+    Department: "NHAI",
+    paragraph:
+      "The expressway, spanning 210 kilometers, will connect Delhi, Uttar Pradesh, and Uttarakhand. Initially designed with six lanes, it can be expanded to eight lanes in the future.",
+    flipimage: "/images/Home/BusinessHelp/Screenshot 2024-11-27 145324.png",
+  },
 ];
 const Business = () => {
   return (
@@ -88,9 +100,11 @@ const Business = () => {
           slidesPerView={1}
           spaceBetween={0}
           breakpoints={{
-            768: { slidesPerView: 2 },
+            768: { slidesPerView: 1 },
 
-            1024: { slidesPerView: 3 },
+            1024: { slidesPerView: 1 },
+            1324: { slidesPerView: 2 },
+            1990: { slidesPerView: 3 },
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
@@ -98,8 +112,7 @@ const Business = () => {
         >
           {businessdata.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="group  perspective-1000 mt-10 mb-8 mx-auto md:h-[250px] md:w-[250px] h-[300px] w-[300px] sm:h-[300px] sm:w-[300px] lg:h-[290px] lg:w-[290px] xl:h-[350px] xl:w-[350px]">
-                {/* Flip Container */}
+              <div className="group perspective-1000 mt-20 mb-16 mx-auto w-full max-w-[580px] h-auto aspect-[4/3] px-5 max-sm:h-[300px]">                {/* Flip Container */}
                 <div className="rotate-container">
                   {/* front Side */}
                   <div className="front-side  duration-1000  bg-gray-100 rounded-lg shadow-lg relative flex items-center justify-center  ">
@@ -124,19 +137,19 @@ const Business = () => {
                       className="relative z-10 text-left"
                     >
                       <ul className="list-none space-y-1 sm:space-y-2">
-                        <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                        <li className="text-lg sm:text-2xl md:text-3xl mb-1 font-medium text-gray-200">
                           Sector :{" "}
                           <span className="text-gray-100 font-normal">
                             {item.work}
                           </span>
                         </li>
-                        <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                        <li className="text-lg sm:text-2xl md:text-3xl mb-1 font-medium text-gray-200">
                           Client :{" "}
                           <span className="text-gray-100 font-normal">
                             {item.client}
                           </span>
                         </li>
-                        <li className="text-base sm:text-lg md:text-xl mb-1 font-semibold text-gray-200">
+                        <li className="text-lg sm:text-2xl md:text-3xl mb-1 font-medium text-gray-200">
                           Location :{" "}
                           <span className="text-gray-100 font-normal">
                             {item.location}
@@ -160,29 +173,29 @@ const Business = () => {
                     >
                       <div className="">
                         <ul className="space-y-2 sm:space-y-3">
-                          <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
+                          <li className="text-lg sm:text-2xl md:text-2xl mb-1 font-medium  sm:mb-2 ">
                             Department :{" "}
                             <span className="text-primary font-normal">
                               {item.Department}
                             </span>
                           </li>
-                          <li className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2">
+                          <li className="text-lg sm:text-2xl md:text-2xl mb-1 font-medium sm:mb-2">
                             {item.head}
                           </li>
-                          <li className="text-base sm:text-lg md:text-xl mb-1 sm:mb-2 font-semibold">
-                          Length :{" "}
+                          <li className="text-lg sm:text-2xl md:text-2xl mb-1 font-medium sm:mb-2 ">
+                            Length :{" "}
                             <span className="text-primary font-normal">
                               {item.km}
                             </span>
                           </li>
-                          <li className="text-base sm:text-lg md:text-xl mb-1  sm:mb-2 font-semibold">
-                          Duration :{" "}
+                          <li className="text-lg sm:text-2xl md:text-2xl mb-1 font-medium sm:mb-2 ">
+                            Duration :{" "}
                             <span className="text-primary font-normal">
                               {item.duration}
                             </span>
                           </li>
                         </ul>
-                        <p className="text-gray-800 pt-3 font-medium self-end text-sm sm:text-base">
+                        <p className="text-gray-800 pt-3 font-medium self-end text-xs sm:text-sm lg:text-lg xl:text-xl">
                           {item.paragraph}
                         </p>
                       </div>

@@ -23,11 +23,11 @@ const keymembers = [
     name: "Maninder Kumar",
     position: "CFO Accounts",
   },
-  {
-    image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
-    name: "Sumit Magotra",
-    position: "BU Head Structure",
-  },
+  // {
+  //   image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
+  //   name: "Sumit Magotra",
+  //   position: "BU Head Structure",
+  // },
   {
     image: "/images/AboutUs/keymembers/Sunil K.JPG",
     name: "Sunil Kumar",

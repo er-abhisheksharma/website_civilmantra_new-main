@@ -71,9 +71,9 @@ export default function WhyChooseUs() {
           <div className="xl:w-1/2 mb-10 lg:mb-0 xl:pr-12">
             <div className="relative">
               <img
-                src="/images/Home/BusinessHelp/Dwarka.jpeg?height=600&width=800"
+                src="/images/AboutUs/Wedeal/1730806663019.jpg"
                 alt="Civil engineering project"
-                className="rounded-lg shadow-xl w-full"
+                className="rounded-lg shadow w-full "
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-white py-4 px-8 rounded-lg shadow-lg hidden md:block">
                 <p className="text-2xl font-bold">9+ Years</p>

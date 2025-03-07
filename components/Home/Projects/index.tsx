@@ -6,7 +6,7 @@ import Image from "next/image";
 const data = [
     {
         image: "/images/Home/Projects/growingscale.png",
-        id: 8,
+        id: 9,
         name: "SUCCESSFULL YEARS",
     },
     {

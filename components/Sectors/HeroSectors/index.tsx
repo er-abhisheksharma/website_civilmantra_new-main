@@ -32,7 +32,7 @@ const Sectors = [
     filterValue: "Railway",
   },
   {
-    Sector: "Waterways",
+    Sector: "Waterways/Irrigation",
     bgimage: "/images/Sectors/Herosectors/waterway.jpg",
     description:
       "Transforming waterways into efficient transport and trade routes.",
