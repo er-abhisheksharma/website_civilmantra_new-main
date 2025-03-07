@@ -44,6 +44,7 @@ export default function KeySectors() {
       title: "Roads/Engineering",
       description: "Expert design and construction of sustainable road infrastructure with focus on durability and safety.",
       href: "/Projects?sector=Roads",
+      image: ""
     },
     {
       icon: <Mountain size={24} />,

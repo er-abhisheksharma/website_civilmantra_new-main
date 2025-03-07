@@ -214,6 +214,22 @@ const Hero = () => {
               </motion.p>
             </div>
           </div>
+
+          <motion.div
+        className="absolute bottom-4 left-0 right-0 z-20 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+      >
+        <div className="inline-block bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full">
+          <p className="text-white/90 text-xs md:text-sm font-light tracking-wide">
+            <span className="inline-block mr-1">
+              <span className="text-red-500">•</span>
+            </span>
+            All footage shown is original content from our completed projects
+          </p>
+        </div>
+      </motion.div>
         </div>
 
         {/* Sliding Section */}

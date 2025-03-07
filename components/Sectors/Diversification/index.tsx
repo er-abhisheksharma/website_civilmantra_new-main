@@ -1,13 +1,17 @@
-import type React from "react"
-import { ArrowUpRight, Plane, Building2, Mountain, Train } from "lucide-react"
+import type React from "react";
+import { ArrowUpRight, Plane, Building2, Mountain, Train } from "lucide-react";
 
 interface DiversificationSectorProps {
-  icon: React.ReactNode
-  title: string
-  description: string
+  icon: React.ReactNode;
+  title: string;
+  description: string;
 }
 
-const DiversificationSector = ({ icon, title, description }: DiversificationSectorProps) => {
+const DiversificationSector = ({
+  icon,
+  title,
+  description,
+}: DiversificationSectorProps) => {
   return (
     <div className="group relative flex flex-col gap-2 rounded-lg border border-border hover:scale-[1.01] bg-card p-6 transition-all hover:shadow-md">
       <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -20,32 +24,36 @@ const DiversificationSector = ({ icon, title, description }: DiversificationSect
         <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
       </div> */}
     </div>
-  )
-}
+  );
+};
 
 export default function DiversificationSection() {
   const newSectors = [
     {
       icon: <Mountain className="h-6 w-6" />,
       title: "Ropeways",
-      description: "Innovative aerial transportation solutions connecting challenging terrains and urban environments.",
+      description:
+        "Innovative aerial transportation solutions connecting challenging terrains and urban environments.",
     },
     {
       icon: <Building2 className="h-6 w-6" />,
       title: "Urban Infrastructures",
-      description: "Comprehensive urban development projects creating sustainable and smart city solutions.",
+      description:
+        "Comprehensive urban development projects creating sustainable and smart city solutions.",
     },
     {
       icon: <Plane className="h-6 w-6" />,
       title: "Aviation",
-      description: "Airport infrastructure and aviation facilities designed for efficiency and future growth.",
+      description:
+        "Airport infrastructure and aviation facilities designed for efficiency and future growth.",
     },
     {
       icon: <Train className="h-6 w-6" />,
       title: "Hyperloop/Highspeed Rails",
-      description: "Next-generation transportation systems delivering unprecedented speed and connectivity.",
+      description:
+        "Next-generation transportation systems delivering unprecedented speed and connectivity.",
     },
-  ]
+  ];
 
   return (
     <section className="w-full py-10 ">
@@ -58,13 +66,15 @@ export default function DiversificationSection() {
             We are diversifying to new sectors
           </h2>
           <p className="mt-4 text-xl text-muted-foreground py-2">
-            Building on our core engineering excellence, we're expanding our capabilities to address emerging
-            infrastructure needs.
+            Building on our core engineering excellence, we're expanding our
+            capabilities to address emerging infrastructure needs.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-lg
-">
+        <div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 bg-white/10 backdrop-blur-lg rounded-lg p-6
+"
+        >
           {newSectors.map((sector, index) => (
             <DiversificationSector
               key={index}
@@ -76,6 +86,5 @@ export default function DiversificationSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

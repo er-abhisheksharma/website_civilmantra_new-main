@@ -18,20 +18,29 @@ const CeoSpeaks = () => {
 
       {/* Text Content - 50% width */}
       <div className="w-full md:w-[60%] text-justify md:pr-20 max-md:mt-8">
-        <h2 className="text-4xl text-gray-800 font-bold">MD Speaks</h2>
+        <h2 className="text-4xl text-logored font-bold">MD Speaks</h2>
         <h3 className="text-2xl text-gray-800 font-semibold">
-          Mr. Shusheel Bhardwaj
+          Mr. Susheel Bhardwaj
         </h3>
         <p className="mt-4 text-base md:text-lg lg:text-xl leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur. Euismod eu ornare non
-          hendrerit sed sed. Purus at elit pellentesque sem nunc molestie
-          volutpat eu mauris. Pulvinar fames at ut amet quam eget. Curabitur
-          accumsan eu feugiat fusce lectus eget condimentum. Nisl vestibulum in
-          quam habitasse praesent suspendisse sapien.
+          At{" "}
+          <span className="text-primary font-bold text-lg md:text-xl lg:text-2xl">
+            Civil
+            <span className="text-logored font-bold text-lg md:text-xl lg:text-2xl">
+              Mantra
+            </span>
+          </span>
+          , we take pride in shaping the future of infrastructure. Our journey
+          has been defined by engineering excellence, innovation, and a
+          commitment to delivering world-class projects in roads, tunnels,
+          railways, waterways, and buildings.
         </p>
         <p className="mt-4 text-base md:text-lg lg:text-xl leading-relaxed">
-          Donec vitae ac vel lorem accumsan vel velit ipsum aliquam. Diam vel
-          euismod et aenean duis laoreet dictumst turpis senectus.
+          With a dedicated team of experts and cutting-edge technology, we
+          continue to transform landscapes and connect communities. As we expand
+          into new frontiers like ropeways, urban infrastructure, aviation, and
+          high-speed rail, our vision remains clear—to build a sustainable and
+          resilient tomorrow.
         </p>
       </div>
     </section>

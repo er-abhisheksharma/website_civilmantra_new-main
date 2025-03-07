@@ -321,6 +321,8 @@ const EnhancedProjectSectors = () => {
   // Check URL parameters on component mount and when they change
   useEffect(() => {
     const sectorParam = searchParams.get("sector");
+    console.log("sectorParam");
+    console.log(sectorParam);
     if (sectorParam) {
       const matchedSector = sectors.find(
         (s) =>
@@ -355,16 +357,16 @@ const EnhancedProjectSectors = () => {
   ]);
 
   // Generate pagination items
-const renderPaginationItems = useCallback(() => {
-  const items = [];
-  const maxVisiblePages = 5;
+  const renderPaginationItems = useCallback(() => {
+    const items = [];
+    const maxVisiblePages = 5;
 
-  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-  const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
 
-  if (endPage - startPage + 1 < maxVisiblePages) {
-    startPage = Math.max(1, endPage - maxVisiblePages + 1);
-  }
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
 
     // Previous button
     items.push(
@@ -378,7 +380,7 @@ const renderPaginationItems = useCallback(() => {
         <ChevronLeft className="h-4 w-4" />
       </button>
     );
-  
+
     // First page
     if (startPage > 1) {
       items.push(
@@ -394,7 +396,7 @@ const renderPaginationItems = useCallback(() => {
           1
         </button>
       );
-  
+
       // Ellipsis if needed
       if (startPage > 2) {
         items.push(
@@ -407,7 +409,7 @@ const renderPaginationItems = useCallback(() => {
         );
       }
     }
-  
+
     // Page numbers
     for (let i = startPage; i <= endPage; i++) {
       items.push(
@@ -424,7 +426,7 @@ const renderPaginationItems = useCallback(() => {
         </button>
       );
     }
-  
+
     // Last page button (only if not already included in the range)
     if (endPage < totalPages) {
       // Ellipsis if needed
@@ -438,7 +440,7 @@ const renderPaginationItems = useCallback(() => {
           </span>
         );
       }
-  
+
       items.push(
         <button
           key={totalPages}
@@ -453,7 +455,7 @@ const renderPaginationItems = useCallback(() => {
         </button>
       );
     }
-  
+
     // Next button
     items.push(
       <button
@@ -471,7 +473,7 @@ const renderPaginationItems = useCallback(() => {
   }, [currentPage, totalPages, handlePageChange]);
 
   return (
-    <div className="px-4  max-w-[88vw] mx-auto mb-10 py-[40px]">
+    <div id="Projects" className="px-4  max-w-[88vw] mx-auto mb-10 py-[40px]">
       {/* Project Type Buttons
       <div className="mb-8 flex flex-wrap gap-4 justify-center">
         <button

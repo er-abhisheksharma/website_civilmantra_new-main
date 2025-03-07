@@ -9,49 +9,50 @@ const Sectors = [
   {
     Sector: "Roads/Engineering",
     bgimage: "/images/Sectors/Herosectors/1.jpeg",
-    discription:
+    description:
       "Expert expressway construction services ensuring efficiency, durability, and safety.",
-    url: "/Projects?sector=Roads",
+    url: "?sector=Roads",
     filterValue: "Roads",
   },
   {
     Sector: "Tunelling/Underground Engineering/Slope",
     bgimage: "/images/Sectors/Herosectors/Tunnel.jpg",
-    discription:
+    description:
       "Professional tunnel construction services with a focus on safety, precision, and durability.",
-    url: "/Projects?sector=Tunneling",
+    url: "?sector=Tunneling",
     filterValue: "Tunneling",
   },
   {
     Sector: "Metro & Railways",
     bgimage: "/images/Sectors/Herosectors/metrotunnel-2.jpg",
-    discription:
+    description:
       "Delivering advanced metro systems with precision and expertise.",
-    url: "/Projects?sector=Railways",
+    url: "?sector=Railways", // Adjusted URL
+
     filterValue: "Railway",
   },
   {
     Sector: "Waterways",
     bgimage: "/images/Sectors/Herosectors/waterway.jpg",
-    discription:
+    description:
       "Transforming waterways into efficient transport and trade routes.",
-    url: "/Projects?sector=Waterways",
+    url: "?sector=Waterways",
     filterValue: "Waterways",
   },
   {
     Sector: "Building/Architech",
     bgimage: "/images/Sectors/Herosectors/arq-2645763_1280.jpg",
-    discription:
+    description:
       "Delivering innovative urban infrastructure solutions to transform cities.",
-    url: "/Projects?sector=Building",
+    url: "?sector=Building",
     filterValue: "Building",
   },
   {
     Sector: "All PROJECTS",
     bgimage: "/images/Sectors/Herosectors/pexels-maren-3055534-29502895.jpg",
-    discription:
+    description:
       "Crafting excellence in roadways and infrastructure, delivering quality that stands the test of time.",
-    url: "/Projects?sector=All",
+    url: "?sector=All",
     filterValue: "All",
   },
 ];
@@ -82,7 +83,8 @@ const Herosectors = () => {
       (prevIndex) => (prevIndex - 1 + Sectors.length) % Sectors.length
     );
   };
-
+  // console.log('Sectors[currentIndex].url.split("?")[1]');
+  console.log(Sectors[currentIndex].url);
   return (
     <div className="relative w-full py-[40px]">
       {/* Background image */}
@@ -113,7 +115,21 @@ const Herosectors = () => {
             {/* Grid layout for extra-large screens */}
             <div className="hidden xl:grid grid-cols-3 gap-x-3 gap-y-3 mx-auto mt-11">
               {Sectors.map((item, index) => (
-                <Link href={item.url} key={index} passHref>
+                <Link
+                  href={item.url}
+                  key={index}
+                  passHref
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const url = new URL(
+                      window.location.origin + "/Sectors" + item.url
+                    );
+                    window.history.pushState({}, "", url.toString()); // Update URL without reload
+                    document
+                      .getElementById("Projects")
+                      ?.scrollIntoView({ behavior: "smooth" }); // Scroll to section
+                  }}
+                >
                   <motion.div
                     variants={{
                       hidden: { opacity: 0, y: -20 },
@@ -135,7 +151,7 @@ const Herosectors = () => {
                         {item.Sector}
                       </h2>
                       <p className="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 text-gray-200 text-base font-normal">
-                        {item.discription}
+                        {item.description}
                       </p>
                     </div>
                   </motion.div>
@@ -145,6 +161,7 @@ const Herosectors = () => {
 
             {/* Carousel for lg and smaller screens */}
             <div className="xl:hidden flex justify-center items-center relative">
+           
               <button
                 onClick={handlePrev}
                 className="absolute left-0 p-2 text-white bg-black bg-opacity-50 rounded-full focus:outline-none z-20"
@@ -166,7 +183,22 @@ const Herosectors = () => {
                 </svg>
               </button>
               <AnimatePresence>
-                <Link href={Sectors[currentIndex].url} passHref>
+               
+              <Link
+                  href={Sectors[currentIndex].url}
+                  key={currentIndex}
+                  passHref
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const url = new URL(
+                      window.location.origin + "/Sectors" + Sectors[currentIndex].url
+                    );
+                    window.history.pushState({}, "", url.toString()); // Update URL without reload
+                    document
+                      .getElementById("Projects")
+                      ?.scrollIntoView({ behavior: "smooth" }); // Scroll to section
+                  }}
+                >
                   <motion.div
                     key={currentIndex}
                     initial={{ opacity: 0, x: 100 }}
@@ -187,7 +219,7 @@ const Herosectors = () => {
                         {Sectors[currentIndex].Sector}
                       </h2>
                       <p className="text-gray-200 text-sm font-normal">
-                        {Sectors[currentIndex].discription}
+                        {Sectors[currentIndex].description}
                       </p>
                     </div>
                   </motion.div>
@@ -212,6 +244,7 @@ const Herosectors = () => {
                   />
                 </svg>
               </button>
+              
             </div>
           </motion.div>
         </div>

@@ -11,7 +11,7 @@ const keymembers = [
   {
     image: "/images/AboutUs/keymembers/123.JPG",
     name: "Sumit Bhati",
-    position: "COO Pre engineering",
+    position: "COO",
   },
   {
     image: "/images/AboutUs/keymembers/Lingam1.jpg",
