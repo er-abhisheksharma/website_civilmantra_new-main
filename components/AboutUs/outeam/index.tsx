@@ -11,7 +11,7 @@ const keymembers = [
   {
     image: "/images/AboutUs/keymembers/123.JPG",
     name: "Sumit Bhati",
-    position: "COO Pre engineering",
+    position: "COO",
   },
   {
     image: "/images/AboutUs/keymembers/Lingam1.jpg",
@@ -23,11 +23,11 @@ const keymembers = [
     name: "Maninder Kumar",
     position: "CFO Accounts",
   },
-  {
-    image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
-    name: "Sumit Magotra",
-    position: "BU Head Structure",
-  },
+  // {
+  //   image: "/images/AboutUs/keymembers/SumitMangotra.JPG",
+  //   name: "Sumit Magotra",
+  //   position: "BU Head Structure",
+  // },
   {
     image: "/images/AboutUs/keymembers/Sunil K.JPG",
     name: "Sunil Kumar",
