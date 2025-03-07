@@ -89,7 +89,7 @@ export default function FrequentlyAskedQuestions() {
   }
 
   return (
-    <section className="pb-20 relative overflow-hidden ">
+    <section className="p-10 relative overflow-hidden ">
       {/* Decorative elements */}
       {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full opacity-20 translate-x-1/3 translate-y-1/3"></div> */}
 

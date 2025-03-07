@@ -355,16 +355,16 @@ const EnhancedProjectSectors = () => {
   ]);
 
   // Generate pagination items
-  const renderPaginationItems = useCallback(() => {
-    const items = [];
-    const maxVisiblePages = 5;
+const renderPaginationItems = useCallback(() => {
+  const items = [];
+  const maxVisiblePages = 5;
 
-    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-    const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
 
-    if (endPage - startPage + 1 < maxVisiblePages) {
-      startPage = Math.max(1, endPage - maxVisiblePages + 1);
-    }
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
 
     // Previous button
     items.push(
@@ -372,13 +372,13 @@ const EnhancedProjectSectors = () => {
         key="prev"
         onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-primary/10  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-white text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Previous page"
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
     );
-
+  
     // First page
     if (startPage > 1) {
       items.push(
@@ -394,7 +394,7 @@ const EnhancedProjectSectors = () => {
           1
         </button>
       );
-
+  
       // Ellipsis if needed
       if (startPage > 2) {
         items.push(
@@ -407,11 +407,9 @@ const EnhancedProjectSectors = () => {
         );
       }
     }
-
+  
     // Page numbers
     for (let i = startPage; i <= endPage; i++) {
-      if (i === totalPages) continue; // Skip last page as it's handled separately
-
       items.push(
         <button
           key={i}
@@ -426,8 +424,8 @@ const EnhancedProjectSectors = () => {
         </button>
       );
     }
-
-    // Last page
+  
+    // Last page button (only if not already included in the range)
     if (endPage < totalPages) {
       // Ellipsis if needed
       if (endPage < totalPages - 1) {
@@ -440,7 +438,7 @@ const EnhancedProjectSectors = () => {
           </span>
         );
       }
-
+  
       items.push(
         <button
           key={totalPages}
@@ -455,14 +453,14 @@ const EnhancedProjectSectors = () => {
         </button>
       );
     }
-
+  
     // Next button
     items.push(
       <button
         key="next"
         onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-primary/10  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-white  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Next page"
       >
         <ChevronRight className="h-4 w-4" />
@@ -473,7 +471,7 @@ const EnhancedProjectSectors = () => {
   }, [currentPage, totalPages, handlePageChange]);
 
   return (
-    <div className="px-4 md:px-16 max-w-[88vw] mx-auto mb-10 py-[40px]">
+    <div className="px-4  max-w-[88vw] mx-auto mb-10 py-[40px]">
       {/* Project Type Buttons
       <div className="mb-8 flex flex-wrap gap-4 justify-center">
         <button
@@ -575,11 +573,11 @@ const EnhancedProjectSectors = () => {
           <div className="overflow-x-auto rounded-lg border border-border shadow-sm">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-primary/10">
+                <tr className="bg-primary">
                   {headers.map((header, index) => (
                     <th
                       key={index}
-                      className="border-b border-border px-4 py-3 text-sm  font-medium text-muted-foreground"
+                      className="border-b border-border px-4 py-3 text-sm text-white font-medium text-muted-foreground"
                     >
                       {header}
                     </th>
