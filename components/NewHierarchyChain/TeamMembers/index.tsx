@@ -187,7 +187,7 @@ const teamMembers: TeamMember[] = [
 
 const MDProfile = ({ md }: { md: TeamMember }) => {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-1">
+    <div className="relative overflow-hidden rounded-2xl hover:scale-[1.01] duration-500 hover:shadow-lg shadow-xl bg-gradient-to-br from-primary/5 to-primary/10">
       <div className="flex flex-col md:flex-row rounded-xl bg-background overflow-hidden">
         <div className="md:w-2/5 relative h-[500px] overflow-hidden">
           <Image
@@ -228,7 +228,7 @@ const MDProfile = ({ md }: { md: TeamMember }) => {
             )}
             <Dialog>
               <DialogTrigger asChild>
-                
+
               </DialogTrigger>
               <DialogContent className="sm:max-w-[600px]">
                 <DialogHeader>
@@ -262,15 +262,15 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
       className="relative"
     >
       <Card
-        className="overflow-hidden h-full bg-background hover:shadow-lg transition-all duration-300 cursor-pointer"
+        className="overflow-hidden h-full bg-gray-50  group hover:shadow-lg hover:bg-background transition-all duration-300 cursor-pointer"
         onClick={() => setShowDetails(true)}
       >
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-square overflow-hidden ">
           <Image
             src={member.imageUrl || "/placeholder.svg"}
             alt={member.name}
             fill
-            className="object-cover transition-transform duration-500"
+            className="object-cover  group-hover:scale-105 transition-all duration-500"
           />
           {member.department && (
             <Badge className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-foreground">
@@ -300,7 +300,10 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
 
       {/* Click-to-show Details Modal */}
       {showDetails && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+        onClick={() => setShowDetails(false)} 
+>
+
           <div className="relative w-[90vw] max-w-[1000px] bg-background shadow-xl rounded-xl overflow-hidden border">
             <Button
               variant="ghost"
@@ -321,7 +324,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-x"
+                className="lucide lucide-x  duration-300 transition-transform active:scale-95"
               >
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
@@ -329,19 +332,19 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
             </Button>
 
             <div className="relative h-[400px] w-full overflow-hidden">
-  <Image
-    src={member.imageUrl || "/placeholder.svg"}
-    alt={member.name}
-    fill
-    className=" object-cover"
-    
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-  <div className="absolute bottom-0 left-0 p-4 text-white">
-    <h3 className="text-xl font-bold">{member.name}</h3>
-    <p className="text-sm text-white/90">{member.position}</p>
-  </div>
-</div>
+              <Image
+                src={member.imageUrl || "/placeholder.svg"}
+                alt={member.name}
+                fill
+                className=" object-cover"
+
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4 text-white">
+                <h3 className="text-xl font-bold">{member.name}</h3>
+                <p className="text-sm text-white/90">{member.position}</p>
+              </div>
+            </div>
             <div className="p-4 space-y-3 bg-white opacity-95">
               {member.dob && (
                 <div>
@@ -471,164 +474,164 @@ export default function ManagementTeam() {
 // };
 
 // const teamMembers: TeamMember[] = [
-  // {
-  //   id: "tm1",
-  //   name: "Sumit Bhati",
-  //   position: "Chief operating officer",
-  //   bio: "Michael leads our technology initiatives with expertise in AI and cloud infrastructure.",
-  //   imageUrl: "/images/AboutUs/keymembers/123.JPG?height=300&width=300",
-  //   department: "",
-  //   email: "michael@company.com",
-  //   linkedin: "https://linkedin.com/in/michael",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm2",
-  //   name: "Bhaskar Lingam",
-  //   position: "Business Development Executive Head",
-  //   bio: "Sarah oversees our financial strategy and has helped secure multiple rounds of funding.",
-  //   imageUrl: "/images/AboutUs/keymembers/Lingam1.jpg?height=300&width=300",
-  //   department: "BDE",
-  //   email: "sarah@company.com",
-  //   linkedin: "https://linkedin.com/in/sarah",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm3",
-  //   name: "Maninder Kumar",
-  //   position: "Chief financial officer Accounts",
-  //   bio: "David ensures smooth day-to-day operations and implements efficient business processes.",
-  //   imageUrl:
-  //     "/images/AboutUs/keymembers/Manindedr Kumar.JPG?height=300&width=300",
-  //   department: "Accounts",
-  //   email: "david@company.com",
-  //   linkedin: "https://linkedin.com/in/david",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm5",
-  //   name: "Sunil Kumar",
-  //   position: "Senior Vice president",
-  //   bio: "James has consistently exceeded sales targets and built strong client relationships.",
-  //   imageUrl: "/images/AboutUs/keymembers/Sunil K.JPG?height=300&width=300",
-  //   department: "",
-  //   email: "james@company.com",
-  //   linkedin: "https://linkedin.com/in/james",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm6",
-  //   name: "Rajveer Dangi",
-  //   position: "Vice president",
-  //   bio: "Aisha has transformed our talent acquisition strategy and workplace culture.",
-  //   imageUrl:
-  //     "/images/AboutUs/keymembers/Rajveer Dangi.JPG?height=300&width=300",
-  //   department: "",
-  //   email: "aisha@company.com",
-  //   linkedin: "https://linkedin.com/in/aisha",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm5",
-  //   name: "Akshay Kumar",
-  //   position: "Business Unit Head Highway",
-  //   bio: "James has consistently exceeded sales targets and built strong client relationships.",
-  //   imageUrl: "/images/AboutUs/keymembers/akshay.JPG?height=300&width=300",
-  //   department: "Highway",
-  //   email: "james@company.com",
-  //   linkedin: "https://linkedin.com/in/james",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm5",
-  //   name: "Ankush Sharma",
-  //   position: "Business Unit Head Structure",
-  //   bio: "James has consistently exceeded sales targets and built strong client relationships.",
-  //   imageUrl: "/images/AboutUs/keymembers/Ankush.JPG?height=300&width=300",
-  //   department: "Structure",
-  //   email: "james@company.com",
-  //   linkedin: "https://linkedin.com/in/james",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
-  // {
-  //   id: "tm5",
-  //   name: "Shashank Gupta",
-  //   position: "Business Unit Head",
-  //   bio: "James has consistently exceeded sales targets and built strong client relationships.",
-  //   imageUrl:
-  //     "/images/AboutUs/keymembers/Shshank Gupta.JPG?height=300&width=300",
-  //   department: "",
-  //   email: "james@company.com",
-  //   linkedin: "https://linkedin.com/in/james",
-  //   dob: "April 15, 1980",
-  //   experience: "15+ years in operations management and strategic planning",
-  //   achievements: [
-  //     "Led company-wide digital transformation initiative",
-  //     "Increased operational efficiency by 35%",
-  //     "Recipient of Industry Leadership Award 2022",
-  //   ],
-  // },
+// {
+//   id: "tm1",
+//   name: "Sumit Bhati",
+//   position: "Chief operating officer",
+//   bio: "Michael leads our technology initiatives with expertise in AI and cloud infrastructure.",
+//   imageUrl: "/images/AboutUs/keymembers/123.JPG?height=300&width=300",
+//   department: "",
+//   email: "michael@company.com",
+//   linkedin: "https://linkedin.com/in/michael",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm2",
+//   name: "Bhaskar Lingam",
+//   position: "Business Development Executive Head",
+//   bio: "Sarah oversees our financial strategy and has helped secure multiple rounds of funding.",
+//   imageUrl: "/images/AboutUs/keymembers/Lingam1.jpg?height=300&width=300",
+//   department: "BDE",
+//   email: "sarah@company.com",
+//   linkedin: "https://linkedin.com/in/sarah",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm3",
+//   name: "Maninder Kumar",
+//   position: "Chief financial officer Accounts",
+//   bio: "David ensures smooth day-to-day operations and implements efficient business processes.",
+//   imageUrl:
+//     "/images/AboutUs/keymembers/Manindedr Kumar.JPG?height=300&width=300",
+//   department: "Accounts",
+//   email: "david@company.com",
+//   linkedin: "https://linkedin.com/in/david",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm5",
+//   name: "Sunil Kumar",
+//   position: "Senior Vice president",
+//   bio: "James has consistently exceeded sales targets and built strong client relationships.",
+//   imageUrl: "/images/AboutUs/keymembers/Sunil K.JPG?height=300&width=300",
+//   department: "",
+//   email: "james@company.com",
+//   linkedin: "https://linkedin.com/in/james",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm6",
+//   name: "Rajveer Dangi",
+//   position: "Vice president",
+//   bio: "Aisha has transformed our talent acquisition strategy and workplace culture.",
+//   imageUrl:
+//     "/images/AboutUs/keymembers/Rajveer Dangi.JPG?height=300&width=300",
+//   department: "",
+//   email: "aisha@company.com",
+//   linkedin: "https://linkedin.com/in/aisha",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm5",
+//   name: "Akshay Kumar",
+//   position: "Business Unit Head Highway",
+//   bio: "James has consistently exceeded sales targets and built strong client relationships.",
+//   imageUrl: "/images/AboutUs/keymembers/akshay.JPG?height=300&width=300",
+//   department: "Highway",
+//   email: "james@company.com",
+//   linkedin: "https://linkedin.com/in/james",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm5",
+//   name: "Ankush Sharma",
+//   position: "Business Unit Head Structure",
+//   bio: "James has consistently exceeded sales targets and built strong client relationships.",
+//   imageUrl: "/images/AboutUs/keymembers/Ankush.JPG?height=300&width=300",
+//   department: "Structure",
+//   email: "james@company.com",
+//   linkedin: "https://linkedin.com/in/james",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
+// {
+//   id: "tm5",
+//   name: "Shashank Gupta",
+//   position: "Business Unit Head",
+//   bio: "James has consistently exceeded sales targets and built strong client relationships.",
+//   imageUrl:
+//     "/images/AboutUs/keymembers/Shshank Gupta.JPG?height=300&width=300",
+//   department: "",
+//   email: "james@company.com",
+//   linkedin: "https://linkedin.com/in/james",
+//   dob: "April 15, 1980",
+//   experience: "15+ years in operations management and strategic planning",
+//   achievements: [
+//     "Led company-wide digital transformation initiative",
+//     "Increased operational efficiency by 35%",
+//     "Recipient of Industry Leadership Award 2022",
+//   ],
+// },
 // ];
 
 // const MDProfile = ({ md }: { md: TeamMember }) => {
 //   return (
-    // <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-1">
-    //   <div className="flex flex-col md:flex-row rounded-xl bg-background overflow-hidden">
-    //     <div className="md:w-2/5 relative h-[500px] overflow-hidden">
-    //       <Image
-    //         src={md.imageUrl || "/placeholder.svg"}
-    //         alt={md.name}
-    //         fill
-    //         className="object-cover"
-    //       />
-    //       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r" />
-    //       <div className="absolute bottom-0 left-0 p-4 md:hidden">
-    //         <h2 className="text-2xl font-bold text-white">{md.name}</h2>
-    //         <p className="text-white/80">{md.position}</p>
-    //       </div>
-    //     </div>
+// <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-1">
+//   <div className="flex flex-col md:flex-row rounded-xl bg-background overflow-hidden">
+//     <div className="md:w-2/5 relative h-[500px] overflow-hidden">
+//       <Image
+//         src={md.imageUrl || "/placeholder.svg"}
+//         alt={md.name}
+//         fill
+//         className="object-cover"
+//       />
+//       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r" />
+//       <div className="absolute bottom-0 left-0 p-4 md:hidden">
+//         <h2 className="text-2xl font-bold text-white">{md.name}</h2>
+//         <p className="text-white/80">{md.position}</p>
+//       </div>
+//     </div>
 
 //         <div className="md:w-3/5 p-6 md:p-8 flex flex-col my-auto items-center">
 //           <div>
@@ -735,7 +738,7 @@ export default function ManagementTeam() {
 
 //       {/* Centered Hover Popup */}
 //       <div
-//         className="fixed inset-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out 
+//         className="fixed inset-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out
 //                     flex items-center justify-center bg-black/50 pointer-events-none group-hover:pointer-events-auto"
 //       >
 //         <div className="relative w-[90vw] max-w-[1000px] bg-background shadow-xl rounded-xl overflow-hidden border pointer-events-auto">
