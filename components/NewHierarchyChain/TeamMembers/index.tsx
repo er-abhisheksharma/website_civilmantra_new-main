@@ -395,7 +395,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
 
 export default function ManagementTeam() {
   return (
-    <div className="w-full py-16 bg-background mt-[80px]">
+    <div className="w-full py-16 bg-background mt-[70px]">
       <div className="container px-4 max-w-[88vw] mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-3">Our Management</h1>
