@@ -294,7 +294,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
         
             
                   <h4 className="text-md font-semibold uppercase text-muted-foreground">Experience</h4>
-                  <p className="text-sm">{member.experience}</p>
+                  <p className="text-md">{member.experience}</p>
             
               
 
