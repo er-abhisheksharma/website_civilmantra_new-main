@@ -48,7 +48,7 @@ const teamMembers: TeamMember[] = [
   {
     id: "tm1",
     name: "Sumit Bhati",
-    position: "Chief operating officer",
+    position: "Chief Operating Officer",
     bio: "Michael leads our technology initiatives with expertise in AI and cloud infrastructure.",
     imageUrl: "/images/AboutUs/keymembers/123.JPG?height=300&width=300",
     department: "",
@@ -283,14 +283,14 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
             className="object-cover  group-hover:scale-105 transition-all duration-500"
           />
           {member.department && (
-            <Badge className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-foreground">
+            <Badge className="absolute top-4 right-4 bg-background/80 bg-gray-100 px-3 text-md ">
               {member.department}
             </Badge>
           )}
         </div>
         <CardContent className="p-6">
           <h3 className="text-xl font-bold">{member.name}</h3>
-          <p className="text-lg font-semibold text-gray-700 mb-3">{member.position}</p>
+          <p className="text-xl font-medium text-gray-700 mb-3">{member.position}</p>
         
             
                   <h4 className="text-md font-semibold uppercase text-muted-foreground">Experience</h4>
