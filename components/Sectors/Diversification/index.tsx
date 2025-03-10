@@ -5,25 +5,43 @@ interface DiversificationSectorProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  image: string;
 }
 
 const DiversificationSector = ({
   icon,
   title,
   description,
+  image,
 }: DiversificationSectorProps) => {
   return (
-    <div className="group relative flex flex-col gap-2 rounded-lg duration-300 border border-border hover:scale-[1.01] bg-card p-6 transition-all hover:shadow-md">
-      <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-        {icon}
+    <div
+      className="group relative flex flex-col justify-between gap-2 rounded-lg lg:h-[240px] duration-300 border border-border bg-cover bg-center p-6 transition-all hover:shadow-md"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/65 rounded-lg"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col h-full">
+        <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/80 text-white">
+          {icon}
+        </div>
+
+        {/* Push title & description to the bottom */}
+        <div className="mt-auto">
+          <h3 className="text-xl font-semibold tracking-tight text-white">{title}</h3>
+          <p className="text-gray-200">{description}</p>
+        </div>
       </div>
-      <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-      {/* <div className="mt-2 flex items-center text-sm font-medium text-primary">
-        <span>Learn more</span>
-        <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-      </div> */}
     </div>
+
+
   );
 };
 
@@ -34,36 +52,40 @@ export default function DiversificationSection() {
       title: "Ropeways",
       description:
         "Innovative aerial transportation solutions connecting challenging terrains and urban environments.",
+      image: "/images/Sectors/diversing/cable-cars-6605261_1280.svg",
     },
     {
       icon: <Building2 className="h-6 w-6" />,
       title: "Urban Infrastructures",
       description:
         "Comprehensive urban development projects creating sustainable and smart city solutions.",
+      image: "/images/Sectors/diversing/shot-burj-park-from-dubai-uae.jpg",
     },
     {
       icon: <Plane className="h-6 w-6" />,
       title: "Aviation",
       description:
         "Airport infrastructure and aviation facilities designed for efficiency and future growth.",
+      image: "/images/Sectors/diversing/ai-generated-8498715_1280.jpg",
     },
     {
       icon: <Train className="h-6 w-6" />,
       title: "Hyperloop/Highspeed Rails",
       description:
         "Next-generation transportation systems delivering unprecedented speed and connectivity.",
+      image: "/images/Sectors/diversing/futuristic-exploration-dubai-s-evolving-cityscape.jpg",
     },
   ];
 
   return (
-    <section className="w-full py-10 ">
-      <div className="mx-auto  px-4 mt-10 max-w-[88vw] xl:w-full">
-        <div className="mx-auto  px-4 mt-10 max-w-[88vw] xl:w-full">
+    <section className="w-full pt-10 pb-5">
+      <div className="mx-auto px-4 mt-10 max-w-[88vw] xl:w-full">
+        <div className="mx-auto px-4 mt-10 max-w-[88vw] xl:w-full">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
             Expanding Our Expertise
           </div>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            We are diversifying to new sectors
+          Shaping the Future: Expanding into New Frontiers
           </h2>
           <p className="mt-4 text-xl text-muted-foreground py-2">
             Building on our core engineering excellence, we're expanding our
@@ -72,8 +94,7 @@ export default function DiversificationSection() {
         </div>
 
         <div
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 bg-white/10 backdrop-blur-lg rounded-lg p-6
-"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 bg-white/10 backdrop-blur-lg rounded-lg p-6"
         >
           {newSectors.map((sector, index) => (
             <DiversificationSector
@@ -81,6 +102,7 @@ export default function DiversificationSection() {
               icon={sector.icon}
               title={sector.title}
               description={sector.description}
+              image={sector.image}
             />
           ))}
         </div>
