@@ -189,7 +189,7 @@ const Ourteam = () => {
                     alt={item.name}
                     width={100}
                     height={100}
-                    className="rounded-lg w-[220px] max-md:w-[250px] h-[250px] max-md:h-[270px] "
+                    className="rounded-lg w-[220px] max-md:w-[250px] h-[250px] object-cover"
                   />
                 </div>
                 <div className="mt-4 text-center">

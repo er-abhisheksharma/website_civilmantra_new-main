@@ -21,7 +21,10 @@ type ServiceType =
 interface Project {
   [key: string]: any
   Services?: string
+  "Type Of Service"?: string
 }
+
+type ProjectType = "DPR" | "Ongoing"
 
 const EnhancedProjectSectors = () => {
   // Get URL search parameters
@@ -49,29 +52,68 @@ const EnhancedProjectSectors = () => {
   const sectors = React.useMemo(
     () => [
       { id: "All", name: "All Projects", filter: "" },
-      { id: "Pre-Feasibility Studies", name: "Pre-Feasibility Studies", filter: "Pre-Feasibility Studies" },
+      {
+        id: "Pre-Feasibility Studies",
+        name: "Pre-Feasibility Studies",
+        filter: "Pre-Feasibility Studies",
+      },
       {
         id: "Pre & Post Tender Engineering Services",
         name: "Pre & Post Tender Engineering Services",
-        filter: "Pre & Post Tender Engineering Services",
+        filter: "Prebid",
       },
-      { id: "Proof & Safety Consultant", name: "Proof & Safety Consultant", filter: "Proof & Safety Consultant" },
+      {
+        id: "Proof & Safety Consultant",
+        name: "Proof & Safety Consultant",
+        filter: "Proof & Safety",
+      },
       {
         id: "Detailed Project Report (DPR)",
         name: "Detailed Project Report (DPR)",
-        filter: "Detailed Project Report (DPR)",
+        filter: "Detail Design",
       },
       {
         id: "Project Management Consultancy (PMC)",
         name: "Project Management Consultancy (PMC)",
-        filter: "Project Management Consultancy (PMC)",
+        filter: "PMC Services",
       },
-      { id: "Authority Engineer (AE)", name: "Authority Engineer (AE)", filter: "Authority Engineer (AE)" },
-      { id: "Independent Engineer (IE)", name: "Independent Engineer (IE)", filter: "Independent Engineer (IE)" },
-      { id: "Financial Modeling", name: "Financial Modeling", filter: "Financial Modeling" },
+      {
+        id: "Authority Engineer (AE)",
+        name: "Authority Engineer (AE)",
+        filter: "Authority Engineer (AE)",
+      },
+      {
+        id: "Independent Engineer (IE)",
+        name: "Independent Engineer (IE)",
+        filter: "Independent Engineer (IE)",
+      },
+      {
+        id: "Financial Modeling",
+        name: "Financial Modeling",
+        filter: "Financial Modeling",
+      },
       { id: "Due Diligence", name: "Due Diligence", filter: "Due Diligence" },
     ],
     [],
+  )
+
+  // Filter projects by sector
+  const filterProjectsBySector = useCallback(
+    (projects: Project[], sector: ServiceType) => {
+      if (sector === "All") {
+        setFilteredProjects(projects)
+      } else {
+        const sectorFilter = sectors.find((s) => s.id === sector)?.filter || ""
+        const filtered = projects.filter(
+          (project) =>
+            (project["Type Of Service"] &&
+              project["Type Of Service"].toLowerCase().includes(sectorFilter.toLowerCase())) ||
+            (project.Services && project.Services.toLowerCase().includes(sectorFilter.toLowerCase())),
+        )
+        setFilteredProjects(filtered)
+      }
+    },
+    [sectors],
   )
 
   // Function to fetch and process Excel data
@@ -282,7 +324,7 @@ const EnhancedProjectSectors = () => {
         key="prev"
         onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-white text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Previous page"
       >
         <ChevronLeft className="h-4 w-4" />
@@ -297,8 +339,8 @@ const EnhancedProjectSectors = () => {
           onClick={() => handlePageChange(1)}
           className={`h-10 w-10 rounded-md border ${
             currentPage === 1
-              ? "bg-primary text-primary-foreground"
-              : "border-border bg-gray-600 text-white hover:bg-gray-700"
+              ? "bg-primary text-white"
+              : "border-border bg-white text-gray-900 hover:bg-primary/10 hover:bg-gray-700"
           }`}
         >
           1
@@ -325,8 +367,8 @@ const EnhancedProjectSectors = () => {
           onClick={() => handlePageChange(i)}
           className={`h-10 w-10 rounded-md border ${
             currentPage === i
-              ? "bg-black text-primary-foreground"
-              : "border-border bg-gray-600 text-white hover:bg-gray-700"
+              ? "bg-primary text-white"
+              : "border-border bg-white text-gray-900 hover:bg-primary/10 hover:bg-gray-700"
           }`}
         >
           {i}
@@ -366,7 +408,7 @@ const EnhancedProjectSectors = () => {
         key="next"
         onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
+        className="flex items-center justify-center h-10 w-10 rounded-md border border-border bg-white  text-Black hover:bg-primary hover:text-white disabled:opacity-50"
         aria-label="Next page"
       >
         <ChevronRight className="h-4 w-4" />
@@ -375,21 +417,6 @@ const EnhancedProjectSectors = () => {
 
     return items
   }, [currentPage, totalPages, handlePageChange])
-
-  const filterProjectsBySector = useCallback(
-    (projects: Project[], sector: ServiceType) => {
-      if (sector === "All") {
-        setFilteredProjects(projects)
-      } else {
-        const sectorFilter = sectors.find((s) => s.id === sector)?.filter || ""
-        const filtered = projects.filter(
-          (project) => project.Services && project.Services.toLowerCase().includes(sectorFilter.toLowerCase()),
-        )
-        setFilteredProjects(filtered)
-      }
-    },
-    [sectors],
-  )
 
   return (
     <div className="px-4 md:px-16 max-w-[88vw] mx-auto mb-10 py-[40px]">
@@ -402,7 +429,7 @@ const EnhancedProjectSectors = () => {
               onClick={() => handleSectorClick(sector.id as ServiceType)}
               className={`px-4 py-2 rounded-md text-sm transition duration-300 ease-in-out ${
                 activeSector === sector.id
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
+                  ? "bg-primary text-white "
                   : "bg-card hover:bg-primary/10 border border-border"
               }`}
             >
@@ -440,11 +467,11 @@ const EnhancedProjectSectors = () => {
           <div className="overflow-x-auto rounded-lg border border-border shadow-sm">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-muted/50">
+                <tr className="bg-primary">
                   {headers.map((header, index) => (
                     <th
                       key={index}
-                      className="border-b border-border px-4 py-3 text-sm font-medium text-muted-foreground"
+                      className="border-b border-border px-4 py-3 text-sm text-white font-medium text-muted-foreground"
                     >
                       {header}
                     </th>
@@ -454,7 +481,7 @@ const EnhancedProjectSectors = () => {
               <tbody>
                 {displayedProjects.length > 0 ? (
                   displayedProjects.map((project, rowIndex) => (
-                    <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-background text-gray-900" : "bg-muted/20"}>
+                    <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-background text-gray-900" : "bg-primary/10"}>
                       {headers.map((header, cellIndex) => (
                         <td
                           key={cellIndex}
@@ -493,7 +520,7 @@ const EnhancedProjectSectors = () => {
                     setItemsPerPage(Number(e.target.value))
                     setCurrentPage(1) // Reset to first page when changing items per page
                   }}
-                  className="h-10 rounded-md border border-border bg-gray-600 text-white hover:bg-gray-700 px-3 text-sm"
+                  className="h-10 rounded-md border border-border bg-white text-gray-900 hover:bg-primary/10 px-3 text-smy"
                 >
                   <option value={10}>10 per page</option>
                   <option value={25}>25 per page</option>

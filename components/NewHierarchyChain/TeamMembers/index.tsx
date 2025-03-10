@@ -37,8 +37,9 @@ const managingDirector: TeamMember = {
   position: "Managing Director",
   bio: "Susheel Bhardwaj has transformed our company with her visionary leadership and strategic insight. With over 15 years of industry experience, she has successfully guided our organization through significant growth and innovation.",
   imageUrl: "/images/AboutUs/keymembers/1.JPG?height=400&width=300",
-  email: "alexandra@company.com",
+  email: "susheelbhardwaj@company.com",
   linkedin: "https://linkedin.com/in/alexandra",
+  experience: "15+ years in operations management and strategic planning",
   fullBio:
     "Alexandra Johnson joined our company in 2015 and has been instrumental in our expansion into international markets. She holds an MBA from Harvard Business School and has previously led successful ventures in technology and finance sectors. Under her leadership, our company has seen a 300% growth in revenue and has been recognized as an industry leader in innovation.",
 };
@@ -200,6 +201,9 @@ const MDProfile = ({ md }: { md: TeamMember }) => {
           <div className="absolute bottom-0 left-0 p-4 md:hidden">
             <h2 className="text-2xl font-bold text-white">{md.name}</h2>
             <p className="text-white/80">{md.position}</p>
+            
+
+            <p>Achievements</p>
           </div>
         </div>
 
@@ -207,14 +211,20 @@ const MDProfile = ({ md }: { md: TeamMember }) => {
           <div>
             <div className="hidden md:block mb-4">
               <h2 className="text-3xl font-bold">{md.name}</h2>
-              <p className="text-xl text-muted-foreground">{md.position}</p>
+              <p className="text-xl font-semibold text-muted-foreground">{md.position}</p>
             </div>
 
             <p className="mt-4 text-base md:text-lg">{md.bio}</p>
+            <h4 className="mt-4 text-base md:text-lg font-semibold uppercase text-muted-foreground">Experience</h4>
+                  <p  className="text-lg">{md.experience}</p>
+
+
+            
+            
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            {md.email && (
+            {/* {md.email && (
               <Button variant="outline" size="sm" className="gap-2">
                 <Mail size={16} />
                 <span>Email</span>
@@ -225,7 +235,7 @@ const MDProfile = ({ md }: { md: TeamMember }) => {
                 <Linkedin size={16} />
                 <span>LinkedIn</span>
               </Button>
-            )}
+            )} */}
             <Dialog>
               <DialogTrigger asChild>
 
@@ -280,10 +290,15 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
         </div>
         <CardContent className="p-6">
           <h3 className="text-xl font-bold">{member.name}</h3>
-          <p className="text-sm text-muted-foreground mb-3">{member.position}</p>
-          <p className="text-sm">{member.bio}</p>
+          <p className="text-lg font-semibold text-gray-700 mb-3">{member.position}</p>
+        
+            
+                  <h4 className="text-md font-semibold uppercase text-muted-foreground">Experience</h4>
+                  <p className="text-sm">{member.experience}</p>
+            
+              
 
-          <div className="mt-4 flex gap-2">
+          {/* <div className="mt-4 flex gap-2">
             {member.email && (
               <Button variant="ghost" size="icon" className="rounded-full h-9 w-9">
                 <Mail size={18} />
@@ -294,12 +309,12 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
                 <Linkedin size={18} />
               </Button>
             )}
-          </div>
+          </div> */}
         </CardContent>
       </Card>
 
       {/* Click-to-show Details Modal */}
-      {showDetails && (
+      {/* {showDetails && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
         onClick={() => setShowDetails(false)} 
 >
@@ -388,7 +403,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </motion.div>
   )
 }
