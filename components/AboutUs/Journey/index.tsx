@@ -59,7 +59,7 @@ const Journey = () => {
     return (
         <div className="max-lg:hidden">
             <div>
-                <h1 className="unihead my-20 "> Our Achievements</h1>
+                <h1 className="unihead my-20 "> Our Journey </h1>
             </div>
             <div
                 className="overflow-hidden h-[75vh] flex mb-20 bg-black"

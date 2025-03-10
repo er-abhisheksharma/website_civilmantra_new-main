@@ -6,8 +6,8 @@ export default function NewHierarchyChain() {
   return (
     <>
       {/* <HierarchyChain/> */}
-      <CompanyHierarchy/>
-      <Heirartwo />
+      <CompanyHierarchy />
+      {/* <Heirartwo /> */}
     </>
   );
 }

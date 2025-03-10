@@ -63,7 +63,7 @@ export default function DiversificationSection() {
             Expanding Our Expertise
           </div>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            We are diversifying to new sectors
+          Shaping the Future with New Infrastructure Sectors
           </h2>
           <p className="mt-4 text-xl text-muted-foreground py-2">
             Building on our core engineering excellence, we're expanding our

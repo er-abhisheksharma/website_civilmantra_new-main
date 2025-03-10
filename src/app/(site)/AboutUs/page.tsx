@@ -21,7 +21,7 @@ export default function Aboutus() {
      <Journey/>
      <Dealin/>
      <OurPresence/>
-     {/* <Gallery/> */}
+     <Gallery/>
      
 
 
