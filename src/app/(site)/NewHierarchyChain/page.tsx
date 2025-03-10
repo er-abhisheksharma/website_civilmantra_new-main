@@ -7,7 +7,7 @@ export default function NewHierarchyChain() {
     <>
       {/* <HierarchyChain/> */}
       <CompanyHierarchy/>
-      <Heirartwo />
+      {/* <Heirartwo /> */}
     </>
   );
 }
