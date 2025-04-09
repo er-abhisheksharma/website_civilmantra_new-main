@@ -3,13 +3,16 @@ import Image from "next/image";
 
 const SocialIcon = () => {
   const socialIcons = [
-    { 
+    // {
+    //   src: "/images/Footer/whatsapp.png",
+    //   alt: "Consult-Ai",
+    //   url: "https://civilmantra.consult-ai.in/"
+    // },
+    {
       src: "/images/Footer/whatsapp.png", 
       alt: "whatsapp", 
-      url: "https://wa.me/8120444777?text=" 
+      url: "https://wa.me/8120444777?text="
     },
-    // Uncomment and add URLs for other icons as needed
-    // { src: "/images/Footer/twitter.png", alt: "Twitter", url: "" },
     // { src: "/images/Footer/linkedin.png", alt: "LinkedIn", url: "" },
     // { src: "/images/Footer/instagram (1).png", alt: "Instagram", url: "" },
   ];

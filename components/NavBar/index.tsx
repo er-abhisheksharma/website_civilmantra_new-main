@@ -77,28 +77,43 @@ const NavBar = () => {
             { name: "Projects", url: "/Projects" },
             { name: "Innovation", url: "/Innovation" },
             { name: "Career", url: "/Career" },
-          ].map((link, index) => (
-            <Link
-              key={index}
-              href={link.url}
-              prefetch={false}
-              className={`px-2 py-1 rounded-lg text-xl relative  hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
-                ? 'scale-110  text-gray-800 font-bold hover:no-underline hover:text-black'
-                : 'hover:text-black '
-                }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+            { name: "Consult-Ai", url: "https://civilmantra.consult-ai.in/" },
+          ].map((link, index) =>
+            link.name === "Consult-Ai" ? (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-2 py-2 overflow-hidden font-medium transition-all text-gray-800 hover:text-black  rounded-full group ml-2 text-xl  duration-300 shadow-black hover:scale-105 animate-pop"
+              >
+                {link.name}
+              </a>
+
+            ) : (
+              <Link
+                key={index}
+                href={link.url}
+                prefetch={false}
+                className={`px-2 py-1 rounded-lg text-xl relative hover:scale-110 transition-transform duration-300 ease-in-out ${pathname === link.url
+                  ? 'scale-110 text-gray-800 font-bold hover:no-underline hover:text-black'
+                  : 'hover:text-black'
+                  }`}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
+
 
           <Link
             href="/ContactUs"
             prefetch={false}
             className="px-6 py-2 overflow-hidden font-medium transition-all text-white rounded-full  group ml-2 bg-primary text-xl hover:shadow-2xl duration-300 shadow-black hover:scale-105"
           >
-            
-              Contact us
-          
+
+            Contact us
+
           </Link>
 
         </div>
@@ -124,6 +139,7 @@ const NavBar = () => {
               { name: "Project", url: "/Projects" },
               { name: "Innovation", url: "/Innovation" },
               { name: "Career", url: "/Career" },
+              // { name: "Consult-Ai", url: "/Career" },
             ].map((link, index) => (
               <Link
                 prefetch={false}

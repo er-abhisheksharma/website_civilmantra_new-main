@@ -5,6 +5,7 @@ import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import ScrollToTopButton from "../../components/Scrolltotop"; 
 import SocialIcon from "../../components/SocialMediaIcons";
+import PopupModal from "../../components/PopUp";
 
 
 
@@ -34,6 +35,7 @@ export default function RootLayout({
                 />
             </head>
             <body className="font-league-spartan">
+                <PopupModal/>
                 <NavBar />
                 <SocialIcon/>
                 {children}

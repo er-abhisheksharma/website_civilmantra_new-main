@@ -7,7 +7,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/(site)**/*.{js,ts,jsx,tsx,mdx}"
   ],
-  
+
   theme: {
     extend: {
       colors: {
@@ -23,7 +23,15 @@ const config: Config = {
         rubik: ['Rubik', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
-        
+      },
+      keyframes: {
+        pop: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.15)' },
+        },
+      },
+      animation: {
+        pop: 'pop 2.2s ease-in-out infinite',
       },
     },
   },
@@ -31,4 +39,3 @@ const config: Config = {
 };
 
 export default config;
-
