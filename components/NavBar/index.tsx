@@ -80,15 +80,29 @@ const NavBar = () => {
             { name: "Consult-Ai", url: "https://civilmantra.consult-ai.in/" },
           ].map((link, index) =>
             link.name === "Consult-Ai" ? (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-2 py-2 overflow-hidden font-medium transition-all text-gray-800 hover:text-black  rounded-full group ml-2 text-xl  duration-300 shadow-black hover:scale-105 animate-pop"
-              >
-                {link.name}
-              </a>
+              <div className="relative inline-block">
+                {/* NEW Ribbon */}
+                <Image
+                  src="/images/badge.png"
+                  alt="New Ribbon"
+                  width={30}
+                  height={20}
+                  className="absolute -top-2 -left-2 z-10"
+                />
+
+                {/* Button */}
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-2 overflow-hidden font-medium transition-all text-gray-800 hover:text-black rounded-full group ml-2 text-xl duration-300 shadow-black hover:scale-105 animate-pop"
+                >
+                  {link.name}
+                </a>
+              </div>
+
+
 
             ) : (
               <Link

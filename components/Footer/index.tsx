@@ -41,7 +41,7 @@ const Footer = () => {
     const handleLogoClick = () => {
         setClickCount((prevCount: number) => prevCount + 1);
         if (clickCount + 1 === 1) {
-            window.location.href = "/AdminLogin";
+            window.location.href = "/";
         }
     };
 
