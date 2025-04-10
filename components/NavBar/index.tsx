@@ -80,7 +80,7 @@ const NavBar = () => {
             { name: "Consult-Ai", url: "https://civilmantra.consult-ai.in/" },
           ].map((link, index) =>
             link.name === "Consult-Ai" ? (
-              <div className="relative inline-block">
+              <div key={index} className="relative inline-block animate-pop">
                 {/* NEW Ribbon */}
                 <Image
                   src="/images/badge.png"

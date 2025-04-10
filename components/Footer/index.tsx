@@ -218,7 +218,7 @@ const Footer = () => {
                 {/* Copyright Section */}
                 <div className="border-t-2 border-gray-500 py-4">
                     <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg text-gray-800 overflow-wrap break-word">
-                        © {new Date().getFullYear()} All Rights Reserved. Website designed by AiMantra
+                        © {new Date().getFullYear()} All Rights Reserved. <span ><a href="https://www.aimantra.co/">Website designed and developed by <span className="underline text-blue-600">AiMantra</span></a></span>
                     </p>
                 </div>
             </div>
