@@ -77,7 +77,7 @@ const NavBar = () => {
             { name: "Projects", url: "/Projects" },
             { name: "Innovation", url: "/Innovation" },
             { name: "Career", url: "/Career" },
-            { name: "Consult-Ai", url: "https://civilmantra.consult-ai.in/" },
+            { name: "Consult-AI", url: "https://civilmantra.consult-ai.in/" },
           ].map((link, index) =>
             link.name === "Consult-Ai" ? (
               <div key={index} className="relative inline-block animate-pop">
